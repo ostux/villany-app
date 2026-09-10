@@ -1,0 +1,26 @@
+{
+  "name": "villanyszerelo-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "katex": "^0.18.7",
+    "marked": "^18.0.12",
+    "tailwindcss": "^4.3.3",
+    "vue": "^3.5.41"
+  },
+  "devDependencies": {
+    "@types/marked": "^6.0.0",
+    "@types/node": "^26.5.0",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2",
+    "vue-tsc": "^3.3.11"
+  }
+}
