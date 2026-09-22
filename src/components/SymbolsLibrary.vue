@@ -32,11 +32,11 @@ const categoryCount = (categoryId: string) => {
     <!-- Category Filter -->
     <div class="space-y-3">
       <h2 class="text-xl font-semibold text-gray-200">Kategória szűrő</h2>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
         <button
           @click="selectedCategory = 'all'"
           :class="[
-            'px-4 py-2 rounded-lg font-medium transition-colors text-[15px]',
+            'px-4 py-3 rounded-lg font-medium transition-colors text-[15px] whitespace-nowrap flex-shrink-0',
             selectedCategory === 'all'
               ? 'bg-amber-500 text-gray-950'
               : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
@@ -49,7 +49,7 @@ const categoryCount = (categoryId: string) => {
           :key="cat.id"
           @click="selectedCategory = cat.id"
           :class="[
-            'px-4 py-2 rounded-lg font-medium transition-colors text-[15px]',
+            'px-4 py-3 rounded-lg font-medium transition-colors text-[15px] whitespace-nowrap flex-shrink-0',
             selectedCategory === cat.id
               ? 'bg-amber-500 text-gray-950'
               : 'bg-gray-800 text-gray-300 hover:bg-gray-700'

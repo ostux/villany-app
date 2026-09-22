@@ -67,21 +67,21 @@ function solvedCount() {
         <option value="all">Véletlen (összes típus)</option>
         <option v-for="t in TOPOLOGY_TYPES" :key="t.id" :value="t.id">{{ t.title }}</option>
       </select>
-      <button class="border border-gray-800 bg-gray-900 px-3.5 py-2 rounded-lg font-bold text-base cursor-pointer text-gray-100 hover:bg-gray-800" @click="newCircuit">🔄 Új áramkör</button>
+      <button class="border border-gray-800 bg-gray-900 px-3.5 py-3 rounded-lg font-bold text-base cursor-pointer text-gray-100 hover:bg-gray-800" @click="newCircuit">🔄 Új áramkör</button>
       <span class="ml-auto bg-gray-800 border border-gray-700 px-3 py-1.5 rounded-full text-base font-semibold text-gray-400">Megoldva: {{ solvedCount() }} / {{ circuit.questions.length }}</span>
     </div>
 
-    <div class="bg-gray-900 border border-gray-800 rounded-[10px] p-5 shadow-lg">
+    <div class="bg-gray-900 border border-gray-800 rounded-[10px] p-4 md:p-5 shadow-lg">
       <div>
         <h3 class="m-0 mb-1 text-xl">{{ circuit.title }}</h3>
         <p class="text-gray-400 text-base m-0 mb-4">{{ circuit.description }}</p>
       </div>
 
-      <div class="bg-gray-800 border border-gray-700 rounded-lg p-2.5 mb-5 flex justify-center">
+      <div class="bg-gray-800 border border-gray-700 rounded-lg p-2 md:p-2.5 mb-5 flex justify-center">
         <CircuitDiagram :circuit="circuit" :key="circuit.id" />
       </div>
 
-      <div class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-3.5">
+      <div class="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-3.5">
         <div
           v-for="q in circuit.questions"
           :key="q.key"
@@ -103,7 +103,7 @@ function solvedCount() {
               class="flex-1 min-w-[100px] px-2.5 py-2 border border-gray-800 rounded-lg text-base bg-gray-900 text-gray-100 disabled:opacity-50"
             />
             <span v-if="q.unit" class="text-base text-gray-400 font-semibold">{{ q.unit }}</span>
-            <button v-if="!checked[q.key]?.revealed" type="submit" class="bg-amber-500 text-white border-0 px-4 py-2 rounded-lg font-bold text-base cursor-pointer hover:bg-amber-600">Ellenőrzés</button>
+            <button v-if="!checked[q.key]?.revealed" type="submit" class="bg-amber-500 text-white border-0 px-4 py-3 rounded-lg font-bold text-base cursor-pointer hover:bg-amber-600">Ellenőrzés</button>
           </form>
 
           <div v-if="!checked[q.key]?.revealed" class="mt-2">

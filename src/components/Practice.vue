@@ -72,7 +72,7 @@ const solvedCount = computed(() =>
       <span class="ml-auto bg-gray-800 border border-gray-700 px-3 py-1.5 rounded-full text-base font-semibold text-gray-400">Megoldva: {{ solvedCount }} / {{ filtered.length }}</span>
     </div>
 
-    <div class="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-4">
+    <div class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-3 md:gap-4">
       <div
         v-for="ex in filtered"
         :key="ex.id"
@@ -95,7 +95,7 @@ const solvedCount = computed(() =>
             class="flex-1 min-w-[100px] px-2.5 py-2 border border-gray-800 rounded-lg text-base bg-gray-900 text-gray-100 disabled:opacity-50"
           />
           <span v-if="ex.unit" class="text-base text-gray-400 font-semibold">{{ ex.unit }}</span>
-          <button v-if="!checked[ex.id]?.revealed" type="submit" class="bg-amber-500 text-white border-0 px-4 py-2 rounded-lg font-bold text-base cursor-pointer hover:bg-amber-600">Ellenőrzés</button>
+          <button v-if="!checked[ex.id]?.revealed" type="submit" class="bg-amber-500 text-white border-0 px-4 py-3 rounded-lg font-bold text-base cursor-pointer hover:bg-amber-600">Ellenőrzés</button>
         </form>
 
         <div v-if="!checked[ex.id]?.revealed" class="mt-2">

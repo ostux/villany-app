@@ -52,13 +52,13 @@ const navigateTo = (path: string) => {
     <div class="max-w-7xl mx-auto">
       <!-- Header -->
       <div class="text-center mb-12">
-        <h1 class="text-[40px] font-bold text-amber-500 mb-4">
+        <h1 class="text-[32px] md:text-[40px] font-bold text-amber-500 mb-4">
           Villanyszerelő / CS 01
         </h1>
-        <h2 class="text-[28px] text-gray-300 mb-2">
+        <h2 class="text-[22px] md:text-[28px] text-gray-300 mb-2">
           Villamos alapismeretek / Elektrotechnika
         </h2>
-        <p class="text-[19px] text-gray-400 mt-6">
+        <p class="text-[17px] md:text-[19px] text-gray-400 mt-6">
           Offline oktató alkalmazás villanyszerelők képzéséhez
         </p>
       </div>

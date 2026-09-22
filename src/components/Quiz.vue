@@ -95,7 +95,7 @@ function restart() {
           v-for="n in questionCountOptions"
           :key="n"
           :class="[
-            'border px-4 py-2.5 rounded-lg font-bold cursor-pointer text-base',
+            'border px-4 py-3 rounded-lg font-bold cursor-pointer text-base',
             selectedCount === n
               ? 'bg-amber-500 border-amber-500 text-white'
               : 'border-gray-800 bg-gray-900 text-gray-100'
@@ -137,12 +137,12 @@ function restart() {
 
       <div class="flex justify-between mt-5">
         <button
-          class="border border-gray-800 bg-gray-900 px-3.5 py-2 rounded-lg cursor-pointer text-base font-semibold text-gray-100 transition-all hover:bg-gray-800 disabled:opacity-40 disabled:cursor-not-allowed"
+          class="border border-gray-800 bg-gray-900 px-3.5 py-3 rounded-lg cursor-pointer text-base font-semibold text-gray-100 transition-all hover:bg-gray-800 disabled:opacity-40 disabled:cursor-not-allowed"
           :disabled="currentIndex === 0"
           @click="goPrev"
         >&larr; Előző</button>
         <button
-          class="bg-amber-500 border-amber-500 text-white px-3.5 py-2 rounded-lg cursor-pointer text-base font-semibold transition-all hover:bg-amber-600 disabled:opacity-40 disabled:cursor-not-allowed"
+          class="bg-amber-500 border-amber-500 text-white px-3.5 py-3 rounded-lg cursor-pointer text-base font-semibold transition-all hover:bg-amber-600 disabled:opacity-40 disabled:cursor-not-allowed"
           :disabled="!answeredCurrent"
           @click="goNext"
         >

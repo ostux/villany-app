@@ -7,6 +7,9 @@ import { loadMarkdownFile, renderMarkdown } from '../utils/markdownRenderer'
 const route = useRoute()
 const router = useRouter()
 
+// Track mobile sidebar visibility
+const isSidebarOpen = ref(false)
+
 // Track which categories are expanded (all expanded by default)
 const expandedCategories = reactive<Record<string, boolean>>(
   CATEGORIES.reduce((acc, cat) => {
@@ -82,6 +85,12 @@ watch(activeTopic, (newTopic) => {
 function select(id: string) {
   router.push(`/study/${id}`)
   window.scrollTo({ top: 0, behavior: 'smooth' })
+  // Close sidebar on mobile after selecting a topic
+  isSidebarOpen.value = false
+}
+
+function toggleSidebar() {
+  isSidebarOpen.value = !isSidebarOpen.value
 }
 
 function next() {
@@ -101,8 +110,42 @@ const idx = computed(() => {
 </script>
 
 <template>
-  <div class="grid lg:grid-cols-[320px_1fr] gap-5 items-start">
-    <aside class="flex flex-col gap-2 bg-gray-900 border border-gray-800 rounded-[10px] p-2 sticky top-[88px] max-h-[calc(100vh-110px)] overflow-y-auto lg:block static lg:max-h-[calc(100vh-110px)]">
+  <div>
+    <!-- Mobile sidebar toggle button -->
+    <button
+      @click="toggleSidebar"
+      class="lg:hidden mb-4 w-full flex items-center justify-between bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 text-left hover:bg-gray-800 transition-colors"
+    >
+      <span class="flex items-center gap-2 font-semibold text-base">
+        <span class="text-xl">📚</span>
+        <span>{{ activeTopic?.title || 'Válassz témakört' }}</span>
+      </span>
+      <span class="text-gray-400 text-xl transition-transform duration-200" :class="{ 'rotate-180': isSidebarOpen }">
+        ▼
+      </span>
+    </button>
+
+    <div class="grid lg:grid-cols-[320px_1fr] gap-5 items-start">
+      <!-- Sidebar with mobile overlay -->
+      <aside
+        :class="[
+          'flex flex-col gap-2 bg-gray-900 border border-gray-800 rounded-[10px] p-2 overflow-y-auto',
+          'lg:sticky lg:top-[88px] lg:max-h-[calc(100vh-110px)]',
+          // Mobile styles
+          'fixed lg:static inset-0 z-50 lg:z-auto',
+          'transition-transform duration-300 lg:transform-none',
+          isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0',
+          'max-h-screen lg:max-h-[calc(100vh-110px)]'
+        ]"
+      >
+        <!-- Mobile close button -->
+        <button
+          @click="toggleSidebar"
+          class="lg:hidden sticky top-0 bg-gray-800 text-gray-100 px-4 py-2 rounded-lg mb-2 font-semibold flex items-center justify-between z-10"
+        >
+          <span>Témakörök</span>
+          <span class="text-xl">✕</span>
+        </button>
       <div v-for="category in topicsByCategory" :key="category.id" class="mb-1">
         <!-- Category Header -->
         <button
@@ -145,9 +188,9 @@ const idx = computed(() => {
           </div>
         </transition>
       </div>
-    </aside>
+      </aside>
 
-    <section v-if="activeTopic" class="bg-gray-900 border border-gray-800 rounded-[10px] p-7 px-8 shadow-lg">
+      <section v-if="activeTopic" class="bg-gray-900 border border-gray-800 rounded-[10px] p-5 md:p-7 px-5 md:px-8 shadow-lg overflow-hidden min-w-0">
       <h2 class="mt-0 text-2xl text-gray-100">{{ activeTopic.title }}</h2>
 
       <!-- Music player if available -->
@@ -176,19 +219,35 @@ const idx = computed(() => {
 
       <div v-if="isLoading" class="text-gray-400 my-4">Betöltés...</div>
       <div v-else v-html="renderedContent"></div>
-      <div v-if="idx >= 0" class="flex items-center justify-between mt-7 pt-4 border-t border-gray-800">
+      <div v-if="idx >= 0" class="flex items-center justify-between gap-2 mt-7 pt-4 border-t border-gray-800">
         <button
-          class="border border-gray-800 bg-gray-900 px-3.5 py-2 rounded-lg cursor-pointer text-base font-semibold text-gray-100 transition-all hover:bg-gray-800 disabled:opacity-40 disabled:cursor-not-allowed"
+          class="border border-gray-800 bg-gray-900 px-4 sm:px-3.5 py-4 sm:py-3 rounded-lg cursor-pointer text-base font-semibold text-gray-100 transition-all hover:bg-gray-800 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-1.5"
           :disabled="idx === 0"
           @click="prev"
-        >&larr; Előző téma</button>
-        <span class="text-base text-gray-400">{{ idx + 1 }} / {{ TOPICS.length }}</span>
+          title="Előző téma"
+        >
+          <span class="text-5xl sm:text-base">&larr;</span>
+          <span class="hidden sm:inline">Előző téma</span>
+        </button>
+        <span class="text-sm sm:text-base text-gray-400 whitespace-nowrap">{{ idx + 1 }} / {{ TOPICS.length }}</span>
         <button
-          class="bg-amber-500 border-amber-500 text-white px-3.5 py-2 rounded-lg cursor-pointer text-base font-semibold transition-all hover:bg-amber-600 disabled:opacity-40 disabled:cursor-not-allowed"
+          class="bg-amber-500 border-amber-500 text-white px-4 sm:px-3.5 py-4 sm:py-3 rounded-lg cursor-pointer text-base font-semibold transition-all hover:bg-amber-600 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-1.5"
           :disabled="idx === TOPICS.length - 1"
           @click="next"
-        >Következő téma &rarr;</button>
+          title="Következő téma"
+        >
+          <span class="hidden sm:inline">Következő téma</span>
+          <span class="text-5xl sm:text-base">&rarr;</span>
+        </button>
       </div>
-    </section>
+      </section>
+    </div>
+
+    <!-- Mobile backdrop overlay -->
+    <div
+      v-if="isSidebarOpen"
+      @click="toggleSidebar"
+      class="lg:hidden fixed inset-0 bg-black/50 z-40 transition-opacity duration-300"
+    ></div>
   </div>
 </template>

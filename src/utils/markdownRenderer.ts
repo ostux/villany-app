@@ -55,10 +55,10 @@ marked.use({
     heading({ tokens, depth }: any) {
       const text = this.parser.parseInline(tokens);
       const classes = {
-        1: 'text-2xl text-gray-100 my-5 mb-3 font-bold',
-        2: 'text-amber-600 text-xl my-5 mb-2 font-bold',
-        3: 'text-amber-600 text-xl my-5 mb-2 font-bold',
-        4: 'text-amber-600 text-xl my-5 mb-2 font-bold',
+        1: 'text-xl md:text-2xl text-gray-100 my-5 mb-3 font-bold',
+        2: 'text-amber-600 text-lg md:text-xl my-5 mb-2 font-bold',
+        3: 'text-amber-600 text-lg md:text-xl my-5 mb-2 font-bold',
+        4: 'text-amber-600 text-lg md:text-xl my-5 mb-2 font-bold',
       };
       const className = classes[depth as keyof typeof classes] || classes[4];
       return `<h${depth} class="${className}">${text}</h${depth}>\n`;
@@ -66,7 +66,7 @@ marked.use({
 
     paragraph({ tokens }: any) {
       const text = this.parser.parseInline(tokens);
-      return `<p class="my-2.5 text-[19px]">${text}</p>\n`;
+      return `<p class="my-2.5 text-[17px] md:text-[19px]">${text}</p>\n`;
     },
 
     list({ items, ordered }: any) {
@@ -85,7 +85,7 @@ marked.use({
         } else if (item.text) {
           text = item.text;
         }
-        body += `<li class="my-1.5 text-[19px]">${text}</li>\n`;
+        body += `<li class="my-1.5 text-[17px] md:text-[19px]">${text}</li>\n`;
       }
       return `<${tag} class="pl-5 my-2">\n${body}</${tag}>\n`;
     },
@@ -110,12 +110,12 @@ marked.use({
         body += '</tr>\n';
       }
 
-      return `<table class="border-collapse w-full my-3 mb-4 text-base">
+      return `<div class="overflow-x-auto my-3 mb-4"><table class="border-collapse w-full text-base">
       <thead>
 ${header}      </thead>
       <tbody>
 ${body}      </tbody>
-    </table>\n`;
+    </table></div>\n`;
     },
 
     blockquote({ tokens }: any) {
@@ -125,14 +125,14 @@ ${body}      </tbody>
 
     code({ text, lang }: any) {
       if (lang === 'formula') {
-        return `<div class="bg-slate-800 border-l-4 border-blue-400 p-2.5 px-3.5 font-serif text-xl font-semibold rounded my-3">${text}</div>\n`;
+        return `<div class="bg-slate-800 border-l-4 border-blue-400 p-2.5 px-3.5 font-serif text-lg md:text-xl font-semibold rounded my-3 overflow-x-auto">${text}</div>\n`;
       }
       if (lang === 'example') {
         // Parse inline math in example blocks by processing the text with marked's inline parser
         const processedText = marked.parseInline(text);
-        return `<div class="bg-gray-800 border-l-4 border-amber-500 p-2.5 px-3.5 rounded text-base my-3">${processedText}</div>\n`;
+        return `<div class="bg-gray-800 border-l-4 border-amber-500 p-2.5 px-3.5 rounded text-[15px] md:text-base my-3 overflow-x-auto">${processedText}</div>\n`;
       }
-      return `<pre class="bg-gray-800 p-3 rounded my-3 overflow-x-auto"><code>${text}</code></pre>\n`;
+      return `<pre class="bg-gray-800 p-3 rounded my-3 overflow-x-auto text-sm md:text-base"><code>${text}</code></pre>\n`;
     },
 
     codespan({ text }: any) {
