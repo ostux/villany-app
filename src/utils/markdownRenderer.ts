@@ -163,13 +163,17 @@ export function renderMarkdown(markdown: string): string {
 
 /**
  * Load markdown content from a file path
- * In Vite, we use ?raw suffix to import as string
+ * Uses Vite's base URL to ensure correct paths in both dev and production
  */
 export async function loadMarkdownFile(path: string): Promise<string> {
   try {
-    const response = await fetch(path);
+    // Remove leading slash if present, then prepend base URL
+    const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+    const fullPath = import.meta.env.BASE_URL + cleanPath;
+
+    const response = await fetch(fullPath);
     if (!response.ok) {
-      throw new Error(`Failed to load markdown file: ${path}`);
+      throw new Error(`Failed to load markdown file: ${fullPath}`);
     }
     return await response.text();
   } catch (error) {
