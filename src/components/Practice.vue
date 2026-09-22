@@ -12,7 +12,7 @@ const topicFilter = ref((route.query.topic as string) || 'all')
 // Watch for changes in topic filter and update URL
 watch(topicFilter, (newTopic) => {
   const query = newTopic === 'all' ? {} : { topic: newTopic }
-  router.push({ path: '/practice', query })
+  router.push({ path: '/villany-app/practice', query })
 })
 
 // Watch for external route changes (e.g., browser back/forward)

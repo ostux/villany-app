@@ -39,12 +39,12 @@ const activeId = computed(() => {
       return topicId
     }
     // Invalid topic, redirect to home
-    router.push('/')
+    router.push('/villany-app')
     return null
   }
   // No topic selected, redirect to first topic
-  if (route.path === '/study' && TOPICS.length > 0) {
-    router.push(`/study/${TOPICS[0].id}`)
+  if (route.path === '/villany-app/study' && TOPICS.length > 0) {
+    router.push(`/villany-app/study/${TOPICS[0].id}`)
     return null
   }
   return null
@@ -83,7 +83,7 @@ watch(activeTopic, (newTopic) => {
 }, { immediate: true })
 
 function select(id: string) {
-  router.push(`/study/${id}`)
+  router.push(`/villany-app/study/${id}`)
   window.scrollTo({ top: 0, behavior: 'smooth' })
   // Close sidebar on mobile after selecting a topic
   isSidebarOpen.value = false

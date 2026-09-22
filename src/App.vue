@@ -7,20 +7,20 @@ const router = useRouter();
 const route = useRoute();
 
 const tabs = [
-  { id: "study", label: "Tananyag", icon: "📚", path: "/study" },
-  { id: "practice", label: "Gyakorlás", icon: "✏️", path: "/practice" },
-  { id: "circuits", label: "Rajzos feladatok", icon: "🔌", path: "/circuits" },
-  { id: "symbols", label: "Jelképek", icon: "🔣", path: "/symbols" },
-  { id: "quiz", label: "Teszt", icon: "📝", path: "/quiz" },
+  { id: "study", label: "Tananyag", icon: "📚", path: "/villany-app/study" },
+  { id: "practice", label: "Gyakorlás", icon: "✏️", path: "/villany-app/practice" },
+  { id: "circuits", label: "Rajzos feladatok", icon: "🔌", path: "/villany-app/circuits" },
+  { id: "symbols", label: "Jelképek", icon: "🔣", path: "/villany-app/symbols" },
+  { id: "quiz", label: "Teszt", icon: "📝", path: "/villany-app/quiz" },
 ];
 
 const activeTab = computed(() => {
   const path = route.path;
-  if (path.startsWith("/study")) return "study";
-  if (path.startsWith("/practice")) return "practice";
-  if (path.startsWith("/circuits")) return "circuits";
-  if (path.startsWith("/symbols")) return "symbols";
-  if (path.startsWith("/quiz")) return "quiz";
+  if (path.startsWith("/villany-app/study")) return "study";
+  if (path.startsWith("/villany-app/practice")) return "practice";
+  if (path.startsWith("/villany-app/circuits")) return "circuits";
+  if (path.startsWith("/villany-app/symbols")) return "symbols";
+  if (path.startsWith("/villany-app/quiz")) return "quiz";
   return "";
 });
 
@@ -68,7 +68,7 @@ const subtitle = computed(() => {
       <div
         class="max-w-[1500px] mx-auto px-4 md:px-5 py-2.5 md:py-3.5 flex items-center justify-between flex-wrap gap-3"
       >
-        <div class="flex items-center gap-2 md:gap-3 cursor-pointer" @click="router.push('/')">
+        <div class="flex items-center gap-2 md:gap-3 cursor-pointer" @click="router.push('/villany-app')">
           <span
             class="text-2xl md:text-3xl bg-amber-500 w-9 h-9 md:w-11 md:h-11 rounded-[10px] flex items-center justify-center shrink-0"
             >⚡</span

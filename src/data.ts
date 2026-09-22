@@ -117,7 +117,7 @@ export const TOPICS: Topic[] = [
     title: "8. Az ellenállás mint alkatrész",
     summary: "Felépítés, névleges érték, tűrés, teljesítmény, színkód, hőfokfüggés, potenciométerek.",
     contentPath: "/src/content/topics/resistor-component.md",
-    musicPath: "/music/ellenallas-dal.mp3",
+    musicPath: import.meta.env.BASE_URL + "music/ellenallas-dal.mp3",
     category: "electrotechnics"
   },
   {

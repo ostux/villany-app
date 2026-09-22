@@ -14,7 +14,7 @@ const circuit = ref(generateCircuit(typeFilter.value))
 // Watch for changes in type filter and update URL
 watch(typeFilter, (newType) => {
   const query = newType === 'all' ? {} : { type: newType }
-  router.push({ path: '/circuits', query })
+  router.push({ path: '/villany-app/circuits', query })
 })
 
 // Watch for external route changes (e.g., browser back/forward)
