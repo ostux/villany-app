@@ -1,19 +1,31 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import StudyMaterial from "./components/StudyMaterial.vue";
-import Practice from "./components/Practice.vue";
-import CircuitProblems from "./components/CircuitProblems.vue";
-import Quiz from "./components/Quiz.vue";
-import SymbolsLibrary from "./components/SymbolsLibrary.vue";
+import { computed } from "vue";
+import { useRouter, useRoute } from "vue-router";
+
+const router = useRouter();
+const route = useRoute();
 
 const tabs = [
-  { id: "study", label: "Tananyag" },
-  { id: "practice", label: "Gyakorlás" },
-  { id: "circuits", label: "Rajzos feladatok" },
-  { id: "symbols", label: "Jelképek" },
-  { id: "quiz", label: "Teszt" },
+  { id: "study", label: "Tananyag", path: "/study" },
+  { id: "practice", label: "Gyakorlás", path: "/practice" },
+  { id: "circuits", label: "Rajzos feladatok", path: "/circuits" },
+  { id: "symbols", label: "Jelképek", path: "/symbols" },
+  { id: "quiz", label: "Teszt", path: "/quiz" },
 ];
-const active = ref("study");
+
+const activeTab = computed(() => {
+  const path = route.path;
+  if (path.startsWith("/study")) return "study";
+  if (path.startsWith("/practice")) return "practice";
+  if (path.startsWith("/circuits")) return "circuits";
+  if (path.startsWith("/symbols")) return "symbols";
+  if (path.startsWith("/quiz")) return "quiz";
+  return "";
+});
+
+const navigateToTab = (path: string) => {
+  router.push(path);
+};
 </script>
 
 <template>
@@ -26,7 +38,7 @@ const active = ref("study");
       <div
         class="max-w-[1500px] mx-auto px-5 py-3.5 flex items-center justify-between flex-wrap gap-3"
       >
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3 cursor-pointer" @click="router.push('/')">
           <span
             class="text-3xl bg-amber-500 w-11 h-11 rounded-[10px] flex items-center justify-center shrink-0"
             >⚡</span
@@ -44,11 +56,11 @@ const active = ref("study");
             :key="tab.id"
             :class="[
               'border-0 px-4 py-2 rounded-lg cursor-pointer text-base font-semibold transition-all duration-150',
-              active === tab.id
+              activeTab === tab.id
                 ? 'bg-amber-500 text-white'
                 : 'bg-transparent text-gray-300 hover:bg-white/10 hover:text-white',
             ]"
-            @click="active = tab.id"
+            @click="navigateToTab(tab.path)"
           >
             {{ tab.label }}
           </button>
@@ -57,11 +69,7 @@ const active = ref("study");
     </header>
 
     <main class="flex-1 max-w-[1500px] mx-auto w-full px-5 py-6 pb-15">
-      <StudyMaterial v-if="active === 'study'" />
-      <Practice v-else-if="active === 'practice'" />
-      <CircuitProblems v-else-if="active === 'circuits'" />
-      <SymbolsLibrary v-else-if="active === 'symbols'" />
-      <Quiz v-else-if="active === 'quiz'" />
+      <router-view />
     </main>
 
     <footer

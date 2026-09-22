@@ -1,10 +1,30 @@
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { ref, reactive, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { TOPOLOGY_TYPES, generateCircuit } from '../circuits'
 import CircuitDiagram from './CircuitDiagram.vue'
 
-const typeFilter = ref('all')
+const route = useRoute()
+const router = useRouter()
+
+// Initialize type filter from query params
+const typeFilter = ref((route.query.type as string) || 'all')
 const circuit = ref(generateCircuit(typeFilter.value))
+
+// Watch for changes in type filter and update URL
+watch(typeFilter, (newType) => {
+  const query = newType === 'all' ? {} : { type: newType }
+  router.push({ path: '/circuits', query })
+})
+
+// Watch for external route changes (e.g., browser back/forward)
+watch(() => route.query.type, (newType) => {
+  const type = (newType as string) || 'all'
+  if (type !== typeFilter.value) {
+    typeFilter.value = type
+    newCircuit()
+  }
+})
 const answers = reactive({})
 const checked = reactive({})
 

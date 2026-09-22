@@ -1,8 +1,24 @@
 <script setup lang="ts">
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive, computed, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { EXERCISES, TOPICS } from '../data'
 
-const topicFilter = ref('all')
+const route = useRoute()
+const router = useRouter()
+
+// Initialize topic filter from query params
+const topicFilter = ref((route.query.topic as string) || 'all')
+
+// Watch for changes in topic filter and update URL
+watch(topicFilter, (newTopic) => {
+  const query = newTopic === 'all' ? {} : { topic: newTopic }
+  router.push({ path: '/practice', query })
+})
+
+// Watch for external route changes (e.g., browser back/forward)
+watch(() => route.query.topic, (newTopic) => {
+  topicFilter.value = (newTopic as string) || 'all'
+})
 const answers = reactive({})   // id -> user input string
 const checked = reactive({})   // id -> { correct: bool, revealed: bool }
 

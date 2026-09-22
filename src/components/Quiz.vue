@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive, computed, onMounted } from 'vue'
 import { QUIZ_QUESTIONS } from '../quizData'
 import { TOPICS } from '../data'
 import { renderMarkdown } from '../utils/markdownRenderer'
@@ -13,6 +13,14 @@ const selectedCount = ref(20)
 const quizQuestions = ref([])
 const currentIndex = ref(0)
 const userAnswers = reactive({}) // id -> selected option index
+
+// Reset quiz state on component mount (ensures fresh start when navigating to /quiz)
+onMounted(() => {
+  state.value = STATE.SETUP
+  quizQuestions.value = []
+  currentIndex.value = 0
+  for (const k in userAnswers) delete userAnswers[k]
+})
 
 function shuffle(arr) {
   const a = [...arr]

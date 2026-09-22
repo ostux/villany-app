@@ -1,10 +1,36 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { TOPICS } from '../data'
 import { loadMarkdownFile, renderMarkdown } from '../utils/markdownRenderer'
 
-const activeId = ref(TOPICS[0].id)
-const activeTopic = computed(() => TOPICS.find(t => t.id === activeId.value))
+const route = useRoute()
+const router = useRouter()
+
+const activeId = computed(() => {
+  const topicId = route.params.topicId as string | undefined
+  if (topicId) {
+    // Validate topic exists
+    const topicExists = TOPICS.some(t => t.id === topicId)
+    if (topicExists) {
+      return topicId
+    }
+    // Invalid topic, redirect to home
+    router.push('/')
+    return null
+  }
+  // No topic selected, redirect to first topic
+  if (route.path === '/study' && TOPICS.length > 0) {
+    router.push(`/study/${TOPICS[0].id}`)
+    return null
+  }
+  return null
+})
+
+const activeTopic = computed(() => {
+  if (!activeId.value) return null
+  return TOPICS.find(t => t.id === activeId.value)
+})
 const renderedContent = ref<string>('')
 const isLoading = ref(false)
 
@@ -34,19 +60,24 @@ watch(activeTopic, (newTopic) => {
 }, { immediate: true })
 
 function select(id: string) {
-  activeId.value = id
+  router.push(`/study/${id}`)
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 function next() {
+  if (!activeId.value) return
   const idx = TOPICS.findIndex(t => t.id === activeId.value)
   if (idx < TOPICS.length - 1) select(TOPICS[idx + 1].id)
 }
 function prev() {
+  if (!activeId.value) return
   const idx = TOPICS.findIndex(t => t.id === activeId.value)
   if (idx > 0) select(TOPICS[idx - 1].id)
 }
-const idx = computed(() => TOPICS.findIndex(t => t.id === activeId.value))
+const idx = computed(() => {
+  if (!activeId.value) return -1
+  return TOPICS.findIndex(t => t.id === activeId.value)
+})
 </script>
 
 <template>
@@ -97,7 +128,7 @@ const idx = computed(() => TOPICS.findIndex(t => t.id === activeId.value))
 
       <div v-if="isLoading" class="text-gray-400 my-4">Betöltés...</div>
       <div v-else v-html="renderedContent"></div>
-      <div class="flex items-center justify-between mt-7 pt-4 border-t border-gray-800">
+      <div v-if="idx >= 0" class="flex items-center justify-between mt-7 pt-4 border-t border-gray-800">
         <button
           class="border border-gray-800 bg-gray-900 px-3.5 py-2 rounded-lg cursor-pointer text-base font-semibold text-gray-100 transition-all hover:bg-gray-800 disabled:opacity-40 disabled:cursor-not-allowed"
           :disabled="idx === 0"
