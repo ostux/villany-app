@@ -4371,6 +4371,2374 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     "explanation": "$R_1 = \\frac{R_a R_b + R_b R_c + R_c R_a}{R_c} = \\frac{99}{6} = 16.5$ Ω.",
     "difficulty": "hard",
     "requiresCalculation": true
+  },
+  {
+    "id": "es0001",
+    "topic": "electrical-safety-basics",
+    "question": "Mekkora az érzékelési küszöb 50 Hz-es váltakozó áram esetén?",
+    "options": [
+      "0,1 mA",
+      "1 mA",
+      "10 mA",
+      "100 mA"
+    ],
+    "correct": 1,
+    "explanation": "50 Hz-es frekvenciájú váltakozó áram esetén általában 1 mA az érzékelési küszöb.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "es0002",
+    "topic": "electrical-safety-basics",
+    "question": "Mi az \"elengedési áramerősség\" 50 Hz-es váltakozó áram esetén?",
+    "options": [
+      "1-5 mA",
+      "10-15 mA",
+      "20-25 mA",
+      "80-100 mA"
+    ],
+    "correct": 1,
+    "explanation": "10-15 mA az elengedési áramerősség, amikor az áramütött már nem tudja a megszorított tárgyat elengedni.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "es0003",
+    "topic": "electrical-safety-basics",
+    "question": "Melyik áramerősség felett már halálveszély áll fenn 50 Hz-es váltakozó áram esetén?",
+    "options": [
+      "20-25 mA",
+      "30-40 mA",
+      "50-60 mA",
+      "80-100 mA felett"
+    ],
+    "correct": 3,
+    "explanation": "80-100 mA felett szívkamraremegés, szívbénulás léphet fel, 0,1-0,3 s után azonnali halál.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "es0004",
+    "topic": "electrical-safety-basics",
+    "question": "Mekkora a limitfeszültség (veszélyesnek minősített érintési feszültség) általános esetben váltakozó áramnál?",
+    "options": [
+      "12 V",
+      "25 V",
+      "50 V",
+      "120 V"
+    ],
+    "correct": 2,
+    "explanation": "Általános esetben váltakozó áram esetén (50 Hz) a limitfeszültség 50 V.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "es0005",
+    "topic": "electrical-safety-basics",
+    "question": "Mekkora a limitfeszültség fokozott veszély esetén (pl. orvostechnika) váltakozó áramnál?",
+    "options": [
+      "12 V",
+      "25 V",
+      "50 V",
+      "120 V"
+    ],
+    "correct": 0,
+    "explanation": "Fokozott veszély esetén (pl. orvostechnika) váltakozó áram esetén a limitfeszültség 12 V.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "es0006",
+    "topic": "electrical-safety-basics",
+    "question": "Mettől számít nagyfeszültségnek egy rendszer AC (váltakozó áram) esetén?",
+    "options": [
+      "500 V",
+      "1000 V",
+      "1500 V",
+      "3000 V"
+    ],
+    "correct": 1,
+    "explanation": "AC esetén 1000 V-tól számít nagyfeszültségnek a biztonságtechnikában.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0001",
+    "topic": "protection-classes",
+    "question": "Melyik védelmi osztályba tartozik a kettős szigetelésű berendezés?",
+    "options": [
+      "0. osztály",
+      "I. osztály",
+      "II. osztály",
+      "III. osztály"
+    ],
+    "correct": 2,
+    "explanation": "A II. védelmi osztályú berendezések kettős szigetelésűek.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0002",
+    "topic": "protection-classes",
+    "question": "Melyik védelmi osztályba tartozik a védőföldeléssel ellátott berendezés?",
+    "options": [
+      "0. osztály",
+      "I. osztály",
+      "II. osztály",
+      "III. osztály"
+    ],
+    "correct": 1,
+    "explanation": "Az I. védelmi osztályú berendezések védőföldeléssel vannak ellátva (nullázás, védőföldelés).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0003",
+    "topic": "protection-classes",
+    "question": "Mi jellemzi a III. védelmi osztályú berendezéseket?",
+    "options": [
+      "Kettős szigetelés",
+      "Védőföldelés",
+      "Törpefeszültségű táplálás",
+      "Nincs külön védelem"
+    ],
+    "correct": 2,
+    "explanation": "A III. védelmi osztályú berendezések törpefeszültségű táplálást használnak (SELV, PELV).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0004",
+    "topic": "protection-classes",
+    "question": "Mekkora a törpefeszültség felső határa általában váltakozó áram esetén?",
+    "options": [
+      "12 V",
+      "25 V",
+      "50 V",
+      "120 V"
+    ],
+    "correct": 2,
+    "explanation": "A törpefeszültség általában 50 V-nál nem nagyobb váltakozó feszültséget jelent.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0005",
+    "topic": "protection-classes",
+    "question": "Melyik NEM aktív érintésvédelmi módszer?",
+    "options": [
+      "Védőföldelés (VF)",
+      "Nullázás (NU)",
+      "Kettős szigetelés (KSZ)",
+      "Áramvédő-kapcsolás (ÁVK)"
+    ],
+    "correct": 2,
+    "explanation": "A kettős szigetelés (KSZ) passzív érintésvédelmi módszer, mert az érintési feszültséget mindig veszélytelen értéken tartja.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pc0006",
+    "topic": "protection-classes",
+    "question": "Mit jelent az alapvédelem (basic protection)?",
+    "options": [
+      "Védelem testzárlat esetén",
+      "Védelem normálüzemben közvetlen érintés ellen",
+      "Védelem túláram ellen",
+      "Védelem villámcsapás ellen"
+    ],
+    "correct": 1,
+    "explanation": "Az alapvédelem (basic protection) a közvetlen érintés elleni védelem, azaz védelem normálüzemben az aktív részek érintése ellen.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tn0001",
+    "topic": "tn-systems",
+    "question": "Mit jelent a TN-C rendszer \"C\" betűje?",
+    "options": [
+      "Csillag (Star)",
+      "Közös (Common)",
+      "Kábel (Cable)",
+      "Kapcsoló (Circuit breaker)"
+    ],
+    "correct": 1,
+    "explanation": "A \"C\" betű \"common\"-t jelent, azaz a védővezető és a nullavezető közös (PEN).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tn0002",
+    "topic": "tn-systems",
+    "question": "Mit jelent a TN-S rendszer \"S\" betűje?",
+    "options": [
+      "Szigetelés (Insulation)",
+      "Biztonság (Safety)",
+      "Külön (Separated)",
+      "Sodrott (Stranded)"
+    ],
+    "correct": 2,
+    "explanation": "Az \"S\" betű \"separated\"-et jelent, azaz a védővezető és a nullavezető külön van választva.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tn0003",
+    "topic": "tn-systems",
+    "question": "Hol kell a PEN vezetőt szétválasztani PE és N vezetőre TN-C-S rendszerben?",
+    "options": [
+      "A transzformátornál",
+      "Az utolsó fogyasztónál",
+      "A felhasználói főelosztóban",
+      "Bárhol a hálózaton"
+    ],
+    "correct": 2,
+    "explanation": "TN-C-S rendszerben a PEN vezetőt a felhasználói főelosztóban vagy az első túláramvédelmi készülék mellett kell szétválasztani.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tn0004",
+    "topic": "tn-systems",
+    "question": "Mekkora legyen a PE vezető keresztmetszete, ha a fázisvezető 10 mm²?",
+    "options": [
+      "4 mm²",
+      "6 mm²",
+      "10 mm²",
+      "16 mm²"
+    ],
+    "correct": 2,
+    "explanation": "16 mm² alatt a PE vezető keresztmetszete azonos a fázisvezetővel, tehát 10 mm².",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tn0005",
+    "topic": "tn-systems",
+    "question": "Mekkora legyen a PE vezető keresztmetszete, ha a fázisvezető 25 mm²?",
+    "options": [
+      "12,5 mm²",
+      "16 mm²",
+      "25 mm²",
+      "35 mm²"
+    ],
+    "correct": 1,
+    "explanation": "16-35 mm² között a PE vezető mindig 16 mm².",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tn0006",
+    "topic": "tn-systems",
+    "question": "Mekkora legyen a PE vezető keresztmetszete, ha a fázisvezető 70 mm²?",
+    "options": [
+      "16 mm²",
+      "25 mm²",
+      "35 mm²",
+      "50 mm²"
+    ],
+    "correct": 2,
+    "explanation": "35 mm² felett a PE vezető = fázisvezető / 2 = 70/2 = 35 mm².",
+    "difficulty": "medium",
+    "requiresCalculation": true
+  },
+  {
+    "id": "tt0001",
+    "topic": "tt-it-systems",
+    "question": "Mit jelent a TT rendszer első \"T\" betűje?",
+    "options": [
+      "A rendszer törpefeszültségű",
+      "A rendszer transzformátoros",
+      "A rendszer egy ponton közvetlenül földelt",
+      "A rendszer teljesen szigetelt"
+    ],
+    "correct": 2,
+    "explanation": "Az első \"T\" (terra) betű azt jelenti, hogy az energiaellátó rendszer egy ponton közvetlenül földelt.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tt0002",
+    "topic": "tt-it-systems",
+    "question": "Mit jelent a TT rendszer második \"T\" betűje?",
+    "options": [
+      "A testek törpefeszültségűek",
+      "A testek közvetlenül földeltek",
+      "A testek transzformátorral védettek",
+      "A testek teljesen szigeteltek"
+    ],
+    "correct": 1,
+    "explanation": "A második \"T\" betű azt jelenti, hogy a villamos berendezés testei közvetlenül földeltek.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tt0003",
+    "topic": "tt-it-systems",
+    "question": "Melyik képlettel számítjuk a zárlati áramot (Iz) TT rendszerben?",
+    "options": [
+      "Iz = U₀ × (Rcs + Ra)",
+      "Iz = U₀ / (Rcs + Ra)",
+      "Iz = U₀ × Rcs / Ra",
+      "Iz = (Rcs + Ra) / U₀"
+    ],
+    "correct": 1,
+    "explanation": "TT rendszerben Iz = U₀ / (Rcs + Ra), ahol U₀ a hálózati feszültség, Rcs a csillagpont földelése, Ra a védőföldelés.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tt0004",
+    "topic": "tt-it-systems",
+    "question": "Hol használják az IT rendszert?",
+    "options": [
+      "Lakóépületekben",
+      "Irodákban",
+      "Bányák föld alatti részeiben és kórházak műtőiben",
+      "Közvilágításban"
+    ],
+    "correct": 2,
+    "explanation": "IT hálózatot csak különleges fogyasztói területeken használnak, pl. bányák föld alatti részeiben, kórházak műtőiben.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tt0005",
+    "topic": "tt-it-systems",
+    "question": "Mit jelent az IT rendszer \"I\" betűje?",
+    "options": [
+      "Ipari (Industrial)",
+      "Szigetelt vagy impedancián keresztül földelt (Insulated)",
+      "Belső (Internal)",
+      "Intelligens (Intelligent)"
+    ],
+    "correct": 1,
+    "explanation": "Az \"I\" betű \"insulated\"-et jelent, azaz a rendszer szigetelt vagy nagy impedancián keresztül földelt.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fa0001",
+    "topic": "first-aid-electrical",
+    "question": "Mi a műszaki mentés első lépése áramütés esetén?",
+    "options": [
+      "Mentő hívása",
+      "Mesterséges lélegeztetés",
+      "Sérült kiszabadítása az áramkörből",
+      "Sérült eszméletre hozása"
+    ],
+    "correct": 2,
+    "explanation": "A műszaki mentés első feladata a sérültnek az áramkörből való kiszabadítása.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fa0002",
+    "topic": "first-aid-electrical",
+    "question": "Mivel lehet kisfeszültség (1000V alatt) esetén a sérültet az áramkörből kiszabadítani?",
+    "options": [
+      "Csak fém eszközzel",
+      "Csak szigetelt mentőrúddal",
+      "Száraz ruhával, pokróccal, faruddal",
+      "Semmiképp nem, csak szakember végezheti"
+    ],
+    "correct": 2,
+    "explanation": "Kisfeszültség esetén száraz ruhával, pokróccal, faruddal vagy más száraz, szigetelő eszközzel lehet a sérültet kiszabadítani.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fa0003",
+    "topic": "first-aid-electrical",
+    "question": "Ki végezheti a kiszabadítást nagyfeszültség (1000V felett) esetén?",
+    "options": [
+      "Bárki, aki tud elsősegélyt nyújtani",
+      "Csak villamos szakember szigetelt mentőrúddal",
+      "Bárki, de védőkesztyűben",
+      "Senki, meg kell várni a mentőket"
+    ],
+    "correct": 1,
+    "explanation": "Nagyfeszültség esetén csak villamos szakember végezheti a kiszabadítást szigetelt mentőrúddal.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fa0004",
+    "topic": "first-aid-electrical",
+    "question": "Mit kell tenni, ha a sérült eszméletlen, de légzése és vérkeringése van?",
+    "options": [
+      "Eszméletre kell hozni mindenképp",
+      "Hagyjuk fekve és azonnal mentőt kell hívni",
+      "Mesterséges lélegeztetést kell alkalmazni",
+      "Szívmasszázst kell végezni"
+    ],
+    "correct": 1,
+    "explanation": "Ha a sérült eszméletlen, de légzése és vérkeringése van, hagyjuk fekve és azonnal mentőt kell hívni. Eszméletre hozása nem feltétlenül szükséges.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gp0001",
+    "topic": "grounding-protection",
+    "question": "Mit jelent a közvetlen érintés?",
+    "options": [
+      "A testzárlat miatti feszültség alá kerülés",
+      "Az üzemszerűen feszültség alatt álló (aktív) rész érintése",
+      "A védővezető megérintése",
+      "Az egyenpotenciálra hozott testek érintése"
+    ],
+    "correct": 1,
+    "explanation": "A közvetlen érintés azt jelenti, hogy az ember üzemszerűen feszültség alatt álló (aktív) részt érint.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gp0002",
+    "topic": "grounding-protection",
+    "question": "Mit jelent a közvetett érintés?",
+    "options": [
+      "Az aktív részek érintése",
+      "Üzemszerűen feszültségmentes, de hiba miatt feszültség alá került test érintése",
+      "A védővezető érintése",
+      "A nullavezető érintése"
+    ],
+    "correct": 1,
+    "explanation": "A közvetett érintés esetén a sérült olyan testet érint, amely üzemszerűen feszültségmentes, de hiba (testzárlat) miatt feszültség alá került.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gp0003",
+    "topic": "grounding-protection",
+    "question": "Mi az AVK rövidítés jelentése?",
+    "options": [
+      "Automatikus Villamos Kapcsoló",
+      "Áram-Védő-Kapcsoló",
+      "Alsó Védelem Kioldó",
+      "Aktív Védelem Készülék"
+    ],
+    "correct": 1,
+    "explanation": "Az AVK az Áram-Védő-Kapcsoló rövidítése.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gp0004",
+    "topic": "grounding-protection",
+    "question": "Az AVK túláramvédelmet lát-e el?",
+    "options": [
+      "Igen, ez a fő feladata",
+      "Nem, ez nem külön érintésvédelmi mód, túláramvédelmet nem lát el",
+      "Csak 30 mA fölött",
+      "Igen, de csak rövidzárlat esetén"
+    ],
+    "correct": 1,
+    "explanation": "Az AVK nem külön érintésvédelmi mód, túláramvédelmet nem lát el!",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gp0005",
+    "topic": "grounding-protection",
+    "question": "Mi az egyenpotenciálra hozás (EPH) célja?",
+    "options": [
+      "A feszültség csökkentése",
+      "Az áram növelése",
+      "Különböző fém testek között ne alakuljon ki veszélyes potenciálkülönbség",
+      "A földelés ellenállásának csökkentése"
+    ],
+    "correct": 2,
+    "explanation": "Az egyenpotenciálra hozás célja, hogy a különböző fém testek között ne alakuljon ki veszélyes potenciálkülönbség.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tn0007",
+    "topic": "tn-systems",
+    "question": "Mekkora a B jelleggörbéjű kismegszakító kioldási szorzója (α)?",
+    "options": [
+      "α = 3",
+      "α = 5",
+      "α = 10",
+      "α = 20"
+    ],
+    "correct": 1,
+    "explanation": "A B jelleggörbéjű MCB kioldási szorzója α = 5, háztartási és irodai fogyasztókhoz használják.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tn0008",
+    "topic": "tn-systems",
+    "question": "Melyik MCB jelleggörbe alkalmas indukciós motorok védelmére?",
+    "options": [
+      "A típus",
+      "B típus (α=5)",
+      "C típus (α=10)",
+      "D típus (α=20)"
+    ],
+    "correct": 3,
+    "explanation": "A D jelleggörbéjű (α=20) kismegszakító alkalmas indukciós motorok és nagy bekapcsolási áramú fogyasztók védelmére.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tn0009",
+    "topic": "tn-systems",
+    "question": "Mi a hurokimpedancia (Zs) számításának képlete TN rendszerben?",
+    "options": [
+      "Zs = U₀ × α × Iₙ",
+      "Zs < U₀ / (α × Iₙ)",
+      "Zs = α / (U₀ × Iₙ)",
+      "Zs > U₀ / Iₙ"
+    ],
+    "correct": 1,
+    "explanation": "A hurokimpedancia feltétele: Zs < U₀/(α×Iₙ), ahol U₀ a fázisfeszültség, α a kioldási szorzó, Iₙ az MCB névleges árama.",
+    "difficulty": "medium",
+    "requiresCalculation": true
+  },
+  {
+    "id": "tn0010",
+    "topic": "tn-systems",
+    "question": "Mekkora a TN rendszerben az előírt maximális kikapcsolási idő 230V esetén?",
+    "options": [
+      "0,1 s",
+      "0,2 s",
+      "0,4 s",
+      "0,8 s"
+    ],
+    "correct": 2,
+    "explanation": "TN rendszerben 230V feszültségnél a maximális kikapcsolási idő 0,4 s.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tn0011",
+    "topic": "tn-systems",
+    "question": "Mi a C jelleggörbéjű kismegszakító kioldási szorzója?",
+    "options": [
+      "α = 5",
+      "α = 7",
+      "α = 10",
+      "α = 15"
+    ],
+    "correct": 2,
+    "explanation": "A C jelleggörbéjű MCB kioldási szorzója α = 10, általános célú vegyes fogyasztókhoz használják.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tn0012",
+    "topic": "tn-systems",
+    "question": "Miért előnyösebb AVK használata az MCB-vel szemben érintésvédelemben?",
+    "options": [
+      "Nagyobb zárlati áramra érzékeny",
+      "Sokkal kisebb hibaáramra (30mA) is kiold",
+      "Túláramvédelmet is biztosít",
+      "Olcsóbb megoldás"
+    ],
+    "correct": 1,
+    "explanation": "Az AVK előnye, hogy már 30mA hibaáramra is kiold, míg az MCB csak nagyobb zárlati áramnál (50-100A+) kapcsol.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gs0001",
+    "topic": "grounding-systems",
+    "question": "Mi a főföldelő sín (MET) feladata?",
+    "options": [
+      "A feszültség stabilizálása",
+      "Az áram mérése",
+      "A védővezetők, földelővezeték és potenciálkiegyenlítő vezetékek központi csatlakozási pontja",
+      "A túláramvédelem kioldása"
+    ],
+    "correct": 2,
+    "explanation": "A főföldelő sín (MET - Main Earthing Terminal) a védővezetők, földelővezeték és potenciálkiegyenlítő vezetékek központi csatlakozási pontja.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gs0002",
+    "topic": "grounding-systems",
+    "question": "Melyik a leggyakoribb földelő elektróda típus?",
+    "options": [
+      "Lemez földelő",
+      "Függőleges földelő rúd",
+      "Vízszintes szalag földelő",
+      "Alapozási földelő"
+    ],
+    "correct": 1,
+    "explanation": "A leggyakoribb földelési módszer a függőleges földelő rúd (általában 2 m hosszú, 14-16 mm átmérőjű).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gs0003",
+    "topic": "grounding-systems",
+    "question": "Melyik talaj típusnak a legkisebb a fajlagos ellenállása?",
+    "options": [
+      "Szikla, kőzet (2000-10000 Ωm)",
+      "Homok (200-2000 Ωm)",
+      "Agyag (40-100 Ωm)",
+      "Mocsaras, lápos talaj (10-40 Ωm)"
+    ],
+    "correct": 3,
+    "explanation": "A mocsaras, lápos talajnak a legkisebb a fajlagos ellenállása (10-40 Ωm), ezért a legjobb földelési hatékonyságot nyújtja.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gs0004",
+    "topic": "grounding-systems",
+    "question": "Mi az alapozási földelő előnye?",
+    "options": [
+      "Olcsó és gyorsan telepíthető",
+      "Nagy érintkezési felület, tartós és megbízható",
+      "Kis helyen is elhelyezhető",
+      "Bármikor cserélhető"
+    ],
+    "correct": 1,
+    "explanation": "Az alapozási földelő előnye a nagy érintkezési felület, tartósság és megbízhatóság. Új építésű épületeknél ez a leghatékonyabb megoldás.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gs0005",
+    "topic": "grounding-systems",
+    "question": "Mekkora a minimális keresztmetszet réz földelővezetéknél, ha mechanikai sérülés ellen védett?",
+    "options": [
+      "2,5 mm²",
+      "4 mm²",
+      "6 mm²",
+      "16 mm²"
+    ],
+    "correct": 2,
+    "explanation": "Réz földelővezeték minimális keresztmetszete mechanikai sérülés ellen védett esetben 6 mm².",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gs0006",
+    "topic": "grounding-systems",
+    "question": "Miért fontos a kiegészítő potenciálkiegyenlítés a fürdőszobában?",
+    "options": [
+      "A vízfogyasztás csökkentése miatt",
+      "Megnövekedett áramütés veszély miatt vizes környezetben",
+      "A fűtés hatékonyságának növelése miatt",
+      "A világítás stabilitása miatt"
+    ],
+    "correct": 1,
+    "explanation": "A kiegészítő potenciálkiegyenlítés különösen fontos vizes helyiségekben (fürdőszoba), ahol megnövekedett az áramütés veszélye.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gs0007",
+    "topic": "grounding-systems",
+    "question": "Mit jelent a függőleges földelő rúd ellenállásának számításában a 'ρ' (ró)?",
+    "options": [
+      "A rúd átmérője",
+      "A rúd hossza",
+      "A talaj fajlagos ellenállása",
+      "A földelési ellenállás"
+    ],
+    "correct": 2,
+    "explanation": "A ρ (ró) a talaj fajlagos ellenállását jelenti, ami Ωm-ben van megadva.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0001",
+    "topic": "avk-rcd",
+    "question": "Mi az AVK (áram-védőkapcsoló) alapelve?",
+    "options": [
+      "A feszültség változását érzékeli",
+      "A bemenő és kimenő áram különbségét (hibaáramot) érzékeli",
+      "A túláramot érzékeli",
+      "A hőmérsékletet érzékeli"
+    ],
+    "correct": 1,
+    "explanation": "Az AVK a bemenő (fázis) és kimenő (nulla) áram különbségét érzékeli. Ha van különbség (hibaáram), akkor kiold.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "avk0002",
+    "topic": "avk-rcd",
+    "question": "Mekkora hibaáramra kioldó AVK kötelező személyvédelem céljából?",
+    "options": [
+      "10 mA",
+      "30 mA",
+      "100 mA",
+      "300 mA"
+    ],
+    "correct": 1,
+    "explanation": "Személyvédelem céljából maximum 30 mA hibaáramra kioldó AVK szükséges a szabvány szerint.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "avk0003",
+    "topic": "avk-rcd",
+    "question": "Milyen típusú AVK szükséges modern háztartási készülékeknél (mosógép, mosogatógép)?",
+    "options": [
+      "AC típus",
+      "A típus",
+      "B típus",
+      "C típus"
+    ],
+    "correct": 1,
+    "explanation": "Modern háztartási készülékeknél A típusú AVK szükséges, mert ezek pulzáló egyenáramot is termelhetnek.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0004",
+    "topic": "avk-rcd",
+    "question": "Hol NEM alkalmazható AVK?",
+    "options": [
+      "TN-S rendszerben",
+      "TN-C rendszerben (PEN vezetőn)",
+      "TT rendszerben",
+      "TN-C-S rendszer PE szakaszán"
+    ],
+    "correct": 1,
+    "explanation": "AVK NEM használható PEN vezetőn (TN-C rendszerben). Csak akkor alkalmazható, ha a védővezető (PE) és nullavezető (N) szét van választva.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0005",
+    "topic": "avk-rcd",
+    "question": "Mit NEM lát el az AVK?",
+    "options": [
+      "Személyvédelmet",
+      "Hibaáram érzékelést",
+      "Túláramvédelmet (rövidzárlat, túlterhelés)",
+      "Földzárlat érzékelést"
+    ],
+    "correct": 2,
+    "explanation": "Az AVK NEM nyújt túláramvédelmet! Nem véd rövidzárlat és túlterhelés ellen. Mindig MCB-vel vagy biztosítékkal együtt használandó.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0006",
+    "topic": "avk-rcd",
+    "question": "Milyen gyakran kell az AVK TEST gombját megnyomni?",
+    "options": [
+      "Naponta",
+      "Hetente",
+      "Havonta",
+      "Évente"
+    ],
+    "correct": 2,
+    "explanation": "Az AVK beépített TEST gombját havonta egyszer meg kell nyomni. Ha kiold, akkor működik. Ha nem old ki, cserélni kell!",
+    "difficulty": "easy"
+  },
+  {
+    "id": "avk0007",
+    "topic": "avk-rcd",
+    "question": "Mi történik normál üzem esetén az AVK összegező áramváltójában?",
+    "options": [
+      "Nagy mágneses tér keletkezik",
+      "A fázis és nulla áramok mágneses tere kölcsönösen kioltja egymást",
+      "Indukált feszültség keletkezik",
+      "A kioldó tekercs működik"
+    ],
+    "correct": 1,
+    "explanation": "Normál üzem esetén I_fázis = I_nulla, így a mágneses terek kölcsönösen kioltják egymást, nincs indukált feszültség, az AVK nem old ki.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0008",
+    "topic": "avk-rcd",
+    "question": "Mi a különbség az AVK és az MCB között érintésvédelemben?",
+    "options": [
+      "Az AVK kisebb hibaáramra érzékeny (30mA vs 50-100A)",
+      "Az MCB gyorsabban kiold",
+      "Az AVK túláramvédelmet is biztosít",
+      "Nincs különbség"
+    ],
+    "correct": 0,
+    "explanation": "Az AVK sokkal kisebb hibaáramra (30mA) érzékeny, míg az MCB csak nagyobb zárlati áramnál (50-100A+) kapcsol ki.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0009",
+    "topic": "avk-rcd",
+    "question": "Hol kötelező AVK alkalmazása?",
+    "options": [
+      "Minden konnektor esetén",
+      "20A-nél kisebb névleges áramú csatlakozó aljzatok, fürdőszobák, kültéri csatlakozók",
+      "Csak ipari létesítményekben",
+      "Csak nagyfeszültségen"
+    ],
+    "correct": 1,
+    "explanation": "AVK kötelező 20A-nél kisebb konektoroknál, fürdőszobákban, kültéri csatlakozóknál és vizes helyiségekben.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0010",
+    "topic": "avk-rcd",
+    "question": "Mi az RCBO készülék?",
+    "options": [
+      "Csak AVK funkció",
+      "Csak MCB funkció",
+      "AVK és MCB kombinált készülék egy egységben",
+      "Földelő elektróda"
+    ],
+    "correct": 2,
+    "explanation": "Az RCBO egy kombinált készülék, amely egyben tartalmazza az AVK és MCB funkciókat.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0011",
+    "topic": "avk-rcd",
+    "question": "Mit jelent az RCBO rövidítés?",
+    "options": [
+      "Residual Current Basic Operation",
+      "Residual Current Breaker with Overcurrent protection",
+      "Resistive Circuit Breaker Overcurrent",
+      "Remote Control Breaker Operation"
+    ],
+    "correct": 1,
+    "explanation": "Az RCBO jelentése: Residual Current Breaker with Overcurrent protection - Hibaáram által működtetett áramköri megszakító beépített túláram védelemmel.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0012",
+    "topic": "avk-rcd",
+    "question": "Mit NEM lát el az RCBO?",
+    "options": [
+      "Rövidzárlat védelmet",
+      "Túláram védelmet",
+      "Hibaáram védelmet",
+      "Mindent ellát, teljes védelem (2 in 1)"
+    ],
+    "correct": 3,
+    "explanation": "Az RCBO mindent ellát: rövidzárlat, túláram és hibaáram védelmet is. Ez egy kombinált készülék (MCB + AVK).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "avk0013",
+    "topic": "avk-rcd",
+    "question": "Milyen típusú RCBO javasolt lakásokban?",
+    "options": [
+      "AC típus",
+      "A típus",
+      "B típus",
+      "S típus"
+    ],
+    "correct": 1,
+    "explanation": "Lakásokban A típusú RCBO javasolt, mert a modern háztartási eszközök (mosógép, LED-ek) pulzáló egyenáramot is termelnek.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gp0006",
+    "topic": "grounding-protection",
+    "question": "Mi az EPH (egyenpotenciálra hozás) új neve?",
+    "options": [
+      "Védővezeték-rendszer",
+      "Védőösszekötő-vezetékrendszer",
+      "Potenciálkiegyenlítő-hálózat",
+      "Földelő-vezetékrendszer"
+    ],
+    "correct": 1,
+    "explanation": "Az EPH új neve: védőösszekötő-vezetékrendszer.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gp0007",
+    "topic": "grounding-protection",
+    "question": "Miért fontos az EPH rendszer?",
+    "options": [
+      "Az áram növelése miatt",
+      "A feszültség stabilizálása miatt",
+      "Hogy ne alakuljon ki veszélyes potenciálkülönbség a különböző fém testek között",
+      "A földelési ellenállás csökkentése miatt"
+    ],
+    "correct": 2,
+    "explanation": "Az EPH célja, hogy a különböző fém testek (csövek, készülékek, szerkezetek) között ne alakuljon ki veszélyes potenciálkülönbség.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gp0008",
+    "topic": "grounding-protection",
+    "question": "Mekkora a réz EPH-gerincvezető minimális keresztmetszete?",
+    "options": [
+      "2,5 mm²",
+      "4 mm²",
+      "6 mm²",
+      "16 mm²"
+    ],
+    "correct": 2,
+    "explanation": "A réz EPH-gerincvezető minimális keresztmetszete 6 mm².",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gp0009",
+    "topic": "grounding-protection",
+    "question": "Mit kell bevonni az EPH rendszerbe?",
+    "options": [
+      "Csak a villamos készülékek testeit",
+      "Csak a csővezetékeket",
+      "Közüzemi csővezetékek, szerkezeti fémrészek, fürdőkádak, 500L+ fémtartályok, stb.",
+      "Csak a földelő elektródákat"
+    ],
+    "correct": 2,
+    "explanation": "Az EPH rendszerbe be kell vonni: közüzemi csővezetékeket, szerkezeti fémrészeket, központi fűtést, zuhanytálcákat, fürdőkádakat, 500 litert meghaladó fémtartályokat, stb.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gp0010",
+    "topic": "grounding-protection",
+    "question": "Milyen áramok folyhatnak az EPH vezetőn?",
+    "options": [
+      "Üzemi áramok",
+      "Zárlati áramok",
+      "Csak kiegyenlítő áramok",
+      "Terhelő áramok"
+    ],
+    "correct": 2,
+    "explanation": "Az EPH vezetőn csak kiegyenlítő áramok folyhatnak, nem üzemi áramok.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pw0001",
+    "topic": "protection-without-pe",
+    "question": "Mi jellemzi a kettős szigetelésű készülékeket?",
+    "options": [
+      "Van védőérintkezőjük",
+      "Nincs védőérintkezőjük, II. védelmi osztály",
+      "Kötelező földelni őket",
+      "Csak 12V-on működhetnek"
+    ],
+    "correct": 1,
+    "explanation": "A kettős szigetelésű készülékeknek nincs védőérintkezőjük (2 pólus), és a II. védelmi osztályba tartoznak.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pw0002",
+    "topic": "protection-without-pe",
+    "question": "Milyen jelölése van a kettős szigetelésű készülékeknek?",
+    "options": [
+      "⏚ (földelés jel)",
+      "⬜ inside ⬜ (négyzet a négyzetben)",
+      "◇III (három vonal gyémántban)",
+      "S betű"
+    ],
+    "correct": 1,
+    "explanation": "A kettős szigetelésű készülékek jelölése: ⬜ inside ⬜ (négyzet a négyzetben).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pw0003",
+    "topic": "protection-without-pe",
+    "question": "Mi az elválasztótranszformátor áttétele?",
+    "options": [
+      "1:2",
+      "1:1",
+      "2:1",
+      "Változó"
+    ],
+    "correct": 1,
+    "explanation": "Az elválasztótranszformátor áttétele 1:1, vagyis a primer és szekunder feszültség azonos.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pw0004",
+    "topic": "protection-without-pe",
+    "question": "Szabad-e az elválasztótranszformátor szekunder oldalát földelni?",
+    "options": [
+      "Igen, kötelező",
+      "Igen, ajánlott",
+      "Nem, tilos",
+      "Csak 230V felett"
+    ],
+    "correct": 2,
+    "explanation": "Az elválasztótranszformátor szekunder oldalát földelni TILOS! A galvanikus elválasztás elvesztene védőhatást.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pw0005",
+    "topic": "protection-without-pe",
+    "question": "Hány fogyasztó működtethető egy elválasztótranszformátorról?",
+    "options": [
+      "Korlátlan számú",
+      "Maximum 3",
+      "Maximum 2",
+      "Csak 1 fogyasztó"
+    ],
+    "correct": 3,
+    "explanation": "Egy elválasztótranszformátorról csak EGY fogyasztó működtethető a védelem biztosítása érdekében.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pw0006",
+    "topic": "protection-without-pe",
+    "question": "Példák kettős szigetelésű készülékekre:",
+    "options": [
+      "Fúrógép, turmixgép, műanyag házas eszközök",
+      "Csak ipari gépek",
+      "Csak fémházas készülékek",
+      "Csak 400V-os motorok"
+    ],
+    "correct": 0,
+    "explanation": "Kettős szigetelésű készülékek például: kézi szerszámok (fúrógép), konyhai gépek (turmixgép), műanyag házas eszközök.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pw0007",
+    "topic": "protection-without-pe",
+    "question": "Mekkora a törpefeszültség maximális értéke váltakozó áram esetén?",
+    "options": [
+      "12 V",
+      "24 V",
+      "50 V",
+      "120 V"
+    ],
+    "correct": 2,
+    "explanation": "A törpefeszültség maximális értéke váltakozó áram esetén 50 V (egyenáramnál 120 V).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pw0008",
+    "topic": "protection-without-pe",
+    "question": "Mik a passzív érintésvédelmi módok?",
+    "options": [
+      "Nullázás, védőföldelés, AVK",
+      "Kettős szigetelés, védőelválasztás, törpefeszültség",
+      "Csak az AVK",
+      "Csak a földelés"
+    ],
+    "correct": 1,
+    "explanation": "A passzív érintésvédelmi módok: kettős szigetelés (KSZ), védőelválasztás (VE), törpefeszültség (TF). Ezek az érintési feszültséget mindig veszélytelen értéken tartják.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "esb0001",
+    "topic": "electrical-safety-basics",
+    "question": "Mekkora az érzékelési küszöb 50 Hz-es váltakozó áram esetén?",
+    "options": [
+      "0.1 mA",
+      "1 mA",
+      "10 mA",
+      "5 mA"
+    ],
+    "correct": 1,
+    "explanation": "50 Hz-es frekvenciájú váltakozó áram esetén általában $1$ mA az érzékelési küszöb.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "esb0002",
+    "topic": "electrical-safety-basics",
+    "question": "Mekkora az elengedési áramerősség felső határa?",
+    "options": [
+      "5-8 mA",
+      "10-15 mA",
+      "20-25 mA",
+      "30-35 mA"
+    ],
+    "correct": 1,
+    "explanation": "$10-15$ mA az elengedési áramerősség, ezen áramhatár fölött az áramütött nem tudja a megszorított tárgyat elengedni (izomgörcs).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "esb0003",
+    "topic": "electrical-safety-basics",
+    "question": "Hány mA felett jelentkezhetnek légzési és szívműködési zavarok?",
+    "options": [
+      "10 mA",
+      "15 mA",
+      "20 mA",
+      "30 mA"
+    ],
+    "correct": 2,
+    "explanation": "$20$ mA felett már légzési és szívműködési zavarok jelentkezhetnek.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "esb0004",
+    "topic": "electrical-safety-basics",
+    "question": "AC esetén hány V felett beszélünk nagyfeszültségről?",
+    "options": [
+      "500 V",
+      "750 V",
+      "1000 V",
+      "1500 V"
+    ],
+    "correct": 2,
+    "explanation": "AC esetén $1000$ V felett beszélünk nagyfeszültségről.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "esb0005",
+    "topic": "electrical-safety-basics",
+    "question": "DC esetén hány V felett beszélünk nagyfeszültségről?",
+    "options": [
+      "1000 V",
+      "1200 V",
+      "1500 V",
+      "2000 V"
+    ],
+    "correct": 2,
+    "explanation": "DC esetén $1500$ V felett beszélünk nagyfeszültségről.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "esb0006",
+    "topic": "electrical-safety-basics",
+    "question": "Mi a közvetlen érintés?",
+    "options": [
+      "Feszültségmentes test megérintése",
+      "Üzemszerűen feszültség alatt álló (aktív) rész megérintése",
+      "Csak a testzárlatos készülék érintése",
+      "Földelés nélküli készülék érintése"
+    ],
+    "correct": 1,
+    "explanation": "A közvetlen érintés azt jelenti, hogy üzemszerűen feszültség alatt álló (aktív) részt érintünk meg. Ezt alapvédelemmel (basic protection) kell megakadályozni.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "esb0007",
+    "topic": "electrical-safety-basics",
+    "question": "Mi a közvetett érintés?",
+    "options": [
+      "Aktív rész érintése",
+      "Üzemszerűen feszültségmentes, de hiba miatt feszültség alá került test érintése",
+      "Földelt rész érintése",
+      "Szigetelt rész érintése"
+    ],
+    "correct": 1,
+    "explanation": "A közvetett érintés azt jelenti, hogy üzemszerűen feszültségmentes, de hiba (testzárlat) miatt feszültség alá került testet érintünk meg. Ezt hibavédelemmel (fault protection) kell kivédeni.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "esb0008",
+    "topic": "electrical-safety-basics",
+    "question": "Melyik villamos hatás okozza az embóliát?",
+    "options": [
+      "Hőhatás",
+      "Vegyi hatás",
+      "Sokkhatás",
+      "Mágneses hatás"
+    ],
+    "correct": 1,
+    "explanation": "A vegyi hatás az emberi szervezetben gázképződést okoz, ami embóliához vezethet.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pc0001",
+    "topic": "protection-classes",
+    "question": "Hány védelmi osztály létezik?",
+    "options": [
+      "3 (I, II, III)",
+      "4 (0, I, II, III)",
+      "5 (0, I, II, III, IV)",
+      "2 (I, II)"
+    ],
+    "correct": 1,
+    "explanation": "Négy védelmi osztály létezik: $0$, I, II, III jelölésűek.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0002",
+    "topic": "protection-classes",
+    "question": "Melyik védelmi osztálynál nincs külön védelem, csak az üzemi szigetelésen alapul?",
+    "options": [
+      "0. osztály",
+      "I. osztály",
+      "II. osztály",
+      "III. osztály"
+    ],
+    "correct": 0,
+    "explanation": "$0.$ védelmi osztályú gyártmány esetén nincs külön védelem, a védelem az üzemi szigetelésen alapul (elkerítés, burkolás, védőelválasztás).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0003",
+    "topic": "protection-classes",
+    "question": "Melyik védelmi osztálynál van nullázás vagy védőföldelés?",
+    "options": [
+      "0. osztály",
+      "I. osztály",
+      "II. osztály",
+      "III. osztály"
+    ],
+    "correct": 1,
+    "explanation": "I. védelmi osztályú gyártmánynál az üzemi szigetelés mellett járulékos védelem van (nullázás, védőföldelés). Védelem a táplálás önműködő lekapcsolásával.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0004",
+    "topic": "protection-classes",
+    "question": "Melyik védelmi osztálynál van kettős szigetelés?",
+    "options": [
+      "0. osztály",
+      "I. osztály",
+      "II. osztály",
+      "III. osztály"
+    ],
+    "correct": 2,
+    "explanation": "II. védelmi osztályú gyártmánynál az üzemi szigetelés mellett megerősített szigetelés van, vagyis kettős szigetelésű.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0005",
+    "topic": "protection-classes",
+    "question": "Melyik védelmi osztály használ törpefeszültséget?",
+    "options": [
+      "0. osztály",
+      "I. osztály",
+      "II. osztály",
+      "III. osztály"
+    ],
+    "correct": 3,
+    "explanation": "III. védelmi osztályú gyártmány törpefeszültségű táplálást jelent.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0006",
+    "topic": "protection-classes",
+    "question": "Mekkora a törpefeszültség felső határa AC esetén?",
+    "options": [
+      "25 V",
+      "50 V",
+      "120 V",
+      "230 V"
+    ],
+    "correct": 1,
+    "explanation": "A törpefeszültség általában $50$ V-nál nem nagyobb váltakozó feszültséget jelent.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0007",
+    "topic": "protection-classes",
+    "question": "Mekkora a törpefeszültség felső határa DC esetén?",
+    "options": [
+      "50 V",
+      "80 V",
+      "120 V",
+      "150 V"
+    ],
+    "correct": 2,
+    "explanation": "A törpefeszültség általában $120$ V-nál nem nagyobb egyenfeszültséget jelent.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pc0008",
+    "topic": "protection-classes",
+    "question": "Mekkora a védővezető keresztmetszete 16 mm² alatt?",
+    "options": [
+      "Mindig 16 mm²",
+      "A fázisvezető keresztmetszete",
+      "A fázisvezető fele",
+      "Mindig 6 mm²"
+    ],
+    "correct": 1,
+    "explanation": "A védővezető keresztmetszete $16$ mm²-ig azonos a fázisvezetővel.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fae0001",
+    "topic": "first-aid-electrical",
+    "question": "Mi a műszaki mentés első lépése?",
+    "options": [
+      "Mentő hívása",
+      "A sérült kiszabadítása az áramkörből",
+      "Újraélesztés megkezdése",
+      "Eszméletlenség vizsgálata"
+    ],
+    "correct": 1,
+    "explanation": "A műszaki mentés első lépése a sérültnek az áramkörből való kiszabadítása. Kisfeszültségen száraz ruhával, pokróccal, farúddal stb.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fae0002",
+    "topic": "first-aid-electrical",
+    "question": "Kisfeszültség (1000V alatt) esetén mivel szabadítjuk ki a sérültet?",
+    "options": [
+      "Puszta kézzel",
+      "Szigetelt mentőrúddal",
+      "Száraz ruhával, farúddal, lapátnyéllel",
+      "Vizes törölközővel"
+    ],
+    "correct": 2,
+    "explanation": "Kisfeszültség (azaz $1000$ V alatt) esetén a sérültet az áramkörből száraz ruhával, pokróccal, farúddal, lapátnyéllel stb. rántjuk ki.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fae0003",
+    "topic": "first-aid-electrical",
+    "question": "1000V feletti feszültség esetén ki végezheti a kiszabadítást?",
+    "options": [
+      "Bárki",
+      "Csak villamos szakember szigetelt mentőrúddal",
+      "Csak orvos",
+      "Csak tűzoltó"
+    ],
+    "correct": 1,
+    "explanation": "$1000$ V-nál nagyobb feszültség esetén csak villamos szakember végezheti a kiszabadítást szigetelt mentőrúddal.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fae0004",
+    "topic": "first-aid-electrical",
+    "question": "Mit tegyünk, ha a sérült eszméleténél van?",
+    "options": [
+      "Azonnal mentőt hívni",
+      "Állandó megfigyelés alatt tartani",
+      "Azonnal kórházba szállítani",
+      "Eszméletre hozni"
+    ],
+    "correct": 1,
+    "explanation": "Ha a sérült eszméleténél van, állandó megfigyelés alatt kell tartani.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fae0005",
+    "topic": "first-aid-electrical",
+    "question": "Mit tegyünk, ha a sérült eszméletlen, de légzése és vérkeringése van?",
+    "options": [
+      "Azonnal eszméletre hozni",
+      "Hagyni fekve, mentőt hívni",
+      "Hideg vízzel leönteni",
+      "Felültetni"
+    ],
+    "correct": 1,
+    "explanation": "Ha a sérült eszméletlen, de légzése és vérkeringése van, hagyjuk fekve, eszméletre hozása nem feltétlenül szükséges. Azonnal mentőt kell hívni.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fae0006",
+    "topic": "first-aid-electrical",
+    "question": "Mit tegyünk, ha nincs légzés, de vérkeringés van?",
+    "options": [
+      "Csak megfigyelni",
+      "Mesterséges lélegeztetés",
+      "Szívmasszázs",
+      "Mindkettő: lélegeztetés és szívmasszázs"
+    ],
+    "correct": 1,
+    "explanation": "Ha nincs légzése, de vérkeringése van, akkor mesterséges lélegeztetéssel kell az életét a mentő megérkezéséig fenntartani.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tns0001",
+    "topic": "tn-systems",
+    "question": "Mit jelent a TN jelölésben az első T betű?",
+    "options": [
+      "Az energiaellátó rendszer egy ponton közvetlenül földelt",
+      "A berendezés testei földeltek",
+      "Transzformátor",
+      "Tápláló hálózat"
+    ],
+    "correct": 0,
+    "explanation": "Az első T betű azt jelenti, hogy az energiaellátó rendszer (terra) egy ponton közvetlenül földelt.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tns0002",
+    "topic": "tn-systems",
+    "question": "Mit jelent a TN jelölésben az N betű?",
+    "options": [
+      "Nagyfeszültség",
+      "A berendezés testei közvetlenül csatlakoznak az energiaellátó rendszer földelt pontjához (nullavezetőhöz)",
+      "Nincs védelem",
+      "Normál üzem"
+    ],
+    "correct": 1,
+    "explanation": "Az N betű (neutral) azt jelenti, hogy a villamos berendezés testei közvetlenül csatlakoznak az energiaellátó rendszer földelt pontjához (nullavezetőhöz).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tns0003",
+    "topic": "tn-systems",
+    "question": "Mit jelent a TN-C jelölésben a C betű?",
+    "options": [
+      "Csillag kapcsolás",
+      "Közös (common) - a védővezető és a nullavezető mindenütt közös",
+      "Cserélhető",
+      "Csatlakozó"
+    ],
+    "correct": 1,
+    "explanation": "A C betű (common) jelzi, hogy a védővezető és a nullavezető mindenütt közös (PEN).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tns0004",
+    "topic": "tn-systems",
+    "question": "Mit jelent a TN-S jelölésben az S betű?",
+    "options": [
+      "Soros kapcsolás",
+      "Különálló (separated) - a védővezető és a nullavezető mindenütt külön",
+      "Speciális",
+      "Szabványos"
+    ],
+    "correct": 1,
+    "explanation": "Az S betű (separated) azt jelenti, hogy a védővezető (PE) és a nullavezető (N) mindenütt elkülönített.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "tns0005",
+    "topic": "tn-systems",
+    "question": "Mekkora a PE vezető keresztmetszete 16-35 mm² közötti fázisvezető esetén?",
+    "options": [
+      "Azonos a fázisvezetővel",
+      "16 mm²",
+      "A fázisvezető fele",
+      "6 mm²"
+    ],
+    "correct": 1,
+    "explanation": "$16-35$ mm² közötti fázisvezető esetén a PE vezető mindig $16$ mm².",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tns0006",
+    "topic": "tn-systems",
+    "question": "Mekkora a PE vezető keresztmetszete 35 mm² feletti fázisvezető esetén?",
+    "options": [
+      "Mindig 16 mm²",
+      "Azonos a fázisvezetővel",
+      "A fázisvezető keresztmetszetének a fele",
+      "35 mm²"
+    ],
+    "correct": 2,
+    "explanation": "$35$ mm² felett a PE vezető keresztmetszete a fázisvezető keresztmetszetének a fele.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tns0007",
+    "topic": "tn-systems",
+    "question": "B karakterisztikájú kismegszakító alfa (α) kioldási tényezője mennyi?",
+    "options": [
+      "3-5",
+      "5-10",
+      "10-20",
+      "20-30"
+    ],
+    "correct": 0,
+    "explanation": "B karakterisztikájú kismegszakító esetén az alfa (α) kioldási tényező $3-5$.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tns0008",
+    "topic": "tn-systems",
+    "question": "C karakterisztikájú kismegszakító alfa (α) kioldási tényezője mennyi?",
+    "options": [
+      "3-5",
+      "5-10",
+      "10-20",
+      "20-30"
+    ],
+    "correct": 1,
+    "explanation": "C karakterisztikájú kismegszakító esetén az alfa (α) kioldási tényező $5-10$.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tns0009",
+    "topic": "tn-systems",
+    "question": "D karakterisztikájú kismegszakító alfa (α) kioldási tényezője mennyi?",
+    "options": [
+      "3-5",
+      "5-10",
+      "10-20",
+      "20-30"
+    ],
+    "correct": 2,
+    "explanation": "D karakterisztikájú kismegszakító esetén az alfa (α) kioldási tényező $10-20$.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "tns0010",
+    "topic": "tn-systems",
+    "question": "Lehet-e PEN vezetőt alkalmazni AVK után?",
+    "options": [
+      "Igen, mindig",
+      "Nem, a PE vezető sosem mehet át az AVK-n",
+      "Csak lakásokban",
+      "Csak ipari környezetben"
+    ],
+    "correct": 1,
+    "explanation": "PEN vezető esetén nem lehet AVK-t alkalmazni, mert a PE vezető sosem mehet át az AVK-n.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ttit0001",
+    "topic": "tt-it-systems",
+    "question": "Mit jelent a TT jelölésben az első T betű?",
+    "options": [
+      "A rendszer egy ponton közvetlenül földelt",
+      "A berendezés testei földeltek",
+      "Transzformátor",
+      "Tápláló hálózat"
+    ],
+    "correct": 0,
+    "explanation": "Az első T betű azt jelenti, hogy a rendszer az áramforrásnál (terra) közvetlenül le van földelve.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ttit0002",
+    "topic": "tt-it-systems",
+    "question": "Mit jelent a TT jelölésben a második T betű?",
+    "options": [
+      "Transzformátor",
+      "Az érintésvédelemmel védett testek földelve vannak",
+      "Táppont",
+      "Terhelt hálózat"
+    ],
+    "correct": 1,
+    "explanation": "A második T betű jelentése az, hogy az érintésvédelemmel védett testek földelve vannak.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ttit0003",
+    "topic": "tt-it-systems",
+    "question": "TT rendszerben mekkora lehet max. az érintési feszültség?",
+    "options": [
+      "25 V",
+      "50 V",
+      "120 V",
+      "230 V"
+    ],
+    "correct": 1,
+    "explanation": "TT rendszerben az érintési feszültség (U_L) kisebb kell legyen $50$ V-nál.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ttit0004",
+    "topic": "tt-it-systems",
+    "question": "IT rendszerben mit jelent az I betű?",
+    "options": [
+      "Izolált",
+      "Az impedancián keresztül földelt vagy elszigetelt hálózat",
+      "Ipari",
+      "Ideiglenes"
+    ],
+    "correct": 1,
+    "explanation": "Az I betű a hálózati csillagpontba kötött impedanciát jelenti, vagy azt, hogy a hálózat elszigetelt (insulated).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ttit0005",
+    "topic": "tt-it-systems",
+    "question": "IT rendszert hol alkalmaznak?",
+    "options": [
+      "Lakásokban",
+      "Bányák föld alatti részeiben, kórházak műtőiben",
+      "Irodákban",
+      "Minden ipari létesítményben"
+    ],
+    "correct": 1,
+    "explanation": "IT hálózatot csak bányák föld alatti részeiben, kórházak műtőiben és más különleges fogyasztói területeken alkalmaznak.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ttit0006",
+    "topic": "tt-it-systems",
+    "question": "IT rendszerben mivel figyelik a testzárlatos állapotot?",
+    "options": [
+      "AVK-val",
+      "Szigetelés ellenőrző készülékkel",
+      "Kismegszakítóval",
+      "Túláramvédelemmel"
+    ],
+    "correct": 1,
+    "explanation": "IT rendszerben a testzárlatos állapotot szigetelés ellenőrző készülékkel figyelik, amely méri a szigetelési ellenállás értékét és hibajelzést ad testzárlat esetén.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gp0001",
+    "topic": "grounding-protection",
+    "question": "Mi a védőföldelés?",
+    "options": [
+      "Aktív részek földelése",
+      "Üzemszerűen feszültségmentes, de hiba folytán feszültség alá kerülhető fémrészek földelése",
+      "Csak a transzformátor földelése",
+      "Nullavezető földelése"
+    ],
+    "correct": 1,
+    "explanation": "A védőföldelés a villamos berendezés üzemszerűen feszültségmentes, de hiba folytán feszültség alá kerülhető fémrészének földelése.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gp0002",
+    "topic": "grounding-protection",
+    "question": "Mi az EPH (egyenpotenciálra hozás)?",
+    "options": [
+      "Csak a földelés",
+      "A villamos készülékek testeinek és idegen vezetőképes részek villamos összekötése",
+      "Csak a nullázás",
+      "Szigetelés"
+    ],
+    "correct": 1,
+    "explanation": "Az EPH (egyenpotenciálra hozás) a villamos készülékek testeinek és idegen vezetőképes részek villamos összekötése, azonos potenciálra hozása.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gp0003",
+    "topic": "grounding-protection",
+    "question": "Mit kell bevonni az EPH rendszerbe?",
+    "options": [
+      "Csak a vízvezetéket",
+      "Közüzemi csővezetékeket, szerkezeti fémrészeket, központi fűtést, zuhanytálcát, fürdőkádat",
+      "Csak a fűtést",
+      "Semmit, az EPH opcionális"
+    ],
+    "correct": 1,
+    "explanation": "Az EPH rendszerbe be kell vonni a közüzemi csővezetékeket, szerkezeti fémrészeket, központi fűtést, légkondicionálót, vasbetonszerkezet fémrészeit, zuhanytálcákat, fürdőkádat, $500$ litert meghaladó fémtartályokat.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gp0004",
+    "topic": "grounding-protection",
+    "question": "Mekkora a réz EPH-gerincvezető minimális keresztmetszete?",
+    "options": [
+      "2.5 mm²",
+      "4 mm²",
+      "6 mm²",
+      "10 mm²"
+    ],
+    "correct": 2,
+    "explanation": "A réz EPH-gerincvezető minimális keresztmetszete $6$ mm².",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gs0001",
+    "topic": "grounding-systems",
+    "question": "Mi a földelő?",
+    "options": [
+      "A védővezető",
+      "A talajjal közvetlen érintkezésben lévő vezetőképes rész",
+      "A nullavezető",
+      "Az elosztószekrény"
+    ],
+    "correct": 1,
+    "explanation": "A földelő a talajjal közvetlen érintkezésben lévő és azzal villamos összeköttetést létesítő vezetőképes rész(ek) együttese.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gs0002",
+    "topic": "grounding-systems",
+    "question": "Milyen mélyre kell lemélyíteni a földelőt?",
+    "options": [
+      "0.5 m alá",
+      "1 m alá",
+      "A fagyhatár alá",
+      "2 m alá mindig"
+    ],
+    "correct": 2,
+    "explanation": "A földelőt a fagyhatár alatti rétegbe kell lemélyíteni.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gs0003",
+    "topic": "grounding-systems",
+    "question": "Milyen típusú földelők léteznek?",
+    "options": [
+      "Csak rúd földelők",
+      "Rúd/csőföldelők, szalag/huzalföldelők, lemez földelők, rézsodronyok, vasbeton szerkezetek",
+      "Csak lemez földelők",
+      "Csak betonalap földelők"
+    ],
+    "correct": 1,
+    "explanation": "Földelő típusok: rúd- vagy csőföldelők, szalag- vagy huzalföldelők, lemez földelők, földbeásott rézsodronyok, talajjal közvetlenül érintkező vasbeton szerkezetek.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gs0004",
+    "topic": "grounding-systems",
+    "question": "Mi a fő földelőkapocs (FFK) feladata?",
+    "options": [
+      "Csak díszítés",
+      "A védővezetőnek a földeléshez való csatlakozására szolgál",
+      "Csak a nullavezető csatlakozása",
+      "Világítás vezérlése"
+    ],
+    "correct": 1,
+    "explanation": "A fő földelőkapocs (FFK) az a kapocs vagy sín, amely a védővezetőnek a földeléshez való csatlakozására szolgál.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gs0005",
+    "topic": "grounding-systems",
+    "question": "Mit kell bonthatóan bekötni a fő földelősínbe?",
+    "options": [
+      "Csak a fázisvezetőket",
+      "A földelővezetőket, védővezetőket, EPH gerincvezetőket",
+      "Csak a nullavezetőt",
+      "Semmit"
+    ],
+    "correct": 1,
+    "explanation": "A fő földelősínbe bonthatóan be kell kötni a földelővezetőket, védővezetőket és az EPH gerincvezetőket.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gs0006",
+    "topic": "grounding-systems",
+    "question": "Melyik talajfajta fajlagos ellenállása a legkisebb?",
+    "options": [
+      "Homokos talaj",
+      "Sziklás talaj",
+      "Tözeges talaj",
+      "Agyag"
+    ],
+    "correct": 2,
+    "explanation": "A tözeges talaj fajlagos ellenállása a legkisebb ($10-50$ Ωm), ezért a legjobb földelést biztosítja.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0001",
+    "topic": "avk-rcd",
+    "question": "Mit jelent az AVK rövidítés?",
+    "options": [
+      "Automatikus Védőkapcsoló",
+      "Áram-védőkapcsoló",
+      "Általános Védelmi Kapcsoló",
+      "Aktív Védelmi Készülék"
+    ],
+    "correct": 1,
+    "explanation": "Az AVK az Áram-védőkapcsoló rövidítése.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "avk0002",
+    "topic": "avk-rcd",
+    "question": "Mi az AVK más elnevezése?",
+    "options": [
+      "Fi relé",
+      "Kismegszakító",
+      "Biztosíték",
+      "Kapcsoló"
+    ],
+    "correct": 0,
+    "explanation": "Az AVK más néven Fi relé (német megnevezésből származik).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "avk0003",
+    "topic": "avk-rcd",
+    "question": "Mehet-e a PE vezető az AVK-n át?",
+    "options": [
+      "Igen, mindig",
+      "Nem, sosem",
+      "Csak lakásokban",
+      "Csak ipari környezetben"
+    ],
+    "correct": 1,
+    "explanation": "A PE vezető sosem mehet át az AVK-n. A védett áramkör valamennyi üzemi áramot vivő vezetőjét egy közös áramváltó ablakán vezetik át, míg a védővezetőt ezt megkerülve építik ki.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0004",
+    "topic": "avk-rcd",
+    "question": "Lakásokban jellemzően milyen érzékenységű AVK-t alkalmaznak?",
+    "options": [
+      "10 mA",
+      "30 mA",
+      "100 mA",
+      "300 mA"
+    ],
+    "correct": 1,
+    "explanation": "Lakásokban jellemzően $30$ mA érzékenységű AVK-t alkalmaznak.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "avk0005",
+    "topic": "avk-rcd",
+    "question": "Milyen típusú AVK-t ajánlott lakásba?",
+    "options": [
+      "AC típus",
+      "A típus",
+      "B típus",
+      "S típus"
+    ],
+    "correct": 1,
+    "explanation": "Lakásba A típusú AVK javasolt, amely váltakozó áramra és pulzáló egyenáramra is érzékeny.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0006",
+    "topic": "avk-rcd",
+    "question": "Melyik AVK típus csak szinuszos váltakozó áramra érzékeny?",
+    "options": [
+      "AC típus",
+      "A típus",
+      "B típus",
+      "S típus"
+    ],
+    "correct": 0,
+    "explanation": "Az AC típusú AVK csak szinuszos váltakozó áramra érzékeny.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0007",
+    "topic": "avk-rcd",
+    "question": "Mi az RCBO?",
+    "options": [
+      "Csak AVK",
+      "Kombinált áram-védőkapcsoló beépített túláram védelemmel",
+      "Csak kismegszakító",
+      "Biztosíték"
+    ],
+    "correct": 1,
+    "explanation": "Az RCBO (Residual Current Breaker with Overcurrent protection) egy kombinált készülék, amely magában foglalja a kismegszakító és az AVK funkcióit. Egyaránt ellátja a rövidzárlat és túláram védelmet, valamint a földzárlati hibaáram-védelmet.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "avk0008",
+    "topic": "avk-rcd",
+    "question": "Mekkora az S típusú (szelektív) AVK meg nem szólalási időhatára?",
+    "options": [
+      "50 ms",
+      "80 ms",
+      "130 ms",
+      "200 ms"
+    ],
+    "correct": 2,
+    "explanation": "Az S típusú (szelektív) AVK meg nem szólalási időhatára $130$ ms. Késleltetéssel van ellátva, így ugyanarra a hibaáramra később kapcsol le, mint a hagyományos.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ip0001",
+    "topic": "ip-protection",
+    "question": "Mit jelent az IP rövidítés?",
+    "options": [
+      "Internal Protection",
+      "Ingress Protection - behatolás elleni védelem",
+      "Isolation Protection",
+      "Industrial Protection"
+    ],
+    "correct": 1,
+    "explanation": "Az IP az Ingress Protection (behatolás elleni védelem) rövidítése.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ip0002",
+    "topic": "ip-protection",
+    "question": "Mit jelöl az IP kód első számjegye?",
+    "options": [
+      "Vízvédelmet",
+      "Idegen anyagok és környezeti behatások elleni védelmet",
+      "Hővédelmet",
+      "Zajvédelmet"
+    ],
+    "correct": 1,
+    "explanation": "Az IP kód első számjegye az idegen anyagok és környezeti behatások elleni védelmet jelöli.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ip0003",
+    "topic": "ip-protection",
+    "question": "Mit jelöl az IP kód második számjegye?",
+    "options": [
+      "Porvédelmet",
+      "Vízbehatolás elleni védelmet",
+      "Hővédelmet",
+      "Érintésvédelmet"
+    ],
+    "correct": 1,
+    "explanation": "Az IP kód második számjegye a vízbehatolás elleni védelem fokát adja meg.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ip0004",
+    "topic": "ip-protection",
+    "question": "Mekkora a minimum IP védettség lakásokban?",
+    "options": [
+      "IP10",
+      "IP20",
+      "IP44",
+      "IP54"
+    ],
+    "correct": 1,
+    "explanation": "Egy lakásban a villamos eszközök, szerelvények védettsége legalább IP$2$X legyen (ujjal nem érinthető).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ip0005",
+    "topic": "ip-protection",
+    "question": "Mit jelent az IP2X védettség?",
+    "options": [
+      "Kézfejjel nem érinthető",
+      "Ujjal nem érinthető (12,5 mm-nél nagyobb testek ellen védett)",
+      "Szerszámmal nem érinthető",
+      "Huzallal nem érinthető"
+    ],
+    "correct": 1,
+    "explanation": "IP$2$X esetén védett a $12,5$ mm-nél nagyobb átmérőjű szilárd testek behatolása ellen (ujjal nem érinthető).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ip0006",
+    "topic": "ip-protection",
+    "question": "Fürdőszoba 0. zónájában (kád belseje) milyen IP védettség szükséges?",
+    "options": [
+      "IPX4",
+      "IPX5",
+      "IPX7",
+      "IPX8"
+    ],
+    "correct": 2,
+    "explanation": "A $0.$ zónában (kád/zuhanytálca belseje) IPX$7$ védettség szükséges (időszakos vízbemerítés elleni védelem).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ip0007",
+    "topic": "ip-protection",
+    "question": "Mit jelent az IP44 védettség?",
+    "options": [
+      "Por- és csöpögő víz ellen védett",
+      "Por- és fröccsenő víz ellen védett",
+      "Portömített és vízsugár ellen védett",
+      "Portömített és vízbemerítés ellen védett"
+    ],
+    "correct": 1,
+    "explanation": "IP$44$ esetén a készülék védett az $1$ mm-nél nagyobb szilárd testek ellen és bármilyen irányból fröcskölő víz ellen.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ip0008",
+    "topic": "ip-protection",
+    "question": "Mit jelent az IP65 védettség?",
+    "options": [
+      "Por- és csöpögő víz ellen védett",
+      "Portömített és fröccsenő víz ellen védett",
+      "Portömített és vízsugár ellen védett",
+      "Portömített és vízbemerítés ellen védett"
+    ],
+    "correct": 2,
+    "explanation": "IP$65$ esetén a készülék portömített és védett bármilyen irányú vízsugár ellen.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de0001",
+    "topic": "de-energization",
+    "question": "Hány lépésből áll a feszültségmentesítés?",
+    "options": [
+      "3 lépés",
+      "4 lépés",
+      "5 lépés",
+      "6 lépés"
+    ],
+    "correct": 2,
+    "explanation": "A feszültségmentesítés $5$ lépésből áll, amelyek sorrendje fel nem cserélhető.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de0002",
+    "topic": "de-energization",
+    "question": "Mi a feszültségmentesítés 1. lépése?",
+    "options": [
+      "Földelés",
+      "Teljes leválasztás",
+      "Feszültség ellenőrzés",
+      "Visszakapcsolás megakadályozása"
+    ],
+    "correct": 1,
+    "explanation": "Az $1.$ lépés a teljes leválasztás - a munkahelyet minden oldalról galvanikusan le kell választani a feszültségforrásról.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de0003",
+    "topic": "de-energization",
+    "question": "Mi a feszültségmentesítés 2. lépése?",
+    "options": [
+      "Földelés",
+      "A visszakapcsolás megakadályozása",
+      "Feszültség ellenőrzés",
+      "Körülhatárolás"
+    ],
+    "correct": 1,
+    "explanation": "A $2.$ lépés a visszakapcsolás megakadályozása - a leválasztó készülékeket mechanikusan rögzíteni kell (pl. lakat, tábla).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de0004",
+    "topic": "de-energization",
+    "question": "Mi a feszültségmentesítés 3. lépése?",
+    "options": [
+      "Földelés",
+      "Visszakapcsolás megakadályozása",
+      "Feszültség nélküli állapot ellenőrzése",
+      "Körülhatárolás"
+    ],
+    "correct": 2,
+    "explanation": "A $3.$ lépés a feszültség nélküli állapot ellenőrzése - fázisjelzővel vagy feszültségmérővel minden fázist ellenőrizni kell.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de0005",
+    "topic": "de-energization",
+    "question": "Mi a feszültségmentesítés 4. lépése?",
+    "options": [
+      "Teljes leválasztás",
+      "Visszakapcsolás megakadályozása",
+      "Földelés, rövidzárás, töltések kisütése",
+      "Körülhatárolás"
+    ],
+    "correct": 2,
+    "explanation": "A $4.$ lépés a földelés, rövidzárás, töltések kisütése - a feszültségmentesített részeket le kell földelni és rövidre kell zárni.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "de0006",
+    "topic": "de-energization",
+    "question": "Mi a feszültségmentesítés 5. lépése?",
+    "options": [
+      "Földelés",
+      "Feszültség ellenőrzés",
+      "Körülhatárolás - közeli aktív részek elleni védelem",
+      "Teljes leválasztás"
+    ],
+    "correct": 2,
+    "explanation": "Az $5.$ lépés a körülhatárolás - közeli aktív részek elleni védelem biztosítása. A munkaterületet el kell határolni, a közeli feszültség alatt maradó részeket le kell takarni vagy el kell keríteni.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "de0007",
+    "topic": "de-energization",
+    "question": "Fel lehet-e cserélni a feszültségmentesítés lépéseinek sorrendjét?",
+    "options": [
+      "Igen, mindegy a sorrend",
+      "Nem, a sorrend fel nem cserélhető",
+      "Csak 1-2 lépés cserélhető",
+      "Szakember dönti el"
+    ],
+    "correct": 1,
+    "explanation": "A lépések sorrendje fel nem cserélhető! Minden lépést el kell végezni ebben a sorrendben, még akkor is, ha valamelyik nyilvánvalónak tűnik.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ps0001",
+    "topic": "power-system",
+    "question": "Mekkora a kisfeszültség felső határa AC esetén?",
+    "options": [
+      "500 V",
+      "750 V",
+      "1000 V",
+      "1500 V"
+    ],
+    "correct": 2,
+    "explanation": "Kisfeszültség AC esetén maximum $1000$ V.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ps0002",
+    "topic": "power-system",
+    "question": "Mekkora a hálózati frekvencia Európában?",
+    "options": [
+      "16⅔ Hz",
+      "50 Hz",
+      "60 Hz",
+      "100 Hz"
+    ],
+    "correct": 1,
+    "explanation": "Európában a hálózati frekvencia $50$ Hz.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ps0003",
+    "topic": "power-system",
+    "question": "Mekkora a közcélú elosztóhálózat fázisfeszültsége Magyarországon?",
+    "options": [
+      "220 V",
+      "230 V",
+      "240 V",
+      "400 V"
+    ],
+    "correct": 1,
+    "explanation": "A közcélú elosztóhálózat fázisfeszültsége (fázis-nulla között) $230$ V.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ps0004",
+    "topic": "power-system",
+    "question": "Mekkora a közcélú elosztóhálózat vonali feszültsége Magyarországon?",
+    "options": [
+      "230 V",
+      "380 V",
+      "400 V",
+      "690 V"
+    ],
+    "correct": 2,
+    "explanation": "A közcélú elosztóhálózat vonali feszültsége (fázisok között) $400$ V.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ps0005",
+    "topic": "power-system",
+    "question": "Mi a MAVIR?",
+    "options": [
+      "Erőművi társaság",
+      "Magyar Villamosenergia-ipari Átviteli Rendszerirányító",
+      "Biztonsági hivatal",
+      "Fogyasztóvédelmi szervezet"
+    ],
+    "correct": 1,
+    "explanation": "A MAVIR a Magyar Villamosenergia-ipari Átviteli Rendszerirányító, amely az országos villamosenergia-rendszer irányítását végzi.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ps0006",
+    "topic": "power-system",
+    "question": "Mi a villamosenergia egyetlen hátránya?",
+    "options": [
+      "Drága",
+      "Veszélyes",
+      "Nem tárolható",
+      "Lassan szállítható"
+    ],
+    "correct": 2,
+    "explanation": "A villamosenergia egyetlen hátránya, hogy nem tárolható gazdaságosan nagy mennyiségben. A termelésnek és fogyasztásnak minden pillanatban meg kell egyeznie.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ps0007",
+    "topic": "power-system",
+    "question": "Hány vezetős a kisfeszültségű hálózat?",
+    "options": [
+      "3 vezetős",
+      "4 vezetős",
+      "5 vezetős",
+      "2 vezetős"
+    ],
+    "correct": 1,
+    "explanation": "A kisfeszültségű hálózat négyvezetős: L$1$, L$2$, L$3$, PEN.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pp0001",
+    "topic": "power-plants",
+    "question": "Magyarország 2024-es villamosenergia termelésében melyik energiaforrás a meghatározó?",
+    "options": [
+      "Földgáz",
+      "Napenergia",
+      "Atomenergia",
+      "Szén"
+    ],
+    "correct": 2,
+    "explanation": "$2024$-ben Magyarország villamosenergia termelésében az atomenergia a meghatározó ($42,8$%).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pp0002",
+    "topic": "power-plants",
+    "question": "1 gramm uránból mennyi teljesítmény nyerhető 1 napig?",
+    "options": [
+      "1 kW",
+      "100 kW",
+      "1 MW",
+      "10 MW"
+    ],
+    "correct": 2,
+    "explanation": "$1$ gramm uránból $1$ MW teljesítmény nyerhető $1$ napig.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pp0003",
+    "topic": "power-plants",
+    "question": "Szélerőműveknél az átlagos szélsebesség legalább mennyi legyen?",
+    "options": [
+      "3 m/s",
+      "5 m/s",
+      "8 m/s",
+      "10 m/s"
+    ],
+    "correct": 1,
+    "explanation": "Szélerőműveknél az átlagos szélsebesség legalább $5$ m/s legyen a működéshez.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pp0004",
+    "topic": "power-plants",
+    "question": "Mi a biogáz fő összetevője?",
+    "options": [
+      "Hidrogén",
+      "Oxigén",
+      "Metán",
+      "Szén-dioxid"
+    ],
+    "correct": 2,
+    "explanation": "A biogáz nagyrészt metánból áll. Szerves anyagok mikroorganizmusok általi lebontásakor keletkezett gázkeverék.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pp0005",
+    "topic": "power-plants",
+    "question": "HMKE max. csatlakozási teljesítménye mennyi?",
+    "options": [
+      "10 kVA",
+      "25 kVA",
+      "50 kVA",
+      "100 kVA"
+    ],
+    "correct": 2,
+    "explanation": "Háztartási méretű kiserőmű (HMKE) max. csatlakozási teljesítménye $50$ kVA.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pp0006",
+    "topic": "power-plants",
+    "question": "Melyik erőműtípus tartozik az alaperőművek közé?",
+    "options": [
+      "Gázturbinás",
+      "Dízelmotoros",
+      "Atomerőmű",
+      "Csak csúcserőművek"
+    ],
+    "correct": 2,
+    "explanation": "Alaperőművek: atomerőművek, vízerőművek, szénerőművek. Kis költséggel termelik a villamos energiát, nem egyszerű a leállításuk, elindításuk.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pp0007",
+    "topic": "power-plants",
+    "question": "Jelenleg hogyan lehet nagyobb mennyiségű energiát tárolni?",
+    "options": [
+      "Akkumulátorokkal",
+      "Szivattyús tározó erőművel",
+      "Kondenzátorokkal",
+      "Nem lehet"
+    ],
+    "correct": 1,
+    "explanation": "Jelenleg csak szivattyús tározó erőművel lehet nagyobb mennyiségű energiát tárolni. Többlet energia esetén vizet szivattyúznak fel a felső tározóba, majd hiány esetén leengedik.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nt0001",
+    "topic": "network-topology",
+    "question": "Melyik hálózattípusnál kap a fogyasztó egyetlen úton energiát?",
+    "options": [
+      "Gyűrűs",
+      "Sugaras",
+      "Hurkolt",
+      "Körvezeték"
+    ],
+    "correct": 1,
+    "explanation": "Sugaras hálózatnál a fogyasztó egyetlen vezetéken, egy úton kap villamos energiát. Üzembiztonsága alacsony.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nt0002",
+    "topic": "network-topology",
+    "question": "Melyik hálózattípus a legbiztonságosabb?",
+    "options": [
+      "Sugaras",
+      "Gyűrűs",
+      "Íves",
+      "Hurkolt"
+    ],
+    "correct": 3,
+    "explanation": "A hurkolt hálózat a legbiztonságosabb. Egyidejűleg több tápponton keresztül látja el a fogyasztókat. A biztonság a legnagyobb, és a hálózat minőségi jellemzői is a legjobbak.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nt0003",
+    "topic": "network-topology",
+    "question": "Mi a gyűrűs hálózat jellemzője?",
+    "options": [
+      "Egy táppontból, egy pontban találkoznak a vezetékek",
+      "Több táppontból táplált",
+      "Nincs kapcsoló",
+      "Nincs tartalék"
+    ],
+    "correct": 0,
+    "explanation": "Gyűrűs hálózatnál az azonos táppontból kiinduló gerincvezetékek egy pontban találkoznak. Az összekötés helyén kapcsolót alkalmaznak.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nt0004",
+    "topic": "network-topology",
+    "question": "Mi az íves hálózat előnye a gyűrűshöz képest?",
+    "options": [
+      "Olcsóbb",
+      "Egymástól független táppontokból indulnak a vezetékek",
+      "Egyszerűbb",
+      "Kevesebb vezeték"
+    ],
+    "correct": 1,
+    "explanation": "Az íves hálózat előnye, hogy egymástól független táppontokból indulnak a vezetékek. Bármelyik táppont kiesése esetén biztosítható az ellátás.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nt0005",
+    "topic": "network-topology",
+    "question": "Melyik állomástípus végzi a feszültségszint váltást?",
+    "options": [
+      "Kapcsolóállomás",
+      "Transzformátor állomás",
+      "Erőművi alállomás",
+      "Fogyasztói alállomás"
+    ],
+    "correct": 1,
+    "explanation": "A transzformátor állomás végzi a feszültségszint váltást (le vagy feltranszformálás).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nt0006",
+    "topic": "network-topology",
+    "question": "A kisfeszültségű hálózat táptranszformátorának szekunder tekercse milyen kapcsolású?",
+    "options": [
+      "Háromszög",
+      "Csillag",
+      "Vegyes",
+      "Nincs meghatározva"
+    ],
+    "correct": 1,
+    "explanation": "A kisfeszültségű hálózat táptranszformátorának szekunder tekercse csillag kapcsolású, melynek csillagpontja mereven földelt.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pl0001",
+    "topic": "poles-lines",
+    "question": "Kisfeszültségen az oszlopköz körülbelül mennyi?",
+    "options": [
+      "15 m",
+      "20 m",
+      "30 m",
+      "50 m"
+    ],
+    "correct": 2,
+    "explanation": "Kisfeszültségen az oszlopköz körülbelül $30$ m, de függ a terepviszonyoktól.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pl0002",
+    "topic": "poles-lines",
+    "question": "Oszlop alapozási mélysége minimum mennyi?",
+    "options": [
+      "0.5 m",
+      "1 m",
+      "1.5 m",
+      "2 m"
+    ],
+    "correct": 2,
+    "explanation": "Az alapozási mélység minimum $1,5$ m (vagy az oszlop $1/6$-od része, ha az nagyobb).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pl0003",
+    "topic": "poles-lines",
+    "question": "B12/4 jelölésű betonoszlopnál mit jelent a 12?",
+    "options": [
+      "12 kN törőerő",
+      "12 m hosszú",
+      "12 mm átmérő",
+      "12 kg tömeg"
+    ],
+    "correct": 1,
+    "explanation": "B$12$/$4$ jelölésű betonoszlopnál a $12$ azt jelenti, hogy $12$ m hosszú.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pl0004",
+    "topic": "poles-lines",
+    "question": "B12/4 jelölésű betonoszlopnál mit jelent a 4?",
+    "options": [
+      "4 m hosszú",
+      "4 kN törőerő",
+      "40 kN törőerő (4×10 kN)",
+      "4 mm átmérő"
+    ],
+    "correct": 2,
+    "explanation": "B$12$/$4$ jelölésű betonoszlopnál a $4$ azt jelenti, hogy törőerő $40$ kN (a $4$-es szám $4×10$ kN-t jelent).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pl0005",
+    "topic": "poles-lines",
+    "question": "Kisfeszültségű hálózaton hány méterenként kell földelést alkalmazni?",
+    "options": [
+      "50-100 m",
+      "100-150 m",
+      "200-300 m",
+      "500-600 m"
+    ],
+    "correct": 2,
+    "explanation": "Kisfeszültségű hálózaton $200-300$ méterenként kell földelést alkalmazni, valamint a transzformátornál.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pl0006",
+    "topic": "poles-lines",
+    "question": "Melyik szigetelőanyag felel meg a követelményeknek?",
+    "options": [
+      "Műanyag",
+      "Gumi",
+      "Porcelán és üveg",
+      "Fa"
+    ],
+    "correct": 2,
+    "explanation": "A porcelán és üveg mint szilárd szigetelőanyagok felelnek meg a követelményeknek (nagy átütési szilárdság, nagy felületi ellenállás, megfelelő mechanikai szilárdság).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pl0007",
+    "topic": "poles-lines",
+    "question": "Miért nem telepítenek új szigeteletlen vezetékrendszert?",
+    "options": [
+      "Túl drága",
+      "Költséges az üzemben tartás és sok a meghibásodás",
+      "Nem szabványos",
+      "Nincs anyag"
+    ],
+    "correct": 1,
+    "explanation": "Szigeteletlen vezetékrendszert újonnan nem telepítenek, mert költséges az üzemben tartásuk és sok a meghibásodás.",
+    "difficulty": "medium"
   }
 ];
 

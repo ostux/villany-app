@@ -88,6 +88,96 @@ export const TOPICS: Topic[] = [
     title: "11. Csillag–delta átalakítás",
     summary: "Háromszög (delta) és csillag (Y) kapcsolású ellenállás-hálózatok átalakítása egymásba.",
     contentPath: "/src/content/topics/star-delta.md"
+  },
+  {
+    id: "electrical-safety-basics",
+    title: "12. A villamos áram élettani hatása",
+    summary: "Áramütés veszélyei, áramerősség-határok, érintési feszültség limitek, nagyfeszültség fogalma.",
+    contentPath: "/src/content/topics/electrical-safety-basics.md"
+  },
+  {
+    id: "protection-classes",
+    title: "13. Áramütés elleni védelmi osztályok",
+    summary: "Védelmi osztályok (0, I, II, III), aktív és passzív érintésvédelmi módszerek, AVK.",
+    contentPath: "/src/content/topics/protection-classes.md"
+  },
+  {
+    id: "tn-systems",
+    title: "14. TN rendszerek (nullázás)",
+    summary: "TN-C, TN-S és TN-C-S rendszerek, védővezető leágazása, keresztmetszet-meghatározás.",
+    contentPath: "/src/content/topics/tn-systems.md"
+  },
+  {
+    id: "tt-it-systems",
+    title: "15. TT és IT rendszerek",
+    summary: "Védőföldeléses (TT) és szigetelt hálózatú (IT) rendszerek, számítási képletek.",
+    contentPath: "/src/content/topics/tt-it-systems.md"
+  },
+  {
+    id: "first-aid-electrical",
+    title: "16. Elsősegélynyújtás villamos baleset esetén",
+    summary: "Műszaki mentés, elsősegély diagnosztikai lépései, áramkörből való kiszabadítás.",
+    contentPath: "/src/content/topics/first-aid-electrical.md"
+  },
+  {
+    id: "grounding-protection",
+    title: "17. Földelés és érintésvédelem",
+    summary: "Közvetlen és közvetett érintés, védővezetős módok, egyenpotenciálra hozás.",
+    contentPath: "/src/content/topics/grounding-protection.md"
+  },
+  {
+    id: "grounding-systems",
+    title: "18. Földelési rendszerek",
+    summary: "Főföldelő sín, földelő elektródák típusai, talaj fajlagos ellenállása, potenciálkiegyenlítés.",
+    contentPath: "/src/content/topics/grounding-systems.md"
+  },
+  {
+    id: "avk-rcd",
+    title: "19. Áram-védőkapcsoló (AVK/RCD)",
+    summary: "AVK működési elve, típusok, telepítési követelmények, tesztelés, RCBO kombinált készülék.",
+    contentPath: "/src/content/topics/avk-rcd.md"
+  },
+  {
+    id: "protection-without-pe",
+    title: "20. Védővezető nélküli érintésvédelem",
+    summary: "Kettős szigetelés, védőelválasztás, törpefeszültség - passzív érintésvédelmi módok.",
+    contentPath: "/src/content/topics/protection-without-pe.md"
+  },
+  {
+    id: "ip-protection",
+    title: "21. IP védettség",
+    summary: "Behatolás elleni védelem, IP kód felépítése, lakásokra vonatkozó előírások, fürdőszoba zónák.",
+    contentPath: "/src/content/topics/ip-protection.md"
+  },
+  {
+    id: "de-energization",
+    title: "22. Feszültségmentesítés",
+    summary: "Az 5 lépéses feszültségmentesítési eljárás, munkavédelmi előírások villamos munkavégzéshez.",
+    contentPath: "/src/content/topics/de-energization.md"
+  },
+  {
+    id: "power-system",
+    title: "23. Villamosenergia-rendszer",
+    summary: "A villamos energia termelése, továbbítása és elosztása, feszültségszintek, frekvencia, MAVIR szerepe.",
+    contentPath: "/src/content/topics/power-system.md"
+  },
+  {
+    id: "power-plants",
+    title: "24. Erőművek",
+    summary: "Erőműtípusok: hőerőművek, atomerőművek, víz-, szél-, biomassza erőművek. Alap-, csúcs- és menetrendtartó erőművek.",
+    contentPath: "/src/content/topics/power-plants.md"
+  },
+  {
+    id: "network-topology",
+    title: "25. Hálózatok topológiája",
+    summary: "Sugaras, gyűrűs, íves, hurkolt hálózatok, állomások típusai, kisfeszültségű hálózat jellemzői.",
+    contentPath: "/src/content/topics/network-topology.md"
+  },
+  {
+    id: "poles-lines",
+    title: "26. Oszlopok és vezetékek",
+    summary: "Vezetéktartó oszlopok típusai, anyagok, alapozás, földelés, szigetelők, szabadvezetékek.",
+    contentPath: "/src/content/topics/poles-lines.md"
   }
 ];
 
@@ -431,6 +521,84 @@ export const EXERCISES: Exercise[] = [
 
   // --- Star-delta transformation ---
   { id: "e32", topic: "star-delta", question: "Egy delta kapcsolásban minden ellenállás 9Ω. Mekkora lesz az egyenértékű csillag kapcsolás minden ága? (Ω)", answer: 3, unit: "Ω", tolerance: 0.1, explanation: "Delta→csillag egyenlő ellenállásoknál: RY = R/3 = 9/3 = 3Ω." },
-  { id: "e33", topic: "star-delta", question: "Egy csillag kapcsolásban minden ág 4Ω. Mekkora lesz az egyenértékű delta kapcsolás minden oldala? (Ω)", answer: 12, unit: "Ω", tolerance: 0.1, explanation: "Csillag→delta egyenlő ellenállásoknál: RΔ = 3R = 3·4 = 12Ω." }
+  { id: "e33", topic: "star-delta", question: "Egy csillag kapcsolásban minden ág 4Ω. Mekkora lesz az egyenértékű delta kapcsolás minden oldala? (Ω)", answer: 12, unit: "Ω", tolerance: 0.1, explanation: "Csillag→delta egyenlő ellenállásoknál: RΔ = 3R = 3·4 = 12Ω." },
+
+  // --- TT system calculations ---
+  { id: "e34", topic: "tt-it-systems", question: "TT rendszerben U₀=230V, Rcs=8Ω, Ra=12Ω. Mekkora a zárlati áram Iz? (A, kerekítve 2 tizedesre)", answer: 11.5, unit: "A", tolerance: 0.1, explanation: "Iz = U₀/(Rcs+Ra) = 230/(8+12) = 230/20 = 11,5 A." },
+  { id: "e35", topic: "tt-it-systems", question: "TT rendszerben Iz=15A és Ra=3Ω. Mekkora az érintési feszültség UL? (V)", answer: 45, unit: "V", tolerance: 0.5, explanation: "UL = Iz × Ra = 15 × 3 = 45 V. Ez kisebb 50V-nál, tehát megengedett." },
+  { id: "e36", topic: "tt-it-systems", question: "TT rendszerben U₀=230V, Rcs=10Ω, Ra=5Ω. Az érintési feszültség UL megengedett-e? (1=igen, 0=nem)", answer: 1, unit: "(1/0)", tolerance: 0, explanation: "Iz=230/15=15,33A → UL=15,33×5=76,67V. Ez nagyobb 50V-nál, NEM megengedett! Válasz: 0 (nem)." },
+
+  // --- Protection conductor sizing ---
+  { id: "e37", topic: "tn-systems", question: "Ha a fázisvezető 10 mm², mekkora legyen a PE vezető? (mm²)", answer: 10, unit: "mm²", tolerance: 0, explanation: "16 mm² alatt a PE azonos a fázisvezetővel: 10 mm²." },
+  { id: "e38", topic: "tn-systems", question: "Ha a fázisvezető 25 mm², mekkora legyen a PE vezető? (mm²)", answer: 16, unit: "mm²", tolerance: 0, explanation: "16-35 mm² között a PE mindig 16 mm²." },
+  { id: "e39", topic: "tn-systems", question: "Ha a fázisvezető 50 mm², mekkora legyen a PE vezető? (mm²)", answer: 25, unit: "mm²", tolerance: 0, explanation: "35 mm² felett a PE = fázisvezető / 2 = 50/2 = 25 mm²." },
+
+  // --- Loop impedance calculations (MCB protection) ---
+  { id: "e40", topic: "tn-systems", question: "B10 kismegszakító esetén (α=5) mekkora lehet max. a hurokimpedancia (Zs)? U₀=230V. (Ω, 1 tizedesre)", answer: 4.6, unit: "Ω", tolerance: 0.1, explanation: "Zs < U₀/(α×Iₙ) = 230/(5×10) = 230/50 = 4,6 Ω." },
+  { id: "e41", topic: "tn-systems", question: "C16 kismegszakító esetén (α=10) mekkora lehet max. a hurokimpedancia (Zs)? U₀=230V. (Ω, 2 tizedesre)", answer: 1.44, unit: "Ω", tolerance: 0.02, explanation: "Zs < U₀/(α×Iₙ) = 230/(10×16) = 230/160 = 1,4375 ≈ 1,44 Ω." },
+  { id: "e42", topic: "tn-systems", question: "D20 kismegszakító esetén (α=20) mekkora lehet max. a hurokimpedancia (Zs)? U₀=230V. (Ω, 2 tizedesre)", answer: 0.58, unit: "Ω", tolerance: 0.02, explanation: "Zs < U₀/(α×Iₙ) = 230/(20×20) = 230/400 = 0,575 ≈ 0,58 Ω." },
+
+  // --- Grounding electrode resistance calculation ---
+  { id: "e43", topic: "grounding-systems", question: "Függőleges földelő rúd: ρ=100Ωm, L=2m, d=0,016m. ln(500)≈6,21. Mekkora Ra? (Ω, egész számra kerekítve)", answer: 49, unit: "Ω", tolerance: 2, explanation: "Ra = ρ/(2πL) × ln(4L/d) = 100/12,57 × 6,21 = 7,96 × 6,21 ≈ 49,4 Ω." },
+  { id: "e44", topic: "grounding-systems", question: "Ha egy földelő elektróda Ra=60Ω, és 3 darabot kapcsolunk párhuzamosan (η=1 ideális esetben), mekkora lesz az összes Ra? (Ω)", answer: 20, unit: "Ω", tolerance: 1, explanation: "Ra(összes) = Ra/n = 60/3 = 20 Ω (ideális esetben η=1)." },
+  { id: "e45", topic: "grounding-systems", question: "Homokos talaj fajlagos ellenállása tipikusan melyik tartományba esik? Válaszd: 1=10-40, 2=100-200, 3=200-2000. (1/2/3)", answer: 3, unit: "(szám)", tolerance: 0, explanation: "Homok fajlagos ellenállása: 200-2000 Ωm, tehát a válasz 3." },
+
+  // --- EPH conductor cross-sections ---
+  { id: "e46", topic: "grounding-protection", question: "Mekkora a réz EPH-gerincvezető minimális keresztmetszete? (mm²)", answer: 6, unit: "mm²", tolerance: 0, explanation: "Réz EPH-gerincvezető: 6 mm²." },
+  { id: "e47", topic: "grounding-protection", question: "Mekkora az alumínium EPH-összekötő (mechanikai védelemmel) minimális keresztmetszete? (mm²)", answer: 16, unit: "mm²", tolerance: 0, explanation: "Alumínium EPH-összekötő mechanikai védelemmel: 16 mm²." },
+  { id: "e48", topic: "grounding-protection", question: "Mekkora a réz EPH-összekötő (mechanikai védettség nélkül) minimális keresztmetszete? (mm²)", answer: 4, unit: "mm²", tolerance: 0, explanation: "Réz EPH-összekötő mechanikai védettség nélkül: 4 mm²." },
+
+  // --- Electrical safety basics ---
+  { id: "e49", topic: "electrical-safety-basics", question: "50 Hz-es váltakozó áram esetén mekkora az érzékelési küszöb? (mA)", answer: 1, unit: "mA", tolerance: 0, explanation: "50 Hz-es váltakozó áram esetén általában 1 mA az érzékelési küszöb." },
+  { id: "e50", topic: "electrical-safety-basics", question: "Mekkora az elengedési áramerősség felső határa? (mA)", answer: 15, unit: "mA", tolerance: 0, explanation: "10-15 mA az elengedési áramerősség, fölötte az áramütött nem tudja a megszorított tárgyat elengedni." },
+  { id: "e51", topic: "electrical-safety-basics", question: "AC esetén hány V-nál nagyobb feszültség minősül nagyfeszültségnek? (V)", answer: 1000, unit: "V", tolerance: 0, explanation: "AC esetén 1000 V-nál nagyobb feszültség minősül nagyfeszültségnek." },
+  { id: "e52", topic: "electrical-safety-basics", question: "DC esetén hány V-nál nagyobb feszültség minősül nagyfeszültségnek? (V)", answer: 1500, unit: "V", tolerance: 0, explanation: "DC esetén 1500 V-nál nagyobb feszültség minősül nagyfeszültségnek." },
+  { id: "e53", topic: "electrical-safety-basics", question: "Mekkora a megengedett érintési feszültség limitje normál körülmények között AC esetén? (V)", answer: 50, unit: "V", tolerance: 0, explanation: "AC esetén normál körülmények között a megengedett érintési feszültség limitje 50 V." },
+
+  // --- Protection classes ---
+  { id: "e54", topic: "protection-classes", question: "Hány védelmi osztály létezik? (0, I, II, III - összesen hány?)", answer: 4, unit: "db", tolerance: 0, explanation: "Négy védelmi osztály létezik: 0, I, II, III." },
+  { id: "e55", topic: "protection-classes", question: "Mekkora a törpefeszültség felső határa AC esetén? (V)", answer: 50, unit: "V", tolerance: 0, explanation: "A törpefeszültség AC esetén maximum 50 V." },
+  { id: "e56", topic: "protection-classes", question: "Mekkora a törpefeszültség felső határa DC esetén? (V)", answer: 120, unit: "V", tolerance: 0, explanation: "A törpefeszültség DC esetén maximum 120 V." },
+
+  // --- AVK / RCD ---
+  { id: "e57", topic: "avk-rcd", question: "Lakásokban jellemzően hány mA érzékenységű AVK-t alkalmaznak? (mA)", answer: 30, unit: "mA", tolerance: 0, explanation: "Lakásokban jellemzően 30 mA érzékenységű AVK-t alkalmaznak." },
+  { id: "e58", topic: "avk-rcd", question: "TN rendszerben lakás elosztón In=25A AVK van, Iᐃ=30mA. Mekkora a max hurokimpedancia? U₀=230V. (kΩ, 2 tizedesre)", answer: 7.67, unit: "kΩ", tolerance: 0.05, explanation: "Zs = U₀/Iᐃ = 230/0,03 = 7666,67 Ω = 7,67 kΩ." },
+  { id: "e59", topic: "avk-rcd", question: "Az S típusú (szelektív) AVK meg nem szólalási időhatára minimum hány ms? (ms)", answer: 130, unit: "ms", tolerance: 0, explanation: "Az S típusú (szelektív) AVK meg nem szólalási időhatára minimum 130 ms." },
+
+  // --- Protection without PE ---
+  { id: "e60", topic: "protection-without-pe", question: "Elválasztótranszformátor áttétele mennyi (primer:szekunder)? Válasz: például 2:1 esetén 2", answer: 1, unit: "(arány)", tolerance: 0, explanation: "Az elválasztótranszformátor 1:1 áttételű." },
+  { id: "e61", topic: "protection-without-pe", question: "Hány fogyasztó működtethető egy elválasztótranszformátorról? (db)", answer: 1, unit: "db", tolerance: 0, explanation: "Egy elválasztótranszformátorról csak egy fogyasztó működtethető." },
+
+  // --- IP protection ---
+  { id: "e62", topic: "ip-protection", question: "Lakásban a villamos eszközök védettsége minimum IP2X. Az első számjegy (2) mit jelent? Válasz: hány mm-nél nagyobb testek ellen véd?", answer: 12.5, unit: "mm", tolerance: 0.1, explanation: "IP2X esetén védett a 12,5 mm-nél nagyobb átmérőjű szilárd testek behatolása ellen (ujjal nem érinthető)." },
+  { id: "e63", topic: "ip-protection", question: "Fürdőszoba 0. zónájában (kád belseje) minimum milyen IP védettség szükséges? Csak a második számjegy (vízvédelem).", answer: 7, unit: "(szám)", tolerance: 0, explanation: "A 0. zónában (kád/zuhanytálca belseje) IPX7 védettség szükséges (időszakos vízbemerítés elleni védelem)." },
+  { id: "e64", topic: "ip-protection", question: "IP44 védettség esetén a második számjegy (4) mit jelent? 1=csöpögő, 2=permetező, 3=eső, 4=fröccsenő víz", answer: 4, unit: "(szám)", tolerance: 0, explanation: "IP44 esetén a 4-es szám bármilyen irányból fröcskölő víz elleni védelmet jelent." },
+
+  // --- De-energization ---
+  { id: "e65", topic: "de-energization", question: "A feszültségmentesítés hány lépésből áll? (db)", answer: 5, unit: "lépés", tolerance: 0, explanation: "A feszültségmentesítés 5 lépésből áll, amelyek sorrendje fel nem cserélhető." },
+  { id: "e66", topic: "de-energization", question: "Melyik lépés a földelés és rövidzárás? (1-5 között)", answer: 4, unit: "(sorszám)", tolerance: 0, explanation: "A 4. lépés a földelés, rövidzárás és töltések kisütése." },
+
+  // --- Power system ---
+  { id: "e67", topic: "power-system", question: "Mekkora a kisfeszültség felső határa AC esetén? (V)", answer: 1000, unit: "V", tolerance: 0, explanation: "Kisfeszültség AC esetén maximum 1000 V." },
+  { id: "e68", topic: "power-system", question: "Mekkora a hálózati frekvencia Európában? (Hz)", answer: 50, unit: "Hz", tolerance: 0, explanation: "Európában a hálózati frekvencia 50 Hz." },
+  { id: "e69", topic: "power-system", question: "A közcélú elosztóhálózat fázisfeszültsége mennyi? (V)", answer: 230, unit: "V", tolerance: 0, explanation: "A közcélú elosztóhálózat fázisfeszültsége 230 V (fázis-nulla között)." },
+  { id: "e70", topic: "power-system", question: "A közcélú elosztóhálózat vonali feszültsége mennyi? (V)", answer: 400, unit: "V", tolerance: 0, explanation: "A közcélú elosztóhálózat vonali feszültsége 400 V (fázisok között)." },
+
+  // --- Power plants ---
+  { id: "e71", topic: "power-plants", question: "Magyarország 2024-es villamosenergia termelésében az atomenergia hány %-ot tesz ki? (%)", answer: 42.8, unit: "%", tolerance: 0.5, explanation: "2024-ben Magyarország villamosenergia termelésében az atomenergia 42,8%-ot tett ki." },
+  { id: "e72", topic: "power-plants", question: "1 gramm uránból hány MW teljesítmény nyerhető 1 napig? (MW)", answer: 1, unit: "MW", tolerance: 0, explanation: "1 gramm uránból 1 MW teljesítmény nyerhető 1 napig." },
+  { id: "e73", topic: "power-plants", question: "Szélerőműveknél az átlagos szélsebesség legalább hány m/s legyen a működéshez? (m/s)", answer: 5, unit: "m/s", tolerance: 0, explanation: "Szélerőműveknél az átlagos szélsebesség legalább 5 m/s legyen." },
+  { id: "e74", topic: "power-plants", question: "HMKE max. csatlakozási teljesítménye mennyi? (kVA)", answer: 50, unit: "kVA", tolerance: 0, explanation: "Háztartási méretű kiserőmű (HMKE) max. csatlakozási teljesítménye 50 kVA." },
+
+  // --- Network topology ---
+  { id: "e75", topic: "network-topology", question: "Hány vezetős a kisfeszültségű hálózat? (L1, L2, L3, PEN - összesen?)", answer: 4, unit: "db", tolerance: 0, explanation: "A kisfeszültségű hálózat négyvezetős: L1, L2, L3, PEN." },
+  { id: "e76", topic: "network-topology", question: "Sugaras hálózatnál hány úton kaphat energiát egy fogyasztó? (db)", answer: 1, unit: "db", tolerance: 0, explanation: "Sugaras hálózatnál a fogyasztó egyetlen vezetéken, egy úton kap energiát." },
+  { id: "e77", topic: "network-topology", question: "Hurkolt hálózat esetén minimum hány táppontról látják el a fogyasztókat? (db)", answer: 2, unit: "db", tolerance: 0, explanation: "Hurkolt hálózat esetén egyidejűleg több (minimum 2) tápponton keresztül látják el a fogyasztókat." },
+
+  // --- Poles and lines ---
+  { id: "e78", topic: "poles-lines", question: "Kisfeszültségen az oszlopköz körülbelül hány m? (m)", answer: 30, unit: "m", tolerance: 5, explanation: "Kisfeszültségen az oszlopköz körülbelül 30 m, de függ a terepviszonyoktól." },
+  { id: "e79", topic: "poles-lines", question: "Oszlop alapozási mélysége minimum hány m? (m)", answer: 1.5, unit: "m", tolerance: 0.1, explanation: "Az alapozási mélység minimum 1,5 m (vagy az oszlop 1/6-od része, ha az nagyobb)." },
+  { id: "e80", topic: "poles-lines", question: "Kisfeszültségű hálózaton hány méterenként kell földelést alkalmazni? (m)", answer: 250, unit: "m", tolerance: 50, explanation: "Kisfeszültségű hálózaton 200-300 méterenként kell földelést alkalmazni." },
+  { id: "e81", topic: "poles-lines", question: "B12/4 jelölésű betonoszlop törőereje hány kN? (kN)", answer: 40, unit: "kN", tolerance: 0, explanation: "B12/4 jelölésű betonoszlop törőereje 40 kN (a 4-es szám 4×10 kN-t jelent)." }
 ];
 

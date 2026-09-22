@@ -79,6 +79,18 @@ const categoryCount = (categoryId: string) => {
               :key="idx"
               :d="pathData"
             />
+            <text
+              v-for="(textData, idx) in symbol.svg.texts"
+              :key="`text-${idx}`"
+              :x="textData.x"
+              :y="textData.y"
+              :font-size="textData.fontSize || 16"
+              :font-weight="textData.fontWeight || 'normal'"
+              text-anchor="middle"
+              dominant-baseline="middle"
+            >
+              {{ textData.content }}
+            </text>
           </svg>
         </div>
 

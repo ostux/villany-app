@@ -14,7 +14,53 @@ $$R = R_1 \times R_2 = \frac{R_1 \cdot R_2}{R_1 + R_2}$$
 
 A "×" (replusz) jel csak **két tagra** érvényes egyszerre — ha 3 vagy több ellenállás van párhuzamosan, párban kell számolni!
 
-Több egyforma $R$ ellenállás párhuzamos eredője: $\frac{R}{n}$ (n = darabszám).
+**Több ellenállás párhuzamos kapcsolása — általános formula:**
+
+Három vagy több ellenállás párhuzamos kapcsolásánál a reciprokokat (fordított értékeket) kell összeadni:
+
+$$\frac{1}{R_e} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + ...$$
+
+Majd az eredményt vissza kell fordítani:
+
+$$R_e = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + ...}$$
+
+```example
+Példa: $R_1=47Ω$, $R_2=22Ω$, $R_3=16Ω$ párhuzamosan
+$1/R_e = 1/47 + 1/22 + 1/16 = 0{,}0213 + 0{,}0455 + 0{,}0625 = 0{,}1292$
+$R_e = 1/0{,}1292 = 7{,}74Ω$
+```
+
+**Speciális eset: Több egyforma ellenállás párhuzamosan**
+
+Ha **n** darab egyforma $R$ ellenállást kapcsolunk párhuzamosan, az eredő ellenállás:
+
+$$R_e = \frac{R}{n}$$
+
+**Levezetés:**
+
+Ha minden ellenállás értéke $R$, akkor:
+
+$$\frac{1}{R_e} = \frac{1}{R} + \frac{1}{R} + \frac{1}{R} + ... \text{ (n-szer)}$$
+
+$$\frac{1}{R_e} = n \cdot \frac{1}{R} = \frac{n}{R}$$
+
+Visszafordítva:
+
+$$R_e = \frac{1}{\frac{n}{R}} = \frac{R}{n}$$
+
+```example
+Példa: 4 darab 100Ω-os ellenállás párhuzamosan
+$R_e = 100/4 = 25Ω$
+
+Ellenőrzés a teljes formulával:
+$1/R_e = 1/100 + 1/100 + 1/100 + 1/100 = 4/100 = 0{,}04$
+$R_e = 1/0{,}04 = 25Ω$ ✓
+```
+
+```example
+Példa: 3 darab 60Ω-os ellenállás párhuzamosan
+$R_e = 60/3 = 20Ω$
+```
 
 #### Vegyes kapcsolás — módszer
 

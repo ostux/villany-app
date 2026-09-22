@@ -32,7 +32,7 @@ const active = ref("study");
             >⚡</span
           >
           <div>
-            <h1 class="text-xl m-0 font-bold">Villanyszerelő/CS 01</h1>
+            <h1 class="text-xl m-0 font-bold">Villanyszerelő/CS</h1>
             <p class="text-base mt-0.5 text-gray-400">
               Villamos alapismeretek &middot; Elektrotechnika
             </p>
@@ -68,8 +68,8 @@ const active = ref("study");
       class="text-center text-base text-gray-500 p-4 border-t border-gray-800 bg-gray-900"
     >
       <p>
-        Tananyag forrása: 01ea-villszer-202509.pdf &middot; Saját tanuláshoz
-        készült segédeszköz
+        Saját tanuláshoz készült segédeszköz &middot; Használat saját
+        felelősségre! Hibákat tartalmazhat!
       </p>
     </footer>
   </div>

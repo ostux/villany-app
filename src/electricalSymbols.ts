@@ -10,6 +10,7 @@ export interface ElectricalSymbol {
   svg: {
     viewBox: string
     paths: string[] // SVG path data
+    texts?: { x: number; y: number; content: string; fontSize?: number; fontWeight?: string }[] // SVG text elements
     width?: number
     height?: number
   }
@@ -306,6 +307,27 @@ export const ELECTRICAL_SYMBOLS: ElectricalSymbol[] = [
         'M 30,45 L 70,45',
         'M 50,25 L 50,45',
         'M 42,32 L 58,32' // FI symbol
+      ]
+    }
+  },
+  {
+    id: 'rcd-selective',
+    name: 'Selective RCD (S-type)',
+    label: 'Szelektív áram-védőkapcsoló (S típus)',
+    category: 'protection',
+    explanation: 'Szelektív áram-védőkapcsoló (S típusú RCD). Időkésleltetéssel rendelkezik a szelektivitás biztosítására.',
+    svg: {
+      viewBox: '0 0 100 70',
+      paths: [
+        'M 0,35 L 20,35',
+        'M 20,10 L 80,10 L 80,60 L 20,60 Z',
+        'M 80,35 L 100,35',
+        'M 30,25 L 70,25', // test button representation
+        'M 30,45 L 70,45',
+        'M 50,25 L 50,45'
+      ],
+      texts: [
+        { x: 50, y: 38, content: 'S', fontSize: 24, fontWeight: 'bold' }
       ]
     }
   },

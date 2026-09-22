@@ -1,6 +1,6 @@
-# Villanyszerelő/CS 01 — Villamos alapismeretek
+# Villanyszerelő/CS — Villamos alapismeretek
 
-Helyi, offline tanulóalkalmazás a Villanyszerelő/CS 01 (Épületvillamosság) kurzus
+Helyi, offline tanulóalkalmazás a Villanyszerelő/CS (Épületvillamosság) kurzus
 "Villamos alapismeretek / Elektrotechnika" moduljához, a `01ea-villszer-202509.pdf (repo nem tartalmazza)`
 tananyag alapján.
 

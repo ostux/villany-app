@@ -2,6 +2,10 @@
 
 $$P = U \cdot I \qquad [P] = W \text{ (watt)}$$
 
+Ebből átrendezéssel:
+
+$$I = \frac{P}{U} \qquad U = \frac{P}{I}$$
+
 Mivel $U = I \cdot R$, a teljesítmény háromféleképpen is számítható, aszerint, hogy a három jellemző mennyiség közül melyik kettőt ismerjük:
 
 $$P = U \cdot I = \frac{U^2}{R} = I^2 \cdot R$$
@@ -21,6 +25,40 @@ $$\eta = \frac{P_{\text{hasznos}}}{P_{\text{összes}}} \qquad \text{(mindig kise
 #### Valódi (nem ideális) generátor
 
 Minden valóságos feszültséggenerátor egy ideális feszültséggenerátorból és a vele sorba kapcsolódó belső ellenállásából ($R_b$) áll. Ezen belső ellenálláson veszteség keletkezik.
+
+**Az ideális vs. valódi generátor:**
+
+- **Ideális generátor**: Olyan elméleti feszültségforrás, amelynek nincs belső ellenállása ($R_b = 0$). A kapocsfeszültsége állandó, terheléstől függetlenül.
+- **Valódi generátor**: Minden valós feszültségforrás (elem, akkumulátor, hálózati tápegység) rendelkezik belső ellenállással, ezen energia veszteségként hővé alakul.
+
+**Fontos jelölések:**
+
+- **$U_0$** (elektromotoros erő, EMF): A generátor "belső" feszültsége, amit terhelés nélkül (üresjárásban) mérhetünk. Ez az ideális feszültség.
+- **$R_b$** (belső ellenállás): A generátor saját ellenállása, amely sorosan van az ideális feszültségforrással.
+- **$R_t$** (terhelési ellenállás): A külső áramkör ellenállása (a fogyasztó).
+- **$U_k$** (kapocsfeszültség): A generátor kivezetésein (kapcsain) ténylegesen mérhető feszültség terhelés alatt.
+
+**Hogyan működik?**
+
+Amikor a generátort megterheljük (áramot veszünk belőle), az áram a belső ellenálláson is keresztülfolyik. Ezen belső ellenálláson feszültség esik:
+
+$$U_{R_b} = I \cdot R_b$$
+
+Ezért a kapocsfeszültség kisebb lesz, mint az elektromotoros erő:
+
+$$U_k = U_0 - I \cdot R_b$$
+
+Az áramot a teljes áramkör (belső + külső ellenállás) határozza meg:
+
+$$I = \frac{U_0}{R_b + R_t}$$
+
+**Teljesítmények:**
+
+- **$P_0$ (összes teljesítmény)**: A generátor által leadott teljes teljesítmény: $P_0 = U_0 \cdot I$
+- **$P_h$ (hasznos teljesítmény)**: A külső terhelésen realizálódó teljesítmény: $P_h = U_k \cdot I = I^2 \cdot R_t$
+- **$P_v$ (veszteségi teljesítmény)**: A belső ellenálláson hővé alakuló teljesítmény: $P_v = I^2 \cdot R_b$
+
+Az energiamegmaradás miatt: $P_0 = P_h + P_v$
 
 ```example
 Alappélda: $U_0=24V$ generátor, $R_b=2Ω$ belső ellenállás, $R_t=10Ω$ terhelés.
