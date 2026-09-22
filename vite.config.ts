@@ -30,9 +30,9 @@ function copyMarkdownFiles(): Plugin {
 }
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [vue(), tailwindcss(), copyMarkdownFiles()],
-  base: mode === "production" ? "/villany-app/" : "/", // GitHub Pages base path for production only
+  base: "/villany-app/", // GitHub Pages base path - same for dev and production
   build: {
     // Disable performance hints to avoid web vitals errors
     reportCompressedSize: false,
@@ -43,4 +43,4 @@ export default defineConfig(({ mode }) => ({
       overlay: true,
     },
   },
-}));
+});
