@@ -1,13 +1,54 @@
 // Study materials, exercises, and quiz questions for the Electrician/CS 01 - Electrical Fundamentals (Electrotechnology) module
 // Source: 01ea-villszer-202509.pdf
 
+export interface Category {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
 export interface Topic {
   id: string;
   title: string;
   summary: string;
   contentPath: string; // Path to markdown file
   musicPath?: string; // Optional path to music file
+  category: string; // Category ID
 }
+
+export const CATEGORIES: Category[] = [
+  {
+    id: "electrotechnics",
+    title: "Elektrotechnikai alapok",
+    description: "Alapvető villamos ismeretek, számítások és törvények",
+    icon: "⚡"
+  },
+  {
+    id: "power-design",
+    title: "Teljesítmény és vezetéktervezés",
+    description: "Energiaszámítások és vezetékméretezés",
+    icon: "📐"
+  },
+  {
+    id: "safety",
+    title: "Villamos biztonságtechnika és érintésvédelem",
+    description: "Áramütés elleni védelem, földelés, védelmi rendszerek",
+    icon: "🛡️"
+  },
+  {
+    id: "work-safety",
+    title: "Munkavédelem és szakmai szabályok",
+    description: "Munkavégzés során követendő biztonsági eljárások",
+    icon: "⚠️"
+  },
+  {
+    id: "power-systems",
+    title: "Villamosenergia-rendszer és hálózatok",
+    description: "Nagyobb léptékű energiarendszerek, infrastruktúra",
+    icon: "🏭"
+  }
+];
 
 export interface Exercise {
   id: string;
@@ -26,158 +67,184 @@ export const TOPICS: Topic[] = [
     id: "units",
     title: "1. Mértékegységrendszer (SI)",
     summary: "Az alapmennyiségek, prefixumok és a legfontosabb származtatott villamos mértékegységek.",
-    contentPath: "/src/content/topics/units.md"
+    contentPath: "/src/content/topics/units.md",
+    category: "electrotechnics"
   },
   {
     id: "basic-concepts",
     title: "2. Töltés, áram, feszültség, ellenállás",
     summary: "Az elektromos feszültség és áram fogalma, a generátorok, valamint az áramkör alapfogalmai.",
-    contentPath: "/src/content/topics/basic-concepts.md"
+    contentPath: "/src/content/topics/basic-concepts.md",
+    category: "electrotechnics"
   },
   {
     id: "ohms-law",
     title: "3. Ohm törvénye, az ellenállás",
     summary: "Ohm törvénye, az ellenállás és a vezetőképesség fogalma, alapszámítások.",
-    contentPath: "/src/content/topics/ohms-law.md"
+    contentPath: "/src/content/topics/ohms-law.md",
+    category: "electrotechnics"
   },
   {
     id: "series-parallel",
     title: "4. Soros és párhuzamos kapcsolás",
     summary: "Ellenállások soros és párhuzamos eredőjének számítása, vegyes kapcsolások.",
-    contentPath: "/src/content/topics/series-parallel.md"
+    contentPath: "/src/content/topics/series-parallel.md",
+    category: "electrotechnics"
   },
   {
     id: "kirchhoff",
     title: "5. Kirchhoff törvényei",
     summary: "A csomóponti törvény és a huroktörvény, alkalmazásuk áramkörökben.",
-    contentPath: "/src/content/topics/kirchhoffs-laws.md"
+    contentPath: "/src/content/topics/kirchhoffs-laws.md",
+    category: "electrotechnics"
   },
   {
     id: "voltage-divider",
     title: "6. Feszültségosztás, áramosztás",
     summary: "Terheletlen és terhelt feszültségosztó, valamint az áramosztó képlet és alkalmazása.",
-    contentPath: "/src/content/topics/voltage-divider.md"
+    contentPath: "/src/content/topics/voltage-divider.md",
+    category: "electrotechnics"
   },
   {
     id: "conductors-insulators",
     title: "7. Vezetők, szigetelők, félvezetők",
     summary: "Az anyagok elektromos vezetőképesség szerinti csoportosítása, sávelmélet.",
-    contentPath: "/src/content/topics/conductors-insulators.md"
+    contentPath: "/src/content/topics/conductors-insulators.md",
+    category: "electrotechnics"
   },
   {
     id: "resistor-component",
     title: "8. Az ellenállás mint alkatrész",
     summary: "Felépítés, névleges érték, tűrés, teljesítmény, színkód, hőfokfüggés, potenciométerek.",
     contentPath: "/src/content/topics/resistor-component.md",
-    musicPath: "/music/ellenallas-dal.mp3"
+    musicPath: "/music/ellenallas-dal.mp3",
+    category: "electrotechnics"
   },
   {
     id: "power-energy",
     title: "9. Teljesítmény, munka, hatásfok",
     summary: "Villamos teljesítmény és energia számítása, hatásfok, valódi generátor.",
-    contentPath: "/src/content/topics/power-energy.md"
+    contentPath: "/src/content/topics/power-energy.md",
+    category: "power-design"
   },
   {
     id: "wire-sizing",
     title: "10. Fajlagos ellenállás, vezeték méretezése",
     summary: "A vezeték ellenállásának számítása, keresztmetszet meghatározása feszültségesésre.",
-    contentPath: "/src/content/topics/wire-sizing.md"
+    contentPath: "/src/content/topics/wire-sizing.md",
+    category: "power-design"
   },
   {
     id: "star-delta",
     title: "11. Csillag–delta átalakítás",
     summary: "Háromszög (delta) és csillag (Y) kapcsolású ellenállás-hálózatok átalakítása egymásba.",
-    contentPath: "/src/content/topics/star-delta.md"
+    contentPath: "/src/content/topics/star-delta.md",
+    category: "electrotechnics"
   },
   {
     id: "electrical-safety-basics",
     title: "12. A villamos áram élettani hatása",
     summary: "Áramütés veszélyei, áramerősség-határok, érintési feszültség limitek, nagyfeszültség fogalma.",
-    contentPath: "/src/content/topics/electrical-safety-basics.md"
+    contentPath: "/src/content/topics/electrical-safety-basics.md",
+    category: "safety"
   },
   {
     id: "protection-classes",
     title: "13. Áramütés elleni védelmi osztályok",
     summary: "Védelmi osztályok (0, I, II, III), aktív és passzív érintésvédelmi módszerek, AVK.",
-    contentPath: "/src/content/topics/protection-classes.md"
+    contentPath: "/src/content/topics/protection-classes.md",
+    category: "safety"
   },
   {
     id: "tn-systems",
     title: "14. TN rendszerek (nullázás)",
     summary: "TN-C, TN-S és TN-C-S rendszerek, védővezető leágazása, keresztmetszet-meghatározás.",
-    contentPath: "/src/content/topics/tn-systems.md"
+    contentPath: "/src/content/topics/tn-systems.md",
+    category: "safety"
   },
   {
     id: "tt-it-systems",
     title: "15. TT és IT rendszerek",
     summary: "Védőföldeléses (TT) és szigetelt hálózatú (IT) rendszerek, számítási képletek.",
-    contentPath: "/src/content/topics/tt-it-systems.md"
+    contentPath: "/src/content/topics/tt-it-systems.md",
+    category: "safety"
   },
   {
     id: "first-aid-electrical",
     title: "16. Elsősegélynyújtás villamos baleset esetén",
     summary: "Műszaki mentés, elsősegély diagnosztikai lépései, áramkörből való kiszabadítás.",
-    contentPath: "/src/content/topics/first-aid-electrical.md"
+    contentPath: "/src/content/topics/first-aid-electrical.md",
+    category: "safety"
   },
   {
     id: "grounding-protection",
     title: "17. Földelés és érintésvédelem",
     summary: "Közvetlen és közvetett érintés, védővezetős módok, egyenpotenciálra hozás.",
-    contentPath: "/src/content/topics/grounding-protection.md"
+    contentPath: "/src/content/topics/grounding-protection.md",
+    category: "safety"
   },
   {
     id: "grounding-systems",
     title: "18. Földelési rendszerek",
     summary: "Főföldelő sín, földelő elektródák típusai, talaj fajlagos ellenállása, potenciálkiegyenlítés.",
-    contentPath: "/src/content/topics/grounding-systems.md"
+    contentPath: "/src/content/topics/grounding-systems.md",
+    category: "safety"
   },
   {
     id: "avk-rcd",
     title: "19. Áram-védőkapcsoló (AVK/RCD)",
     summary: "AVK működési elve, típusok, telepítési követelmények, tesztelés, RCBO kombinált készülék.",
-    contentPath: "/src/content/topics/avk-rcd.md"
+    contentPath: "/src/content/topics/avk-rcd.md",
+    category: "safety"
   },
   {
     id: "protection-without-pe",
     title: "20. Védővezető nélküli érintésvédelem",
     summary: "Kettős szigetelés, védőelválasztás, törpefeszültség - passzív érintésvédelmi módok.",
-    contentPath: "/src/content/topics/protection-without-pe.md"
+    contentPath: "/src/content/topics/protection-without-pe.md",
+    category: "safety"
   },
   {
     id: "ip-protection",
     title: "21. IP védettség",
     summary: "Behatolás elleni védelem, IP kód felépítése, lakásokra vonatkozó előírások, fürdőszoba zónák.",
-    contentPath: "/src/content/topics/ip-protection.md"
+    contentPath: "/src/content/topics/ip-protection.md",
+    category: "safety"
   },
   {
     id: "de-energization",
     title: "22. Feszültségmentesítés",
     summary: "Az 5 lépéses feszültségmentesítési eljárás, munkavédelmi előírások villamos munkavégzéshez.",
-    contentPath: "/src/content/topics/de-energization.md"
+    contentPath: "/src/content/topics/de-energization.md",
+    category: "work-safety"
   },
   {
     id: "power-system",
     title: "23. Villamosenergia-rendszer",
     summary: "A villamos energia termelése, továbbítása és elosztása, feszültségszintek, frekvencia, MAVIR szerepe.",
-    contentPath: "/src/content/topics/power-system.md"
+    contentPath: "/src/content/topics/power-system.md",
+    category: "power-systems"
   },
   {
     id: "power-plants",
     title: "24. Erőművek",
     summary: "Erőműtípusok: hőerőművek, atomerőművek, víz-, szél-, biomassza erőművek. Alap-, csúcs- és menetrendtartó erőművek.",
-    contentPath: "/src/content/topics/power-plants.md"
+    contentPath: "/src/content/topics/power-plants.md",
+    category: "power-systems"
   },
   {
     id: "network-topology",
     title: "25. Hálózatok topológiája",
     summary: "Sugaras, gyűrűs, íves, hurkolt hálózatok, állomások típusai, kisfeszültségű hálózat jellemzői.",
-    contentPath: "/src/content/topics/network-topology.md"
+    contentPath: "/src/content/topics/network-topology.md",
+    category: "power-systems"
   },
   {
     id: "poles-lines",
     title: "26. Oszlopok és vezetékek",
     summary: "Vezetéktartó oszlopok típusai, anyagok, alapozás, földelés, szigetelők, szabadvezetékek.",
-    contentPath: "/src/content/topics/poles-lines.md"
+    contentPath: "/src/content/topics/poles-lines.md",
+    category: "power-systems"
   }
 ];
 

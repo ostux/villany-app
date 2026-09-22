@@ -1,11 +1,31 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, reactive } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { TOPICS } from '../data'
+import { TOPICS, CATEGORIES } from '../data'
 import { loadMarkdownFile, renderMarkdown } from '../utils/markdownRenderer'
 
 const route = useRoute()
 const router = useRouter()
+
+// Track which categories are expanded (all expanded by default)
+const expandedCategories = reactive<Record<string, boolean>>(
+  CATEGORIES.reduce((acc, cat) => {
+    acc[cat.id] = true
+    return acc
+  }, {} as Record<string, boolean>)
+)
+
+// Group topics by category
+const topicsByCategory = computed(() => {
+  return CATEGORIES.map(category => ({
+    ...category,
+    topics: TOPICS.filter(topic => topic.category === category.id)
+  }))
+})
+
+function toggleCategory(categoryId: string) {
+  expandedCategories[categoryId] = !expandedCategories[categoryId]
+}
 
 const activeId = computed(() => {
   const topicId = route.params.topicId as string | undefined
@@ -81,22 +101,50 @@ const idx = computed(() => {
 </script>
 
 <template>
-  <div class="grid lg:grid-cols-[300px_1fr] gap-5 items-start">
-    <aside class="flex flex-col gap-1.5 bg-gray-900 border border-gray-800 rounded-[10px] p-2 sticky top-[88px] max-h-[calc(100vh-110px)] overflow-y-auto lg:block static lg:max-h-[calc(100vh-110px)]">
-      <button
-        v-for="topic in TOPICS"
-        :key="topic.id"
-        :class="[
-          'text-left border-0 rounded-lg p-2.5 px-3 cursor-pointer flex flex-col gap-0.5 transition-all duration-150',
-          topic.id === activeId
-            ? 'bg-amber-950/40'
-            : 'bg-transparent hover:bg-gray-800'
-        ]"
-        @click="select(topic.id)"
-      >
-        <span :class="['text-base font-bold', topic.id === activeId ? 'text-amber-600' : 'text-gray-100']">{{ topic.title }}</span>
-        <span class="text-base text-gray-400">{{ topic.summary }}</span>
-      </button>
+  <div class="grid lg:grid-cols-[320px_1fr] gap-5 items-start">
+    <aside class="flex flex-col gap-2 bg-gray-900 border border-gray-800 rounded-[10px] p-2 sticky top-[88px] max-h-[calc(100vh-110px)] overflow-y-auto lg:block static lg:max-h-[calc(100vh-110px)]">
+      <div v-for="category in topicsByCategory" :key="category.id" class="mb-1">
+        <!-- Category Header -->
+        <button
+          @click="toggleCategory(category.id)"
+          class="w-full text-left border-0 rounded-lg p-2.5 px-3 cursor-pointer flex items-center justify-between bg-gray-800 hover:bg-gray-750 transition-all duration-150 mb-1"
+        >
+          <div class="flex items-center gap-2">
+            <span class="text-xl">{{ category.icon }}</span>
+            <span class="text-base font-bold text-amber-500">{{ category.title }}</span>
+          </div>
+          <span class="text-gray-400 text-lg transition-transform duration-200" :class="{ 'rotate-180': expandedCategories[category.id] }">
+            ▼
+          </span>
+        </button>
+
+        <!-- Topics in Category (collapsible) -->
+        <transition
+          enter-active-class="transition-all duration-200 ease-out"
+          leave-active-class="transition-all duration-200 ease-in"
+          enter-from-class="opacity-0 max-h-0"
+          enter-to-class="opacity-100 max-h-[2000px]"
+          leave-from-class="opacity-100 max-h-[2000px]"
+          leave-to-class="opacity-0 max-h-0"
+        >
+          <div v-show="expandedCategories[category.id]" class="flex flex-col gap-1 overflow-hidden">
+            <button
+              v-for="topic in category.topics"
+              :key="topic.id"
+              :class="[
+                'text-left border-0 rounded-lg p-2.5 px-3 ml-2 cursor-pointer flex flex-col gap-0.5 transition-all duration-150',
+                topic.id === activeId
+                  ? 'bg-amber-950/40 border-l-2 border-amber-500'
+                  : 'bg-transparent hover:bg-gray-800'
+              ]"
+              @click="select(topic.id)"
+            >
+              <span :class="['text-[15px] font-bold', topic.id === activeId ? 'text-amber-500' : 'text-gray-100']">{{ topic.title }}</span>
+              <span class="text-[14px] text-gray-400">{{ topic.summary }}</span>
+            </button>
+          </div>
+        </transition>
+      </div>
     </aside>
 
     <section v-if="activeTopic" class="bg-gray-900 border border-gray-800 rounded-[10px] p-7 px-8 shadow-lg">
