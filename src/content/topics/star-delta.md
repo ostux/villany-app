@@ -60,19 +60,23 @@ Bonyolultabb hálózatoknál előfordul, hogy a részek **nem tisztán sorosak v
 
 Ha adott egy **csillag kapcsolás** ($R_a$, $R_b$, $R_c$ ellenállásokkal), és szeretnéd kiszámolni az egyenértékű **delta kapcsolás** ellenállásait ($R_1$, $R_2$, $R_3$):
 
-$$R_1 = \frac{R_a \cdot R_c}{R_Y} \qquad R_2 = \frac{R_b \cdot R_c}{R_Y} \qquad R_3 = \frac{R_a \cdot R_b}{R_Y}$$
+Először számoljuk ki: $\text{Összeg} = R_a \cdot R_b + R_b \cdot R_c + R_c \cdot R_a$
 
-ahol $R_Y = R_a + R_b + R_c$ (a csillag ellenállások összege).
+Majd:
 
-**Megjegyezni:** Minden delta ellenállás = **két szomszédos csillag ellenállás szorzata osztva az összegükkel**.
+$$R_1 = \frac{\text{Összeg}}{R_c} \qquad R_2 = \frac{\text{Összeg}}{R_a} \qquad R_3 = \frac{\text{Összeg}}{R_b}$$
 
-**Példa:** $R_1$ (ami A és B között van a deltában) = $R_a \times R_c$ szorzata (ezek az A és B "melletti" csillag ellenállások) osztva $R_Y$-nal.
+**Megjegyezni:** Az Összeg = **minden lehetséges csillag ellenállás-pár szorzatának összege**.
+
+Minden delta ellenállás = **az Összeg osztva a "szemközti" csillag ellenállással**.
+
+**Példa:** $R_1$ (ami A és B között van a deltában) = Összeg osztva $R_c$-vel (C a "szemközti" terminál).
 
 ### Delta → Csillag (Δ→Y) átalakítás
 
 Ha adott egy **delta kapcsolás** ($R_1$, $R_2$, $R_3$ ellenállásokkal), és szeretnéd kiszámolni az egyenértékű **csillag kapcsolás** ellenállásait ($R_a$, $R_b$, $R_c$):
 
-$$R_a = \frac{R_1 \cdot R_3}{R_\Delta} \qquad R_b = \frac{R_2 \cdot R_3}{R_\Delta} \qquad R_c = \frac{R_1 \cdot R_2}{R_\Delta}$$
+$$R_a = \frac{R_1 \cdot R_3}{R_\Delta} \qquad R_b = \frac{R_1 \cdot R_2}{R_\Delta} \qquad R_c = \frac{R_2 \cdot R_3}{R_\Delta}$$
 
 ahol $R_\Delta = R_1 + R_2 + R_3$ (a delta ellenállások összege).
 
@@ -91,22 +95,23 @@ ahol $R_\Delta = R_1 + R_2 + R_3$ (a delta ellenállások összege).
 ```example
 Adott: $R_a = R_b = R_c = 9Ω$
 
-1. lépés: Számoljuk ki $R_Y$-t (csillag ellenállások összege)
+1. lépés: Számoljuk ki az Összeget
 
-   $$R_Y = R_a + R_b + R_c = 9 + 9 + 9 = 27Ω$$
+   $$\text{Összeg} = R_a \cdot R_b + R_b \cdot R_c + R_c \cdot R_a$$
+   $$= 9 \cdot 9 + 9 \cdot 9 + 9 \cdot 9 = 81 + 81 + 81 = 243$$
 
 2. lépés: Használjuk a Csillag→Delta képleteket
 
-   $$R_1 = \frac{R_a \cdot R_c}{R_Y} = \frac{9 \cdot 9}{27} = \frac{81}{27} = 3Ω$$
+   $$R_1 = \frac{\text{Összeg}}{R_c} = \frac{243}{9} = 27Ω$$
 
-   $$R_2 = \frac{R_b \cdot R_c}{R_Y} = \frac{9 \cdot 9}{27} = \frac{81}{27} = 3Ω$$
+   $$R_2 = \frac{\text{Összeg}}{R_a} = \frac{243}{9} = 27Ω$$
 
-   $$R_3 = \frac{R_a \cdot R_b}{R_Y} = \frac{9 \cdot 9}{27} = \frac{81}{27} = 3Ω$$
+   $$R_3 = \frac{\text{Összeg}}{R_b} = \frac{243}{9} = 27Ω$$
 
-Eredmény: $R_1 = R_2 = R_3 = 3Ω$
+Eredmény: $R_1 = R_2 = R_3 = 27Ω$
 ```
 
-**Gyors szabály:** Ha minden csillag ellenállás egyforma (R), akkor minden delta ellenállás **3R** lesz!
+> **Gyors szabály:** Ha minden csillag ellenállás egyforma (R), akkor minden delta ellenállás **3R** lesz! (3 × 9Ω = 27Ω)
 
 ### 2. Példa: Különböző ellenállások - Csillag → Delta
 
@@ -117,19 +122,20 @@ Eredmény: $R_1 = R_2 = R_3 = 3Ω$
 ```example
 Adott: $R_a = 6Ω$, $R_b = 12Ω$, $R_c = 18Ω$
 
-1. lépés: Számoljuk ki $R_Y$-t (csillag ellenállások összege)
+1. lépés: Számoljuk ki az Összeget
 
-   $$R_Y = R_a + R_b + R_c = 6 + 12 + 18 = 36Ω$$
+   $$\text{Összeg} = R_a \cdot R_b + R_b \cdot R_c + R_c \cdot R_a$$
+   $$= 6 \cdot 12 + 12 \cdot 18 + 18 \cdot 6 = 72 + 216 + 108 = 396$$
 
 2. lépés: Használjuk a Csillag→Delta képleteket
 
-   $$R_1 = \frac{R_a \cdot R_c}{R_Y} = \frac{6 \cdot 18}{36} = \frac{108}{36} = 3Ω$$
+   $$R_1 = \frac{\text{Összeg}}{R_c} = \frac{396}{18} = 22Ω$$
 
-   $$R_2 = \frac{R_b \cdot R_c}{R_Y} = \frac{12 \cdot 18}{36} = \frac{216}{36} = 6Ω$$
+   $$R_2 = \frac{\text{Összeg}}{R_a} = \frac{396}{6} = 66Ω$$
 
-   $$R_3 = \frac{R_a \cdot R_b}{R_Y} = \frac{6 \cdot 12}{36} = \frac{72}{36} = 2Ω$$
+   $$R_3 = \frac{\text{Összeg}}{R_b} = \frac{396}{12} = 33Ω$$
 
-Eredmény: $R_1 = 3Ω$ (A-B között), $R_2 = 6Ω$ (B-C között), $R_3 = 2Ω$ (C-A között)
+Eredmény: $R_1 = 22Ω$ (A-B között), $R_2 = 66Ω$ (B-C között), $R_3 = 33Ω$ (C-A között)
 ```
 
 ### 3. Példa: Egyenlő ellenállások - Delta → Csillag
@@ -149,14 +155,14 @@ Adott: $R_1 = R_2 = R_3 = 15Ω$
 
    $$R_a = \frac{R_1 \cdot R_3}{R_\Delta} = \frac{15 \cdot 15}{45} = \frac{225}{45} = 5Ω$$
 
-   $$R_b = \frac{R_2 \cdot R_3}{R_\Delta} = \frac{15 \cdot 15}{45} = \frac{225}{45} = 5Ω$$
+   $$R_b = \frac{R_1 \cdot R_2}{R_\Delta} = \frac{15 \cdot 15}{45} = \frac{225}{45} = 5Ω$$
 
-   $$R_c = \frac{R_1 \cdot R_2}{R_\Delta} = \frac{15 \cdot 15}{45} = \frac{225}{45} = 5Ω$$
+   $$R_c = \frac{R_2 \cdot R_3}{R_\Delta} = \frac{15 \cdot 15}{45} = \frac{225}{45} = 5Ω$$
 
 Eredmény: $R_a = R_b = R_c = 5Ω$
 ```
 
-**Gyors szabály:** Ha minden delta ellenállás egyforma (R), akkor minden csillag ellenállás **R/3** lesz! (15Ω / 3 = 5Ω)
+> **Gyors szabály:** Ha minden delta ellenállás egyforma (R), akkor minden csillag ellenállás **R/3** lesz! (15Ω / 3 = 5Ω)
 
 ### 4. Példa: Különböző ellenállások - Delta → Csillag
 
@@ -177,12 +183,12 @@ Adott: $R_1 = 12Ω$, $R_2 = 18Ω$, $R_3 = 9Ω$
    $$R_a = \frac{R_1 \cdot R_3}{R_\Delta} = \frac{12 \cdot 9}{39} = \frac{108}{39} \approx 2{,}77Ω$$
 
    $R_b$ (B terminálhoz):
-   $$R_b = \frac{R_2 \cdot R_3}{R_\Delta} = \frac{18 \cdot 9}{39} = \frac{162}{39} \approx 4{,}15Ω$$
+   $$R_b = \frac{R_1 \cdot R_2}{R_\Delta} = \frac{12 \cdot 18}{39} = \frac{216}{39} \approx 5{,}54Ω$$
 
    $R_c$ (C terminálhoz):
-   $$R_c = \frac{R_1 \cdot R_2}{R_\Delta} = \frac{12 \cdot 18}{39} = \frac{216}{39} \approx 5{,}54Ω$$
+   $$R_c = \frac{R_2 \cdot R_3}{R_\Delta} = \frac{18 \cdot 9}{39} = \frac{162}{39} \approx 4{,}15Ω$$
 
-Eredmény: $R_a \approx 2{,}77Ω$, $R_b \approx 4{,}15Ω$, $R_c \approx 5{,}54Ω$
+Eredmény: $R_a \approx 2{,}77Ω$, $R_b \approx 5{,}54Ω$, $R_c \approx 4{,}15Ω$
 ```
 
 ### 5. Példa: Hídkapcsolás egyszerűsítése (gyakorlati alkalmazás)
@@ -225,11 +231,11 @@ Eredmény: Átalakítás nélkül NEM tudnánk kiszámolni!
 
 Ha **minden ellenállás egyforma** (szimmetrikus hálózat), akkor nagyon egyszerű szabályok vannak:
 
-**Delta → Csillag:** Minden delta ellenállást **osszunk 3-mal**
-- Delta $R$ ⟶ Csillag $\frac{R}{3}$
+> **Gyors szabály - Delta → Csillag:** Minden delta ellenállást **osszunk 3-mal**
+> - Delta $R$ ⟶ Csillag $\frac{R}{3}$
 
-**Csillag → Delta:** Minden csillag ellenállást **szorozzunk 3-mal**
-- Csillag $R$ ⟶ Delta $3R$
+> **Gyors szabály - Csillag → Delta:** Minden csillag ellenállást **szorozzunk 3-mal**
+> - Csillag $R$ ⟶ Delta $3R$
 
 > **Gyors fejszámolás:** Ha látod, hogy minden ellenállás egyforma, azonnal használd a "×3" vagy "/3" szabályt! Nem kell semmit számolgatni.
 
