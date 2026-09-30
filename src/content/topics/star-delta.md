@@ -60,17 +60,17 @@ Bonyolultabb hálózatoknál előfordul, hogy a részek **nem tisztán sorosak v
 
 Ha adott egy **csillag kapcsolás** ($R_a$, $R_b$, $R_c$ ellenállásokkal), és szeretnéd kiszámolni az egyenértékű **delta kapcsolás** ellenállásait ($R_1$, $R_2$, $R_3$):
 
-Először számoljuk ki: $\text{Összeg} = R_a \cdot R_b + R_b \cdot R_c + R_c \cdot R_a$
+Először számoljuk ki: $R_Y = R_a \cdot R_b + R_b \cdot R_c + R_c \cdot R_a$
 
 Majd:
 
-$$R_1 = \frac{\text{Összeg}}{R_c} \qquad R_2 = \frac{\text{Összeg}}{R_a} \qquad R_3 = \frac{\text{Összeg}}{R_b}$$
+$$R_1 = \frac{R_Y}{R_c} \qquad R_2 = \frac{R_Y}{R_a} \qquad R_3 = \frac{R_Y}{R_b}$$
 
-**Megjegyezni:** Az Összeg = **minden lehetséges csillag ellenállás-pár szorzatának összege**.
+**Megjegyezni:** $R_Y$ = **minden lehetséges csillag ellenállás-pár szorzatának összege**.
 
-Minden delta ellenállás = **az Összeg osztva a "szemközti" csillag ellenállással**.
+Minden delta ellenállás = **$R_Y$ osztva a "szemközti" csillag ellenállással**.
 
-**Példa:** $R_1$ (ami A és B között van a deltában) = Összeg osztva $R_c$-vel (C a "szemközti" terminál).
+**Példa:** $R_1$ (ami A és B között van a deltában) = $R_Y$ osztva $R_c$-vel (C a "szemközti" terminál).
 
 ### Delta → Csillag (Δ→Y) átalakítás
 
@@ -95,18 +95,18 @@ ahol $R_\Delta = R_1 + R_2 + R_3$ (a delta ellenállások összege).
 ```example
 Adott: $R_a = R_b = R_c = 9Ω$
 
-1. lépés: Számoljuk ki az Összeget
+1. lépés: Számoljuk ki $R_Y$-t
 
-   $$\text{Összeg} = R_a \cdot R_b + R_b \cdot R_c + R_c \cdot R_a$$
+   $$R_Y = R_a \cdot R_b + R_b \cdot R_c + R_c \cdot R_a$$
    $$= 9 \cdot 9 + 9 \cdot 9 + 9 \cdot 9 = 81 + 81 + 81 = 243$$
 
 2. lépés: Használjuk a Csillag→Delta képleteket
 
-   $$R_1 = \frac{\text{Összeg}}{R_c} = \frac{243}{9} = 27Ω$$
+   $$R_1 = \frac{R_Y}{R_c} = \frac{243}{9} = 27Ω$$
 
-   $$R_2 = \frac{\text{Összeg}}{R_a} = \frac{243}{9} = 27Ω$$
+   $$R_2 = \frac{R_Y}{R_a} = \frac{243}{9} = 27Ω$$
 
-   $$R_3 = \frac{\text{Összeg}}{R_b} = \frac{243}{9} = 27Ω$$
+   $$R_3 = \frac{R_Y}{R_b} = \frac{243}{9} = 27Ω$$
 
 Eredmény: $R_1 = R_2 = R_3 = 27Ω$
 ```
@@ -122,18 +122,18 @@ Eredmény: $R_1 = R_2 = R_3 = 27Ω$
 ```example
 Adott: $R_a = 6Ω$, $R_b = 12Ω$, $R_c = 18Ω$
 
-1. lépés: Számoljuk ki az Összeget
+1. lépés: Számoljuk ki $R_Y$-t
 
-   $$\text{Összeg} = R_a \cdot R_b + R_b \cdot R_c + R_c \cdot R_a$$
+   $$R_Y = R_a \cdot R_b + R_b \cdot R_c + R_c \cdot R_a$$
    $$= 6 \cdot 12 + 12 \cdot 18 + 18 \cdot 6 = 72 + 216 + 108 = 396$$
 
 2. lépés: Használjuk a Csillag→Delta képleteket
 
-   $$R_1 = \frac{\text{Összeg}}{R_c} = \frac{396}{18} = 22Ω$$
+   $$R_1 = \frac{R_Y}{R_c} = \frac{396}{18} = 22Ω$$
 
-   $$R_2 = \frac{\text{Összeg}}{R_a} = \frac{396}{6} = 66Ω$$
+   $$R_2 = \frac{R_Y}{R_a} = \frac{396}{6} = 66Ω$$
 
-   $$R_3 = \frac{\text{Összeg}}{R_b} = \frac{396}{12} = 33Ω$$
+   $$R_3 = \frac{R_Y}{R_b} = \frac{396}{12} = 33Ω$$
 
 Eredmény: $R_1 = 22Ω$ (A-B között), $R_2 = 66Ω$ (B-C között), $R_3 = 33Ω$ (C-A között)
 ```
