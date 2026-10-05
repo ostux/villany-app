@@ -166,6 +166,6 @@ Az energiatermelés **koncentrálódott** a régi viszonyokhoz képest:
 
 - Nagyobb erőművek
 - Jobb hatásfok nagy teljesítmény esetén
-- Kisebb удельные költségek
+- Kisebb fajlagos költségek
 
 > **Trend:** Az utóbbi években viszont megjelentek a **decentralizált** energiatermelők (naperőművek, szélerőművek, HMKE-k), ami új kihívásokat jelent a hálózati irányítás szempontjából.

@@ -926,7 +926,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "oh0063",
     "topic": "ohms-law",
-    "question": "Az ábrán 24V feszültség van 80Ω ellenálláson. Mekkora az áram?",
+    "question": "Egy 80Ω ellenálláson 24V feszültség van. Mekkora az áram?",
     "options": [
       "0.15 A",
       "0.3 A",
@@ -988,10 +988,13 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     "topic": "ohms-law",
     "question": "12V táp, R1=10Ω sorban R2-vel, 0.4A folyik. Mekkora R2? (Tipp: először számold ki az eredő ellenállást!)",
     "options": [
-      "0 A"
+      "20 Ω",
+      "30 Ω",
+      "10 Ω",
+      "25 Ω"
     ],
     "correct": 0,
-    "explanation": "",
+    "explanation": "Először: $R_{össz} = U/I = 12/0.4 = 30$ Ω. Mivel $R_{össz} = R_1 + R_2$, ezért $R_2 = 30 - 10 = 20$ Ω.",
     "difficulty": "hard",
     "requiresCalculation": true
   },
@@ -2018,22 +2021,22 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0136",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=100Ω, R2=200Ω, Ube=12V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=100Ω, R2=200Ω, Rt=300Ω, Ube=12V. Mekkora Uki?",
     "options": [
-      "6 V",
       "8 V",
-      "12 V",
-      "4 V"
+      "6.55 V",
+      "7.2 V",
+      "5.8 V"
     ],
     "correct": 1,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 12 \\cdot \\frac{200}{100+200} = 8$ V.",
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{200 \\cdot 300}{200+300} = 120$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 12 \\cdot \\frac{120}{100+120} = 6.55$ V.",
     "difficulty": "easy",
     "requiresCalculation": true
   },
   {
     "id": "vd0137",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=150Ω, R2=150Ω, Ube=20V. Mekkora Uki?",
+    "question": "Feszültségosztó soros kapcsolásban: R1=150Ω, R2=150Ω, Ube=20V. Mekkora Uki?",
     "options": [
       "15 V",
       "10 V",
@@ -2048,15 +2051,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0138",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=200Ω, R2=400Ω, Ube=18V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=200Ω, R2=400Ω, Rt=400Ω, Ube=18V. Mekkora Uki?",
     "options": [
-      "18 V",
-      "6 V",
+      "12 V",
       "9 V",
-      "12 V"
+      "10.5 V",
+      "7.5 V"
     ],
-    "correct": 3,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 18 \\cdot \\frac{400}{200+400} = 12$ V.",
+    "correct": 1,
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{400 \\cdot 400}{400+400} = 200$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 18 \\cdot \\frac{200}{200+200} = 9$ V.",
     "difficulty": "easy",
     "requiresCalculation": true
   },
@@ -2078,15 +2081,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0140",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=220Ω, R2=220Ω, Ube=24V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=220Ω, R2=220Ω, Rt=330Ω, Ube=24V. Mekkora Uki?",
     "options": [
-      "7.2 V",
-      "14.4 V",
       "12 V",
-      "18 V"
+      "9 V",
+      "10.5 V",
+      "8.2 V"
     ],
-    "correct": 2,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 24 \\cdot \\frac{220}{220+220} = 12$ V.",
+    "correct": 1,
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{220 \\cdot 330}{220+330} = 132$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 24 \\cdot \\frac{132}{220+132} = 9$ V.",
     "difficulty": "easy",
     "requiresCalculation": true
   },
@@ -2108,15 +2111,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0142",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=180Ω, R2=180Ω, Ube=30V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=180Ω, R2=180Ω, Rt=270Ω, Ube=30V. Mekkora Uki?",
     "options": [
-      "12 V",
-      "22.5 V",
-      "16.5 V",
-      "15 V"
+      "15 V",
+      "11.25 V",
+      "12.5 V",
+      "10 V"
     ],
-    "correct": 3,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 30 \\cdot \\frac{180}{180+180} = 15$ V.",
+    "correct": 1,
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{180 \\cdot 270}{180+270} = 108$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 30 \\cdot \\frac{108}{180+108} = 11.25$ V.",
     "difficulty": "easy",
     "requiresCalculation": true
   },
@@ -2138,15 +2141,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0144",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=820Ω, R2=680Ω, Ube=24V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=820Ω, R2=680Ω, Rt=1000Ω, Ube=24V. Mekkora Uki?",
     "options": [
-      "12 V",
-      "16.32 V",
       "10.88 V",
-      "13.12 V"
+      "7.93 V",
+      "9.2 V",
+      "6.5 V"
     ],
-    "correct": 2,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 24 \\cdot \\frac{680}{820+680} = 10.88$ V.",
+    "correct": 1,
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{680 \\cdot 1000}{680+1000} \\approx 404.76$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 24 \\cdot \\frac{404.76}{820+404.76} \\approx 7.93$ V.",
     "difficulty": "medium",
     "requiresCalculation": true
   },
@@ -2168,15 +2171,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0146",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=200Ω, R2=330Ω, Ube=30V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=200Ω, R2=330Ω, Rt=470Ω, Ube=30V. Mekkora Uki?",
     "options": [
-      "11.32 V",
       "18.68 V",
-      "28.02 V",
-      "15 V"
+      "14.77 V",
+      "16.2 V",
+      "13.5 V"
     ],
     "correct": 1,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 30 \\cdot \\frac{330}{200+330} = 18.68$ V.",
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{330 \\cdot 470}{330+470} \\approx 193.88$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 30 \\cdot \\frac{193.88}{200+193.88} \\approx 14.77$ V.",
     "difficulty": "medium",
     "requiresCalculation": true
   },
@@ -2198,15 +2201,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0148",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=220Ω, R2=560Ω, Ube=18V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=220Ω, R2=560Ω, Rt=680Ω, Ube=18V. Mekkora Uki?",
     "options": [
-      "9 V",
       "12.92 V",
-      "19.38 V",
-      "5.08 V"
+      "10.49 V",
+      "11.5 V",
+      "9.8 V"
     ],
     "correct": 1,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 18 \\cdot \\frac{560}{220+560} = 12.92$ V.",
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{560 \\cdot 680}{560+680} \\approx 307.1$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 18 \\cdot \\frac{307.1}{220+307.1} \\approx 10.49$ V.",
     "difficulty": "medium",
     "requiresCalculation": true
   },
@@ -2228,15 +2231,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0150",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=200Ω, R2=220Ω, Ube=10V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=200Ω, R2=220Ω, Rt=330Ω, Ube=10V. Mekkora Uki?",
     "options": [
       "5.24 V",
-      "4.76 V",
-      "5 V",
-      "7.86 V"
+      "3.98 V",
+      "4.5 V",
+      "3.2 V"
     ],
-    "correct": 0,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 10 \\cdot \\frac{220}{200+220} = 5.24$ V.",
+    "correct": 1,
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{220 \\cdot 330}{220+330} = 132$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 10 \\cdot \\frac{132}{200+132} \\approx 3.98$ V.",
     "difficulty": "medium",
     "requiresCalculation": true
   },
@@ -2258,15 +2261,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0152",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=820Ω, R2=330Ω, Ube=15V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=820Ω, R2=330Ω, Rt=470Ω, Ube=15V. Mekkora Uki?",
     "options": [
       "4.3 V",
-      "10.7 V",
-      "7.5 V",
-      "6.45 V"
+      "2.87 V",
+      "3.5 V",
+      "2.2 V"
     ],
-    "correct": 0,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 15 \\cdot \\frac{330}{820+330} = 4.3$ V.",
+    "correct": 1,
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{330 \\cdot 470}{330+470} \\approx 193.88$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 15 \\cdot \\frac{193.88}{820+193.88} \\approx 2.87$ V.",
     "difficulty": "medium",
     "requiresCalculation": true
   },
@@ -2288,15 +2291,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0154",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=820Ω, R2=270Ω, Ube=10V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=820Ω, R2=270Ω, Rt=390Ω, Ube=10V. Mekkora Uki?",
     "options": [
-      "7.52 V",
       "2.48 V",
-      "3.72 V",
-      "5 V"
+      "1.63 V",
+      "2.0 V",
+      "1.2 V"
     ],
     "correct": 1,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 10 \\cdot \\frac{270}{820+270} = 2.48$ V.",
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{270 \\cdot 390}{270+390} \\approx 159.55$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 10 \\cdot \\frac{159.55}{820+159.55} \\approx 1.63$ V.",
     "difficulty": "medium",
     "requiresCalculation": true
   },
@@ -2318,15 +2321,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0156",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=200Ω, R2=330Ω, Ube=10V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=200Ω, R2=330Ω, Rt=560Ω, Ube=10V. Mekkora Uki?",
     "options": [
-      "5 V",
-      "9.35 V",
-      "3.77 V",
-      "6.23 V"
+      "6.23 V",
+      "5.09 V",
+      "5.8 V",
+      "4.5 V"
     ],
-    "correct": 3,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 10 \\cdot \\frac{330}{200+330} = 6.23$ V.",
+    "correct": 1,
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{330 \\cdot 560}{330+560} \\approx 207.64$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 10 \\cdot \\frac{207.64}{200+207.64} \\approx 5.09$ V.",
     "difficulty": "hard",
     "requiresCalculation": true
   },
@@ -2348,15 +2351,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0158",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=220Ω, R2=220Ω, Ube=20V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=220Ω, R2=220Ω, Rt=470Ω, Ube=20V. Mekkora Uki?",
     "options": [
-      "15 V",
       "10 V",
-      "14 V",
-      "7 V"
+      "8.10 V",
+      "9.0 V",
+      "7.2 V"
     ],
     "correct": 1,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 20 \\cdot \\frac{220}{220+220} = 10$ V.",
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{220 \\cdot 470}{220+470} \\approx 149.86$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 20 \\cdot \\frac{149.86}{220+149.86} \\approx 8.10$ V.",
     "difficulty": "hard",
     "requiresCalculation": true
   },
@@ -2378,15 +2381,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0160",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=270Ω, R2=820Ω, Ube=18V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=270Ω, R2=820Ω, Rt=1200Ω, Ube=18V. Mekkora Uki?",
     "options": [
       "13.54 V",
-      "9 V",
-      "4.46 V",
-      "20.31 V"
+      "11.59 V",
+      "12.5 V",
+      "10.8 V"
     ],
-    "correct": 0,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 18 \\cdot \\frac{820}{270+820} = 13.54$ V.",
+    "correct": 1,
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{820 \\cdot 1200}{820+1200} \\approx 487.13$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 18 \\cdot \\frac{487.13}{270+487.13} \\approx 11.59$ V.",
     "difficulty": "hard",
     "requiresCalculation": true
   },
@@ -2408,15 +2411,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0162",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=100Ω, R2=220Ω, Ube=30V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=100Ω, R2=220Ω, Rt=330Ω, Ube=30V. Mekkora Uki?",
     "options": [
       "20.63 V",
-      "15 V",
-      "9.38 V",
-      "30.95 V"
+      "17.07 V",
+      "18.5 V",
+      "15.8 V"
     ],
-    "correct": 0,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 30 \\cdot \\frac{220}{100+220} = 20.63$ V.",
+    "correct": 1,
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{220 \\cdot 330}{220+330} = 132$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 30 \\cdot \\frac{132}{100+132} \\approx 17.07$ V.",
     "difficulty": "hard",
     "requiresCalculation": true
   },
@@ -2438,15 +2441,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "vd0164",
     "topic": "voltage-divider",
-    "question": "Feszültségosztó: R1=220Ω, R2=680Ω, Ube=30V. Mekkora Uki?",
+    "question": "Terhelt feszültségosztó: R1=220Ω, R2=680Ω, Rt=1000Ω, Ube=30V. Mekkora Uki?",
     "options": [
-      "34.01 V",
       "22.67 V",
-      "7.33 V",
-      "15 V"
+      "19.42 V",
+      "21.0 V",
+      "18.5 V"
     ],
     "correct": 1,
-    "explanation": "$U_{ki} = U_{be} \\cdot \\frac{R_2}{R_1+R_2} = 30 \\cdot \\frac{680}{220+680} = 22.67$ V.",
+    "explanation": "Először $R_p = \\frac{R_2 \\cdot R_t}{R_2+R_t} = \\frac{680 \\cdot 1000}{680+1000} \\approx 404.76$ Ω. Majd $U_{ki} = U_{be} \\cdot \\frac{R_p}{R_1+R_p} = 30 \\cdot \\frac{404.76}{220+404.76} \\approx 19.42$ V.",
     "difficulty": "hard",
     "requiresCalculation": true
   },
@@ -2722,7 +2725,10 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     "topic": "resistor-component",
     "question": "Színkód: Fekete-Fekete-Fekete. Mekkora az érték?",
     "options": [
-      "0 Ω"
+      "0 Ω",
+      "1 Ω",
+      "10 Ω",
+      "100 Ω"
     ],
     "correct": 0,
     "explanation": "Fekete=0, Fekete=0, Fekete=×1. Érték: 00×1=0 Ω.",

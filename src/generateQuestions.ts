@@ -511,7 +511,7 @@ function generateOhmsLawQuestions(): QuizQuestion[] {
     },
     {
       diagram: "Áramkör: [24V] ---(R=80Ω)--- áramirány: I=?",
-      question: "Az ábrán 24V feszültség van 80Ω ellenálláson. Mekkora az áram?",
+      question: "Egy 80Ω ellenálláson 24V feszültség van. Mekkora az áram?",
       I: 0.3,
       diff: 'hard'
     },
