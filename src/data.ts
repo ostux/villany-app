@@ -149,20 +149,6 @@ export const TOPICS: Topic[] = [
     category: "safety"
   },
   {
-    id: "protection-classes",
-    title: "Áramütés elleni védelmi osztályok",
-    summary: "Védelmi osztályok (0, I, II, III), aktív és passzív érintésvédelmi módszerek, AVK.",
-    contentPath: "/src/content/topics/protection-classes.md",
-    category: "safety"
-  },
-  {
-    id: "grounding-and-protection",
-    title: "Földelés és érintésvédelem",
-    summary: "Közvetlen és közvetett érintés, EPH, TN/TT/IT rendszerek, védővezető méretezése, kismegszakítók.",
-    contentPath: "/src/content/topics/grounding-and-protection.md",
-    category: "safety"
-  },
-  {
     id: "first-aid-electrical",
     title: "Elsősegélynyújtás villamos baleset esetén",
     summary: "Műszaki mentés, elsősegély diagnosztikai lépései, áramkörből való kiszabadítás.",
@@ -170,10 +156,24 @@ export const TOPICS: Topic[] = [
     category: "safety"
   },
   {
+    id: "protection-classes",
+    title: "Áramütés elleni védelmi osztályok",
+    summary: "Védelmi osztályok (0, I, II, III), aktív és passzív érintésvédelmi módszerek, AVK.",
+    contentPath: "/src/content/topics/protection-classes.md",
+    category: "safety"
+  },
+  {
     id: "grounding-systems",
     title: "Földelési rendszerek",
     summary: "Főföldelő sín, földelő elektródák típusai, talaj fajlagos ellenállása, potenciálkiegyenlítés.",
     contentPath: "/src/content/topics/grounding-systems.md",
+    category: "safety"
+  },
+  {
+    id: "grounding-and-protection",
+    title: "Földelés és érintésvédelem",
+    summary: "Közvetlen és közvetett érintés, EPH, TN/TT/IT rendszerek, védővezető méretezése, kismegszakítók.",
+    contentPath: "/src/content/topics/grounding-and-protection.md",
     category: "safety"
   },
   {
