@@ -51,7 +51,7 @@ const navigateTo = (path: string) => {
         <h2 class="text-[22px] md:text-[28px] text-gray-300 mb-2">
           Villamos alapismeretek / Elektrotechnika
         </h2>
-        <p class="text-[17px] md:text-[19px] text-gray-400 mt-6">
+        <p class="text-[16px] md:text-[16px] text-gray-400 mt-6">
           Oktató alkalmazás villanyszerelők képzéséhez
         </p>
       </div>
