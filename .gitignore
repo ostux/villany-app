@@ -27,3 +27,8 @@ suli-data
 CLAUDE.md
 .claude
 .vscode
+
+.firebaserc
+firebase.json
+skills-lock.json
+.agents
