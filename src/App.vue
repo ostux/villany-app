@@ -10,7 +10,6 @@ const tabs = [
   { id: "study", label: "Tananyag", icon: "📚", path: "/villany-app/study" },
   { id: "practice", label: "Gyakorlás", icon: "✏️", path: "/villany-app/practice" },
   { id: "circuits", label: "Rajzos feladatok", icon: "🔌", path: "/villany-app/circuits" },
-  { id: "symbols", label: "Jelképek", icon: "🔣", path: "/villany-app/symbols" },
   { id: "quiz", label: "Teszt", icon: "📝", path: "/villany-app/quiz" },
 ];
 
@@ -19,7 +18,6 @@ const activeTab = computed(() => {
   if (path.startsWith("/villany-app/study")) return "study";
   if (path.startsWith("/villany-app/practice")) return "practice";
   if (path.startsWith("/villany-app/circuits")) return "circuits";
-  if (path.startsWith("/villany-app/symbols")) return "symbols";
   if (path.startsWith("/villany-app/quiz")) return "quiz";
   return "";
 });
@@ -48,8 +46,6 @@ const subtitle = computed(() => {
       return "Gyakorlás · Feladatok";
     case "circuits":
       return "Rajzos feladatok · Áramkörök";
-    case "symbols":
-      return "Jelképek · Szimbólumok";
     case "quiz":
       return "Teszt · Kvíz";
     default:

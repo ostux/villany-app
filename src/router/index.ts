@@ -32,11 +32,6 @@ const routes: RouteRecordRaw[] = [
     component: () => import("../components/CircuitProblems.vue"),
   },
   {
-    path: "/villany-app/symbols",
-    name: "symbols",
-    component: () => import("../components/SymbolsLibrary.vue"),
-  },
-  {
     path: "/villany-app/quiz",
     name: "quiz",
     component: () => import("../components/Quiz.vue"),
