@@ -156,17 +156,10 @@ export const TOPICS: Topic[] = [
     category: "safety"
   },
   {
-    id: "tn-systems",
-    title: "TN rendszerek (nullázás)",
-    summary: "TN-C, TN-S és TN-C-S rendszerek, védővezető leágazása, keresztmetszet-meghatározás.",
-    contentPath: "/src/content/topics/tn-systems.md",
-    category: "safety"
-  },
-  {
-    id: "tt-it-systems",
-    title: "TT és IT rendszerek",
-    summary: "Védőföldeléses (TT) és szigetelt hálózatú (IT) rendszerek, számítási képletek.",
-    contentPath: "/src/content/topics/tt-it-systems.md",
+    id: "grounding-and-protection",
+    title: "Földelés és érintésvédelem",
+    summary: "Közvetlen és közvetett érintés, EPH, TN/TT/IT rendszerek, védővezető méretezése, kismegszakítók.",
+    contentPath: "/src/content/topics/grounding-and-protection.md",
     category: "safety"
   },
   {
@@ -174,13 +167,6 @@ export const TOPICS: Topic[] = [
     title: "Elsősegélynyújtás villamos baleset esetén",
     summary: "Műszaki mentés, elsősegély diagnosztikai lépései, áramkörből való kiszabadítás.",
     contentPath: "/src/content/topics/first-aid-electrical.md",
-    category: "safety"
-  },
-  {
-    id: "grounding-protection",
-    title: "Földelés és érintésvédelem",
-    summary: "Közvetlen és közvetett érintés, védővezetős módok, egyenpotenciálra hozás.",
-    contentPath: "/src/content/topics/grounding-protection.md",
     category: "safety"
   },
   {
@@ -598,19 +584,19 @@ export const EXERCISES: Exercise[] = [
   { id: "e33", topic: "star-delta", question: "Egy csillag kapcsolásban minden ág 4Ω. Mekkora lesz az egyenértékű delta kapcsolás minden oldala? (Ω)", answer: 12, unit: "Ω", tolerance: 0.1, explanation: "Csillag→delta egyenlő ellenállásoknál: RΔ = 3R = 3·4 = 12Ω." },
 
   // --- TT system calculations ---
-  { id: "e34", topic: "tt-it-systems", question: "TT rendszerben U₀=230V, Rcs=8Ω, Ra=12Ω. Mekkora a zárlati áram Iz? (A, kerekítve 2 tizedesre)", answer: 11.5, unit: "A", tolerance: 0.1, explanation: "Iz = U₀/(Rcs+Ra) = 230/(8+12) = 230/20 = 11,5 A." },
-  { id: "e35", topic: "tt-it-systems", question: "TT rendszerben Iz=15A és Ra=3Ω. Mekkora az érintési feszültség UL? (V)", answer: 45, unit: "V", tolerance: 0.5, explanation: "UL = Iz × Ra = 15 × 3 = 45 V. Ez kisebb 50V-nál, tehát megengedett." },
-  { id: "e36", topic: "tt-it-systems", question: "TT rendszerben U₀=230V, Rcs=10Ω, Ra=5Ω. Az érintési feszültség UL megengedett-e? (1=igen, 0=nem)", answer: 1, unit: "(1/0)", tolerance: 0, explanation: "Iz=230/15=15,33A → UL=15,33×5=76,67V. Ez nagyobb 50V-nál, NEM megengedett! Válasz: 0 (nem)." },
+  { id: "e34", topic: "grounding-and-protection", question: "TT rendszerben U₀=230V, Rcs=8Ω, Ra=12Ω. Mekkora a zárlati áram Iz? (A, kerekítve 2 tizedesre)", answer: 11.5, unit: "A", tolerance: 0.1, explanation: "Iz = U₀/(Rcs+Ra) = 230/(8+12) = 230/20 = 11,5 A." },
+  { id: "e35", topic: "grounding-and-protection", question: "TT rendszerben Iz=15A és Ra=3Ω. Mekkora az érintési feszültség UL? (V)", answer: 45, unit: "V", tolerance: 0.5, explanation: "UL = Iz × Ra = 15 × 3 = 45 V. Ez kisebb 50V-nál, tehát megengedett." },
+  { id: "e36", topic: "grounding-and-protection", question: "TT rendszerben U₀=230V, Rcs=10Ω, Ra=5Ω. Az érintési feszültség UL megengedett-e? (1=igen, 0=nem)", answer: 1, unit: "(1/0)", tolerance: 0, explanation: "Iz=230/15=15,33A → UL=15,33×5=76,67V. Ez nagyobb 50V-nál, NEM megengedett! Válasz: 0 (nem)." },
 
   // --- Protection conductor sizing ---
-  { id: "e37", topic: "tn-systems", question: "Ha a fázisvezető 10 mm², mekkora legyen a PE vezető? (mm²)", answer: 10, unit: "mm²", tolerance: 0, explanation: "16 mm² alatt a PE azonos a fázisvezetővel: 10 mm²." },
-  { id: "e38", topic: "tn-systems", question: "Ha a fázisvezető 25 mm², mekkora legyen a PE vezető? (mm²)", answer: 16, unit: "mm²", tolerance: 0, explanation: "16-35 mm² között a PE mindig 16 mm²." },
-  { id: "e39", topic: "tn-systems", question: "Ha a fázisvezető 50 mm², mekkora legyen a PE vezető? (mm²)", answer: 25, unit: "mm²", tolerance: 0, explanation: "35 mm² felett a PE = fázisvezető / 2 = 50/2 = 25 mm²." },
+  { id: "e37", topic: "grounding-and-protection", question: "Ha a fázisvezető 10 mm², mekkora legyen a PE vezető? (mm²)", answer: 10, unit: "mm²", tolerance: 0, explanation: "16 mm² alatt a PE azonos a fázisvezetővel: 10 mm²." },
+  { id: "e38", topic: "grounding-and-protection", question: "Ha a fázisvezető 25 mm², mekkora legyen a PE vezető? (mm²)", answer: 16, unit: "mm²", tolerance: 0, explanation: "16-35 mm² között a PE mindig 16 mm²." },
+  { id: "e39", topic: "grounding-and-protection", question: "Ha a fázisvezető 50 mm², mekkora legyen a PE vezető? (mm²)", answer: 25, unit: "mm²", tolerance: 0, explanation: "35 mm² felett a PE = fázisvezető / 2 = 50/2 = 25 mm²." },
 
   // --- Loop impedance calculations (MCB protection) ---
-  { id: "e40", topic: "tn-systems", question: "B10 kismegszakító esetén (α=5) mekkora lehet max. a hurokimpedancia (Zs)? U₀=230V. (Ω, 1 tizedesre)", answer: 4.6, unit: "Ω", tolerance: 0.1, explanation: "Zs < U₀/(α×Iₙ) = 230/(5×10) = 230/50 = 4,6 Ω." },
-  { id: "e41", topic: "tn-systems", question: "C16 kismegszakító esetén (α=10) mekkora lehet max. a hurokimpedancia (Zs)? U₀=230V. (Ω, 2 tizedesre)", answer: 1.44, unit: "Ω", tolerance: 0.02, explanation: "Zs < U₀/(α×Iₙ) = 230/(10×16) = 230/160 = 1,4375 ≈ 1,44 Ω." },
-  { id: "e42", topic: "tn-systems", question: "D20 kismegszakító esetén (α=20) mekkora lehet max. a hurokimpedancia (Zs)? U₀=230V. (Ω, 2 tizedesre)", answer: 0.58, unit: "Ω", tolerance: 0.02, explanation: "Zs < U₀/(α×Iₙ) = 230/(20×20) = 230/400 = 0,575 ≈ 0,58 Ω." },
+  { id: "e40", topic: "grounding-and-protection", question: "B10 kismegszakító esetén (α=5) mekkora lehet max. a hurokimpedancia (Zs)? U₀=230V. (Ω, 1 tizedesre)", answer: 4.6, unit: "Ω", tolerance: 0.1, explanation: "Zs < U₀/(α×Iₙ) = 230/(5×10) = 230/50 = 4,6 Ω." },
+  { id: "e41", topic: "grounding-and-protection", question: "C16 kismegszakító esetén (α=10) mekkora lehet max. a hurokimpedancia (Zs)? U₀=230V. (Ω, 2 tizedesre)", answer: 1.44, unit: "Ω", tolerance: 0.02, explanation: "Zs < U₀/(α×Iₙ) = 230/(10×16) = 230/160 = 1,4375 ≈ 1,44 Ω." },
+  { id: "e42", topic: "grounding-and-protection", question: "D20 kismegszakító esetén (α=20) mekkora lehet max. a hurokimpedancia (Zs)? U₀=230V. (Ω, 2 tizedesre)", answer: 0.58, unit: "Ω", tolerance: 0.02, explanation: "Zs < U₀/(α×Iₙ) = 230/(20×20) = 230/400 = 0,575 ≈ 0,58 Ω." },
 
   // --- Grounding electrode resistance calculation ---
   { id: "e43", topic: "grounding-systems", question: "Függőleges földelő rúd: ρ=100Ωm, L=2m, d=0,016m. ln(500)≈6,21. Mekkora Ra? (Ω, egész számra kerekítve)", answer: 49, unit: "Ω", tolerance: 2, explanation: "Ra = ρ/(2πL) × ln(4L/d) = 100/12,57 × 6,21 = 7,96 × 6,21 ≈ 49,4 Ω." },
@@ -618,9 +604,9 @@ export const EXERCISES: Exercise[] = [
   { id: "e45", topic: "grounding-systems", question: "Homokos talaj fajlagos ellenállása tipikusan melyik tartományba esik? Válaszd: 1=10-40, 2=100-200, 3=200-2000. (1/2/3)", answer: 3, unit: "(szám)", tolerance: 0, explanation: "Homok fajlagos ellenállása: 200-2000 Ωm, tehát a válasz 3." },
 
   // --- EPH conductor cross-sections ---
-  { id: "e46", topic: "grounding-protection", question: "Mekkora a réz EPH-gerincvezető minimális keresztmetszete? (mm²)", answer: 6, unit: "mm²", tolerance: 0, explanation: "Réz EPH-gerincvezető: 6 mm²." },
-  { id: "e47", topic: "grounding-protection", question: "Mekkora az alumínium EPH-összekötő (mechanikai védelemmel) minimális keresztmetszete? (mm²)", answer: 16, unit: "mm²", tolerance: 0, explanation: "Alumínium EPH-összekötő mechanikai védelemmel: 16 mm²." },
-  { id: "e48", topic: "grounding-protection", question: "Mekkora a réz EPH-összekötő (mechanikai védettség nélkül) minimális keresztmetszete? (mm²)", answer: 4, unit: "mm²", tolerance: 0, explanation: "Réz EPH-összekötő mechanikai védettség nélkül: 4 mm²." },
+  { id: "e46", topic: "grounding-and-protection", question: "Mekkora a réz EPH-gerincvezető minimális keresztmetszete? (mm²)", answer: 6, unit: "mm²", tolerance: 0, explanation: "Réz EPH-gerincvezető: 6 mm²." },
+  { id: "e47", topic: "grounding-and-protection", question: "Mekkora az alumínium EPH-összekötő (mechanikai védelemmel) minimális keresztmetszete? (mm²)", answer: 16, unit: "mm²", tolerance: 0, explanation: "Alumínium EPH-összekötő mechanikai védelemmel: 16 mm²." },
+  { id: "e48", topic: "grounding-and-protection", question: "Mekkora a réz EPH-összekötő (mechanikai védettség nélkül) minimális keresztmetszete? (mm²)", answer: 4, unit: "mm²", tolerance: 0, explanation: "Réz EPH-összekötő mechanikai védettség nélkül: 4 mm²." },
 
   // --- Electrical safety basics ---
   { id: "e49", topic: "electrical-safety-basics", question: "50 Hz-es váltakozó áram esetén mekkora az érzékelési küszöb? (mA)", answer: 1, unit: "mA", tolerance: 0, explanation: "50 Hz-es váltakozó áram esetén általában 1 mA az érzékelési küszöb." },

@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "bun run build && gh-pages -d dist"
+    "deploy": "bun run build && gh-pages -d dist",
+    "build:firebase": "DEPLOY_TARGET=firebase bun run build",
+    "deploy:firebase": "bun run build:firebase && firebase deploy"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",

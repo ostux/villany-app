@@ -32,7 +32,8 @@ function copyMarkdownFiles(): Plugin {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), tailwindcss(), copyMarkdownFiles()],
-  base: "/villany-app/", // GitHub Pages base path - same for dev and production
+  // Use "/" for Firebase, "/villany-app/" for GitHub Pages
+  base: process.env.DEPLOY_TARGET === "firebase" ? "/" : "/villany-app/",
   build: {
     // Disable performance hints to avoid web vitals errors
     reportCompressedSize: false,

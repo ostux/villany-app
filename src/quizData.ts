@@ -4548,7 +4548,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0001",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a TN-C rendszer \"C\" betűje?",
     "options": [
       "Csillag (Star)",
@@ -4562,7 +4562,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0002",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a TN-S rendszer \"S\" betűje?",
     "options": [
       "Szigetelés (Insulation)",
@@ -4576,7 +4576,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0003",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Hol kell a PEN vezetőt szétválasztani PE és N vezetőre TN-C-S rendszerben?",
     "options": [
       "A transzformátornál",
@@ -4590,7 +4590,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0004",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mekkora legyen a PE vezető keresztmetszete, ha a fázisvezető 10 mm²?",
     "options": [
       "4 mm²",
@@ -4604,7 +4604,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0005",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mekkora legyen a PE vezető keresztmetszete, ha a fázisvezető 25 mm²?",
     "options": [
       "12,5 mm²",
@@ -4618,7 +4618,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0006",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mekkora legyen a PE vezető keresztmetszete, ha a fázisvezető 70 mm²?",
     "options": [
       "16 mm²",
@@ -4633,7 +4633,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tt0001",
-    "topic": "tt-it-systems",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a TT rendszer első \"T\" betűje?",
     "options": [
       "A rendszer törpefeszültségű",
@@ -4647,7 +4647,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tt0002",
-    "topic": "tt-it-systems",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a TT rendszer második \"T\" betűje?",
     "options": [
       "A testek törpefeszültségűek",
@@ -4661,7 +4661,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tt0003",
-    "topic": "tt-it-systems",
+    "topic": "grounding-and-protection",
     "question": "Melyik képlettel számítjuk a zárlati áramot (Iz) TT rendszerben?",
     "options": [
       "Iz = U₀ × (Rcs + Ra)",
@@ -4675,7 +4675,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tt0004",
-    "topic": "tt-it-systems",
+    "topic": "grounding-and-protection",
     "question": "Hol használják az IT rendszert?",
     "options": [
       "Lakóépületekben",
@@ -4689,7 +4689,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tt0005",
-    "topic": "tt-it-systems",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent az IT rendszer \"I\" betűje?",
     "options": [
       "Ipari (Industrial)",
@@ -4759,7 +4759,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0001",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a közvetlen érintés?",
     "options": [
       "A testzárlat miatti feszültség alá kerülés",
@@ -4773,7 +4773,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0002",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a közvetett érintés?",
     "options": [
       "Az aktív részek érintése",
@@ -4787,7 +4787,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0003",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Mi az AVK rövidítés jelentése?",
     "options": [
       "Automatikus Villamos Kapcsoló",
@@ -4801,7 +4801,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0004",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Az AVK túláramvédelmet lát-e el?",
     "options": [
       "Igen, ez a fő feladata",
@@ -4815,7 +4815,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0005",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Mi az egyenpotenciálra hozás (EPH) célja?",
     "options": [
       "A feszültség csökkentése",
@@ -4829,7 +4829,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0007",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mekkora a B jelleggörbéjű kismegszakító kioldási szorzója (α)?",
     "options": [
       "α = 3",
@@ -4843,7 +4843,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0008",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Melyik MCB jelleggörbe alkalmas indukciós motorok védelmére?",
     "options": [
       "A típus",
@@ -4857,7 +4857,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0009",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mi a hurokimpedancia (Zs) számításának képlete TN rendszerben?",
     "options": [
       "Zs = U₀ × α × Iₙ",
@@ -4872,7 +4872,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0010",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mekkora a TN rendszerben az előírt maximális kikapcsolási idő 230V esetén?",
     "options": [
       "0,1 s",
@@ -4886,7 +4886,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0011",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mi a C jelleggörbéjű kismegszakító kioldási szorzója?",
     "options": [
       "α = 5",
@@ -4900,7 +4900,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tn0012",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Miért előnyösebb AVK használata az MCB-vel szemben érintésvédelemben?",
     "options": [
       "Nagyobb zárlati áramra érzékeny",
@@ -4945,10 +4945,10 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     "topic": "grounding-systems",
     "question": "Melyik talaj típusnak a legkisebb a fajlagos ellenállása?",
     "options": [
-      "Szikla, kőzet (2000-10000 Ωm)",
-      "Homok (200-2000 Ωm)",
-      "Agyag (40-100 Ωm)",
-      "Mocsaras, lápos talaj (10-40 Ωm)"
+      "Szikla, kőzet",
+      "Homok",
+      "Agyag",
+      "Mocsaras, lápos talaj"
     ],
     "correct": 3,
     "explanation": "A mocsaras, lápos talajnak a legkisebb a fajlagos ellenállása (10-40 Ωm), ezért a legjobb földelési hatékonyságot nyújtja.",
@@ -5194,7 +5194,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0006",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Mi az EPH (egyenpotenciálra hozás) új neve?",
     "options": [
       "Védővezeték-rendszer",
@@ -5208,7 +5208,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0007",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Miért fontos az EPH rendszer?",
     "options": [
       "Az áram növelése miatt",
@@ -5222,7 +5222,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0008",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Mekkora a réz EPH-gerincvezető minimális keresztmetszete?",
     "options": [
       "2,5 mm²",
@@ -5236,7 +5236,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0009",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Mit kell bevonni az EPH rendszerbe?",
     "options": [
       "Csak a villamos készülékek testeit",
@@ -5250,7 +5250,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0010",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Milyen áramok folyhatnak az EPH vezetőn?",
     "options": [
       "Üzemi áramok",
@@ -5684,7 +5684,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tns0001",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a TN jelölésben az első T betű?",
     "options": [
       "Az energiaellátó rendszer egy ponton közvetlenül földelt",
@@ -5698,7 +5698,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tns0002",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a TN jelölésben az N betű?",
     "options": [
       "Nagyfeszültség",
@@ -5712,7 +5712,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tns0003",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a TN-C jelölésben a C betű?",
     "options": [
       "Csillag kapcsolás",
@@ -5726,7 +5726,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tns0004",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a TN-S jelölésben az S betű?",
     "options": [
       "Soros kapcsolás",
@@ -5740,7 +5740,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tns0005",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mekkora a PE vezető keresztmetszete 16-35 mm² közötti fázisvezető esetén?",
     "options": [
       "Azonos a fázisvezetővel",
@@ -5754,7 +5754,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tns0006",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Mekkora a PE vezető keresztmetszete 35 mm² feletti fázisvezető esetén?",
     "options": [
       "Mindig 16 mm²",
@@ -5768,7 +5768,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tns0007",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "B karakterisztikájú kismegszakító alfa (α) kioldási tényezője mennyi?",
     "options": [
       "3-5",
@@ -5782,7 +5782,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tns0008",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "C karakterisztikájú kismegszakító alfa (α) kioldási tényezője mennyi?",
     "options": [
       "3-5",
@@ -5796,7 +5796,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tns0009",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "D karakterisztikájú kismegszakító alfa (α) kioldási tényezője mennyi?",
     "options": [
       "3-5",
@@ -5810,7 +5810,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "tns0010",
-    "topic": "tn-systems",
+    "topic": "grounding-and-protection",
     "question": "Lehet-e PEN vezetőt alkalmazni AVK után?",
     "options": [
       "Igen, mindig",
@@ -5824,7 +5824,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "ttit0001",
-    "topic": "tt-it-systems",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a TT jelölésben az első T betű?",
     "options": [
       "A rendszer egy ponton közvetlenül földelt",
@@ -5838,7 +5838,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "ttit0002",
-    "topic": "tt-it-systems",
+    "topic": "grounding-and-protection",
     "question": "Mit jelent a TT jelölésben a második T betű?",
     "options": [
       "Transzformátor",
@@ -5852,7 +5852,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "ttit0003",
-    "topic": "tt-it-systems",
+    "topic": "grounding-and-protection",
     "question": "TT rendszerben mekkora lehet max. az érintési feszültség?",
     "options": [
       "25 V",
@@ -5866,7 +5866,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "ttit0004",
-    "topic": "tt-it-systems",
+    "topic": "grounding-and-protection",
     "question": "IT rendszerben mit jelent az I betű?",
     "options": [
       "Izolált",
@@ -5880,7 +5880,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "ttit0005",
-    "topic": "tt-it-systems",
+    "topic": "grounding-and-protection",
     "question": "IT rendszert hol alkalmaznak?",
     "options": [
       "Lakásokban",
@@ -5894,7 +5894,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "ttit0006",
-    "topic": "tt-it-systems",
+    "topic": "grounding-and-protection",
     "question": "IT rendszerben mivel figyelik a testzárlatos állapotot?",
     "options": [
       "AVK-val",
@@ -5908,7 +5908,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0001",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Mi a védőföldelés?",
     "options": [
       "Aktív részek földelése",
@@ -5922,7 +5922,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0002",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Mi az EPH (egyenpotenciálra hozás)?",
     "options": [
       "Csak a földelés",
@@ -5936,7 +5936,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0003",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Mit kell bevonni az EPH rendszerbe?",
     "options": [
       "Csak a vízvezetéket",
@@ -5950,7 +5950,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     "id": "gp0004",
-    "topic": "grounding-protection",
+    "topic": "grounding-and-protection",
     "question": "Mekkora a réz EPH-gerincvezető minimális keresztmetszete?",
     "options": [
       "2.5 mm²",
