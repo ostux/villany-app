@@ -659,6 +659,12 @@ export const EXERCISES: Exercise[] = [
   { id: "e78", topic: "poles-lines", question: "Kisfeszültségen az oszlopköz körülbelül hány m? (m)", answer: 30, unit: "m", tolerance: 5, explanation: "Kisfeszültségen az oszlopköz körülbelül 30 m, de függ a terepviszonyoktól." },
   { id: "e79", topic: "poles-lines", question: "Oszlop alapozási mélysége minimum hány m? (m)", answer: 1.5, unit: "m", tolerance: 0.1, explanation: "Az alapozási mélység minimum 1,5 m (vagy az oszlop 1/6-od része, ha az nagyobb)." },
   { id: "e80", topic: "poles-lines", question: "Kisfeszültségű hálózaton hány méterenként kell földelést alkalmazni? (m)", answer: 250, unit: "m", tolerance: 50, explanation: "Kisfeszültségű hálózaton 200-300 méterenként kell földelést alkalmazni." },
-  { id: "e81", topic: "poles-lines", question: "B12/4 jelölésű betonoszlop törőereje hány kN? (kN)", answer: 40, unit: "kN", tolerance: 0, explanation: "B12/4 jelölésű betonoszlop törőereje 40 kN (a 4-es szám 4×10 kN-t jelent)." }
+  { id: "e81", topic: "poles-lines", question: "B12/4 jelölésű betonoszlop törőereje hány kN? (kN)", answer: 40, unit: "kN", tolerance: 0, explanation: "B12/4 jelölésű betonoszlop törőereje 40 kN (a 4-es szám 4×10 kN-t jelent)." },
+
+  // --- More star-delta transformations with different resistances ---
+  { id: "e82", topic: "star-delta", question: "Csillag kapcsolásban R1=6Ω, R2=3Ω, R3=6Ω. Mekkora a delta kapcsolás R12 oldala? (Ω)", answer: 12, unit: "Ω", tolerance: 0.1, explanation: "Csillag→delta: R12 = R1 + R2 + (R1×R2)/R3 = 6 + 3 + (6×3)/6 = 6 + 3 + 3 = 12Ω." },
+  { id: "e83", topic: "star-delta", question: "Csillag kapcsolásban R1=10Ω, R2=5Ω, R3=10Ω. Mekkora a delta kapcsolás R23 oldala? (Ω)", answer: 20, unit: "Ω", tolerance: 0.1, explanation: "Csillag→delta: R23 = R2 + R3 + (R2×R3)/R1 = 5 + 10 + (5×10)/10 = 5 + 10 + 5 = 20Ω." },
+  { id: "e84", topic: "star-delta", question: "Delta kapcsolásban R12=12Ω, R23=6Ω, R31=12Ω. Mekkora a csillag kapcsolás R1 ága? (Ω, 1 tizedesre)", answer: 4.8, unit: "Ω", tolerance: 0.1, explanation: "Delta→csillag: R1 = (R12×R31)/(R12+R23+R31) = (12×12)/(12+6+12) = 144/30 = 4,8Ω." },
+  { id: "e85", topic: "star-delta", question: "Delta kapcsolásban R12=15Ω, R23=10Ω, R31=15Ω. Mekkora a csillag kapcsolás R2 ága? (Ω, 2 tizedesre)", answer: 3.75, unit: "Ω", tolerance: 0.05, explanation: "Delta→csillag: R2 = (R23×R12)/(R12+R23+R31) = (10×15)/(15+10+15) = 150/40 = 3,75Ω." }
 ];
 

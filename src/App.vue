@@ -103,9 +103,17 @@ const subtitle = computed(() => {
     <footer
       class="text-center text-base text-gray-500 p-4 border-t border-gray-800 bg-gray-900"
     >
-      <p>
-        Saját tanuláshoz készült segédeszköz &middot; Használat saját
-        felelősségre! Hibákat tartalmazhat!
+      <p class="mb-2">
+        Saját tanuláshoz készült segédeszköz &middot; AI által generált tartalom &middot; Használat saját felelősségre!
+      </p>
+      <p class="text-sm">
+        Hibát találtál?
+        <a
+          href="mailto:andras+villany@andrastoth.eu"
+          class="text-amber-500 hover:text-amber-400 underline"
+        >
+          andras+villany@andrastoth.eu
+        </a>
       </p>
     </footer>
   </div>
