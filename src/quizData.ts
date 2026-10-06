@@ -1498,12 +1498,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     "topic": "series-parallel",
     "question": "Vegyes: 30V ---> R1=10Ω sorban (R2=20Ω||R3=30Ω). Mennyi az össz áram?",
     "options": [
-      "3 A",
+      "1.36 A",
       "1.5 A",
-      "2.25 A",
-      "0.75 A"
+      "2.0 A",
+      "3.0 A"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "$R_{23} = 12$ Ω, $R_e = 22$ Ω, $I = 30/22 = 1.36$ A.",
     "difficulty": "hard",
     "requiresCalculation": true
@@ -6287,7 +6287,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "de0002",
     "topic": "de-energization",
-    "question": "Mi a feszültségmentesítés 1. lépése?",
+    "question": "A feszültségmentesítés 5 lépése:\n1. Teljes leválasztás\n2. Visszakapcsolás megakadályozása\n3. Feszültség nélküli állapot ellenőrzése\n4. Földelés, rövidzárás, töltések kisütése\n5. Körülhatárolás - közeli aktív részek elleni védelem\n\nMelyik a helyes sorrendben az 1. lépés?",
     "options": [
       "Földelés",
       "Teljes leválasztás",
@@ -6301,7 +6301,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "de0003",
     "topic": "de-energization",
-    "question": "Mi a feszültségmentesítés 2. lépése?",
+    "question": "A feszültségmentesítés 5 lépése:\n1. Teljes leválasztás\n2. Visszakapcsolás megakadályozása\n3. Feszültség nélküli állapot ellenőrzése\n4. Földelés, rövidzárás, töltések kisütése\n5. Körülhatárolás - közeli aktív részek elleni védelem\n\nMelyik a helyes sorrendben a 2. lépés?",
     "options": [
       "Földelés",
       "A visszakapcsolás megakadályozása",
@@ -6315,7 +6315,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "de0004",
     "topic": "de-energization",
-    "question": "Mi a feszültségmentesítés 3. lépése?",
+    "question": "A feszültségmentesítés 5 lépése:\n1. Teljes leválasztás\n2. Visszakapcsolás megakadályozása\n3. Feszültség nélküli állapot ellenőrzése\n4. Földelés, rövidzárás, töltések kisütése\n5. Körülhatárolás - közeli aktív részek elleni védelem\n\nMelyik a helyes sorrendben a 3. lépés?",
     "options": [
       "Földelés",
       "Visszakapcsolás megakadályozása",
@@ -6329,7 +6329,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "de0005",
     "topic": "de-energization",
-    "question": "Mi a feszültségmentesítés 4. lépése?",
+    "question": "A feszültségmentesítés 5 lépése:\n1. Teljes leválasztás\n2. Visszakapcsolás megakadályozása\n3. Feszültség nélküli állapot ellenőrzése\n4. Földelés, rövidzárás, töltések kisütése\n5. Körülhatárolás - közeli aktív részek elleni védelem\n\nMelyik a helyes sorrendben a 4. lépés?",
     "options": [
       "Teljes leválasztás",
       "Visszakapcsolás megakadályozása",
@@ -6343,7 +6343,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     "id": "de0006",
     "topic": "de-energization",
-    "question": "Mi a feszültségmentesítés 5. lépése?",
+    "question": "A feszültségmentesítés 5 lépése:\n1. Teljes leválasztás\n2. Visszakapcsolás megakadályozása\n3. Feszültség nélküli állapot ellenőrzése\n4. Földelés, rövidzárás, töltések kisütése\n5. Körülhatárolás - közeli aktív részek elleni védelem\n\nMelyik a helyes sorrendben az 5. lépés?",
     "options": [
       "Földelés",
       "Feszültség ellenőrzés",
@@ -6367,6 +6367,90 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     "correct": 1,
     "explanation": "A lépések sorrendje fel nem cserélhető! Minden lépést el kell végezni ebben a sorrendben, még akkor is, ha valamelyik nyilvánvalónak tűnik.",
     "difficulty": "medium"
+  },
+  {
+    "id": "is0001",
+    "topic": "installation-steps",
+    "question": "Rendezd helyes sorrendbe a villanyszerelés 9 lépését!\n\nA) Doboznyílások és hornyok kivésése\nB) Eszközök előkészítése\nC) Vezetékek behúzása\nD) Védőcsövek elhelyezése és rögzítése\nE) Pozíciók és útvonalak kijelölése\nF) Vizsgálatok és üzembe helyezés\nG) Dobozok beépítése\nH) Hornyok bevakolása\nI) Vezetékek azonosítása és szerelvények bekötése\n\nMi a helyes sorrend?",
+    "options": [
+      "B-E-A-G-D-H-C-I-F",
+      "A-B-C-D-E-F-G-H-I",
+      "B-A-E-G-D-C-H-I-F",
+      "E-B-A-D-G-H-C-I-F"
+    ],
+    "correct": 0,
+    "explanation": "A helyes sorrend: $1.$ Eszközök előkészítése, $2.$ Pozíciók és útvonalak kijelölése, $3.$ Doboznyílások és hornyok kivésése, $4.$ Dobozok beépítése, $5.$ Védőcsövek elhelyezése és rögzítése, $6.$ Hornyok bevakolása, $7.$ Vezetékek behúzása, $8.$ Vezetékek azonosítása és szerelvények bekötése, $9.$ Vizsgálatok és üzembe helyezés.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "is0002",
+    "topic": "installation-steps",
+    "question": "Rendezd helyes sorrendbe a villanyszerelés 9 lépését!\n\nA) Védőcsövek elhelyezése és rögzítése\nB) Vizsgálatok és üzembe helyezés\nC) Pozíciók és útvonalak kijelölése\nD) Vezetékek behúzása\nE) Eszközök előkészítése\nF) Dobozok beépítése\nG) Vezetékek azonosítása és szerelvények bekötése\nH) Doboznyílások és hornyok kivésése\nI) Hornyok bevakolása\n\nMi a helyes sorrend?",
+    "options": [
+      "E-C-H-F-A-D-I-G-B",
+      "E-C-H-F-A-I-D-G-B",
+      "C-E-H-F-A-I-D-G-B",
+      "E-H-C-F-A-I-D-G-B"
+    ],
+    "correct": 1,
+    "explanation": "A helyes sorrend: $1.$ Eszközök előkészítése (E), $2.$ Pozíciók és útvonalak kijelölése (C), $3.$ Doboznyílások és hornyok kivésése (H), $4.$ Dobozok beépítése (F), $5.$ Védőcsövek elhelyezése és rögzítése (A), $6.$ Hornyok bevakolása (I), $7.$ Vezetékek behúzása (D), $8.$ Vezetékek azonosítása és szerelvények bekötése (G), $9.$ Vizsgálatok és üzembe helyezés (B).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "is0003",
+    "topic": "installation-steps",
+    "question": "Rendezd helyes sorrendbe a villanyszerelés 9 lépését!\n\nA) Hornyok bevakolása\nB) Doboznyílások és hornyok kivésése\nC) Vezetékek azonosítása és szerelvények bekötése\nD) Eszközök előkészítése\nE) Dobozok beépítése\nF) Vezetékek behúzása\nG) Vizsgálatok és üzembe helyezés\nH) Pozíciók és útvonalak kijelölése\nI) Védőcsövek elhelyezése és rögzítése\n\nMi a helyes sorrend?",
+    "options": [
+      "D-H-B-E-A-I-F-C-G",
+      "D-H-B-E-I-A-F-C-G",
+      "H-D-B-E-I-A-F-C-G",
+      "D-B-H-E-I-A-F-C-G"
+    ],
+    "correct": 1,
+    "explanation": "A helyes sorrend: $1.$ Eszközök előkészítése (D), $2.$ Pozíciók és útvonalak kijelölése (H), $3.$ Doboznyílások és hornyok kivésése (B), $4.$ Dobozok beépítése (E), $5.$ Védőcsövek elhelyezése és rögzítése (I), $6.$ Hornyok bevakolása (A), $7.$ Vezetékek behúzása (F), $8.$ Vezetékek azonosítása és szerelvények bekötése (C), $9.$ Vizsgálatok és üzembe helyezés (G).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "is0004",
+    "topic": "installation-steps",
+    "question": "Rendezd helyes sorrendbe a villanyszerelés 9 lépését!\n\nA) Pozíciók és útvonalak kijelölése\nB) Hornyok bevakolása\nC) Dobozok beépítése\nD) Vizsgálatok és üzembe helyezés\nE) Vezetékek behúzása\nF) Eszközök előkészítése\nG) Védőcsövek elhelyezése és rögzítése\nH) Vezetékek azonosítása és szerelvények bekötése\nI) Doboznyílások és hornyok kivésése\n\nMi a helyes sorrend?",
+    "options": [
+      "F-A-I-C-B-G-E-H-D",
+      "F-A-I-C-G-B-E-H-D",
+      "A-F-I-C-G-B-E-H-D",
+      "F-I-A-C-G-B-E-H-D"
+    ],
+    "correct": 1,
+    "explanation": "A helyes sorrend: $1.$ Eszközök előkészítése (F), $2.$ Pozíciók és útvonalak kijelölése (A), $3.$ Doboznyílások és hornyok kivésése (I), $4.$ Dobozok beépítése (C), $5.$ Védőcsövek elhelyezése és rögzítése (G), $6.$ Hornyok bevakolása (B), $7.$ Vezetékek behúzása (E), $8.$ Vezetékek azonosítása és szerelvények bekötése (H), $9.$ Vizsgálatok és üzembe helyezés (D).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "is0005",
+    "topic": "installation-steps",
+    "question": "Rendezd helyes sorrendbe a villanyszerelés 9 lépését!\n\nA) Vezetékek azonosítása és szerelvények bekötése\nB) Dobozok beépítése\nC) Eszközök előkészítése\nD) Hornyok bevakolása\nE) Doboznyílások és hornyok kivésése\nF) Vizsgálatok és üzembe helyezés\nG) Pozíciók és útvonalak kijelölése\nH) Védőcsövek elhelyezése és rögzítése\nI) Vezetékek behúzása\n\nMi a helyes sorrend?",
+    "options": [
+      "C-G-E-B-D-H-I-A-F",
+      "C-G-E-B-H-D-I-A-F",
+      "G-C-E-B-H-D-I-A-F",
+      "C-E-G-B-H-D-I-A-F"
+    ],
+    "correct": 1,
+    "explanation": "A helyes sorrend: $1.$ Eszközök előkészítése (C), $2.$ Pozíciók és útvonalak kijelölése (G), $3.$ Doboznyílások és hornyok kivésése (E), $4.$ Dobozok beépítése (B), $5.$ Védőcsövek elhelyezése és rögzítése (H), $6.$ Hornyok bevakolása (D), $7.$ Vezetékek behúzása (I), $8.$ Vezetékek azonosítása és szerelvények bekötése (A), $9.$ Vizsgálatok és üzembe helyezés (F).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "is0006",
+    "topic": "installation-steps",
+    "question": "Rendezd helyes sorrendbe a villanyszerelés 9 lépését!\n\nA) Vezetékek behúzása\nB) Pozíciók és útvonalak kijelölése\nC) Védőcsövek elhelyezése és rögzítése\nD) Vezetékek azonosítása és szerelvények bekötése\nE) Vizsgálatok és üzembe helyezés\nF) Doboznyílások és hornyok kivésése\nG) Eszközök előkészítése\nH) Hornyok bevakolása\nI) Dobozok beépítése\n\nMi a helyes sorrend?",
+    "options": [
+      "G-B-F-C-I-H-A-D-E",
+      "G-B-F-I-C-H-A-D-E",
+      "B-G-F-I-C-H-A-D-E",
+      "G-F-B-I-C-H-A-D-E"
+    ],
+    "correct": 1,
+    "explanation": "A helyes sorrend: $1.$ Eszközök előkészítése (G), $2.$ Pozíciók és útvonalak kijelölése (B), $3.$ Doboznyílások és hornyok kivésése (F), $4.$ Dobozok beépítése (I), $5.$ Védőcsövek elhelyezése és rögzítése (C), $6.$ Hornyok bevakolása (H), $7.$ Vezetékek behúzása (A), $8.$ Vezetékek azonosítása és szerelvények bekötése (D), $9.$ Vizsgálatok és üzembe helyezés (E).",
+    "difficulty": "hard"
   },
   {
     "id": "ps0001",

@@ -5,7 +5,7 @@ import { TOPICS } from "../data";
 import { renderMarkdown } from "../utils/markdownRenderer";
 
 // Time limit per question in seconds (easily configurable)
-const SECONDS_PER_QUESTION = 90;
+const SECONDS_PER_QUESTION = 60;
 
 const STATE = { SETUP: "setup", RUNNING: "running", RESULTS: "results" };
 const state = ref(STATE.SETUP);
@@ -52,9 +52,57 @@ function shuffle(arr) {
   return a;
 }
 
+function selectBalancedQuestions(count: number) {
+  // Get unique topics
+  const topics = [...new Set(QUIZ_QUESTIONS.map((q) => q.topic))];
+  const questionsPerTopic = Math.floor(count / topics.length);
+  const remainder = count % topics.length;
+
+  const selectedIds = new Set<string>(); // Track selected question IDs to prevent duplicates
+  const selected: typeof QUIZ_QUESTIONS = [];
+
+  // Step 1: Select questions from each topic
+  topics.forEach((topic, index) => {
+    const topicQuestions = QUIZ_QUESTIONS.filter(
+      (q) => q.topic === topic && !selectedIds.has(q.id),
+    );
+
+    // Calculate how many questions to take from this topic
+    const takeCount = questionsPerTopic + (index < remainder ? 1 : 0);
+
+    // Shuffle and take the required count
+    const shuffled = shuffle(topicQuestions);
+    const toTake = shuffled.slice(
+      0,
+      Math.min(takeCount, topicQuestions.length),
+    );
+
+    // Add to selected array and mark IDs
+    toTake.forEach((q) => {
+      selectedIds.add(q.id);
+      selected.push(q);
+    });
+  });
+
+  // Step 2: If we still need more questions (shouldn't happen normally, but just in case)
+  if (selected.length < count) {
+    const remaining = QUIZ_QUESTIONS.filter((q) => !selectedIds.has(q.id));
+    const shuffled = shuffle(remaining);
+    const needed = count - selected.length;
+
+    shuffled.slice(0, needed).forEach((q) => {
+      selectedIds.add(q.id);
+      selected.push(q);
+    });
+  }
+
+  // Step 3: Final shuffle to randomize question order
+  return shuffle(selected);
+}
+
 function startQuiz() {
   const n = Math.min(selectedCount.value, QUIZ_QUESTIONS.length);
-  quizQuestions.value = shuffle(QUIZ_QUESTIONS).slice(0, n);
+  quizQuestions.value = selectBalancedQuestions(n);
   currentIndex.value = 0;
   for (const k in userAnswers) delete userAnswers[k];
 
@@ -155,9 +203,10 @@ const unansweredCount = computed(() => {
     >
       <h2 class="mt-0">Teszt indítása</h2>
       <p class="text-gray-400 text-base">
-        Válaszd ki, hány kérdésből álljon a teszt. A kérdések véletlenszerű
-        sorrendben jelennek meg. A teszt végén megkapod az eredményedet és
-        minden kérdéshez a részletes magyarázatot.
+        Válaszd ki, hány kérdésből álljon a teszt. A kérdések minden témakörből
+        egyenletesen kerülnek kiválasztásra, véletlenszerű sorrendben. A teszt
+        végén megkapod az eredményedet és minden kérdéshez a részletes
+        magyarázatot.
       </p>
       <div
         class="bg-amber-900/20 border border-amber-700/50 rounded-lg p-4 my-5"
