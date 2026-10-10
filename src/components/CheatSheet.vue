@@ -261,6 +261,130 @@ const cheatSheetData = {
         "Szigetelők: porcelán, üveg, műanyag"
       ]
     }
+  ],
+  "technical-drawing": [
+    {
+      title: "Rajzlap méretek (MSZ EN ISO 5457)",
+      items: [
+        "A0: 841 × 1189 mm (1 m²)",
+        "A1: 594 × 841 mm",
+        "A2: 420 × 594 mm",
+        "A3: 297 × 420 mm",
+        "**A4: 210 × 297 mm** (alapméret)",
+        "Arány: a : b = 1 : √2 (állandó felezéskor)"
+      ]
+    },
+    {
+      title: "Vonaltípusok (MSZ ISO 128)",
+      items: [
+        "**A (folytonos, vastag):** látható körvonalak, élek",
+        "**B (folytonos, vékony):** méretvonalak, segédvonalak, sraffozás",
+        "**E (szaggatott, vastag):** nem látható körvonalak",
+        "**G (pontvonal, vékony):** középvonalak, szimmetriatengelyek",
+        "**H (pontvonal):** metszősíkok nyomvonalai",
+        "Vastag : vékony arány min. **2:1**"
+      ]
+    },
+    {
+      title: "Méretarányok",
+      items: [
+        "**Valóságos:** 1:1",
+        "**Kicsinyítés:** 1:2, 1:5, 1:10 (és többszöröseik)",
+        "**Nagyítás:** 2:1, 5:1, 10:1 (és többszöröseik)",
+        "Mindig a jobb alsó feliratmezőben jelölni!"
+      ]
+    },
+    {
+      title: "Betűméretek (MSZ EN ISO 3098)",
+      items: [
+        "Méreteltérések: **2,5 mm**",
+        "Méretmegadás: **3,5 mm**",
+        "Darabjegyzék: **5 mm**",
+        "Feliratok: **7 mm**",
+        "Tételszám: **10 mm**",
+        "Álló vagy 75° dőlt betűk használhatók"
+      ]
+    },
+    {
+      title: "Felületi érdesség (N-fokozatok)",
+      items: [
+        "N1-N4: finom (polírozás, hóndlás) — Ra < 0,4 μm",
+        "N5-N7: közepes (marás, esztergálás) — Ra 0,4-3,2 μm",
+        "N8-N9: durva (gyalulás, fúrás) — Ra 3,2-6,3 μm",
+        "N10-N12: nagyon durva (öntés, kovácsolás) — Ra > 12,5 μm",
+        "Ra: átlagos érdesség mikrométerben (μm)"
+      ]
+    },
+    {
+      title: "Lemezhajlítás számítása",
+      items: [
+        "Rövidülés: $z = \\frac{r}{2} + v$",
+        "$r$ = hajlítási sugár, $v$ = lemezvastagság",
+        "Kiterített hossz: $L = c + d - z$",
+        "Derékszögű hajlításnál mindig figyelembe venni!"
+      ]
+    },
+    {
+      title: "Villamos rajzok típusai",
+      items: [
+        "**Tömbvázlat:** funkcionális egységek (téglalapok)",
+        "**Elvi rajz:** egyvonalas, minden elem látható",
+        "**Kapcsolási rajz:** egy/többvonalas, részletes",
+        "**Huzalozási rajz:** vezetékek nyomvonala",
+        "**Bekötési rajz:** csatlakozások, színkódok",
+        "**NYÁK rajz:** nyomtatott áramköri lap tervezés"
+      ]
+    },
+    {
+      title: "Kapcsolási rajz jelölések",
+      items: [
+        "**Egyvonlas:** több vezeték = 1 vonal (kompakt)",
+        "**Többvonalas:** minden vezeték külön (részletes)",
+        "Vezetékszámok: ——/3—— (3 vezeték)",
+        "Több vezeték: ——//—— vagy ——/2——"
+      ]
+    },
+    {
+      title: "Vezetékszínek (villamos)",
+      items: [
+        "**L1, L2, L3** (fázis): Barna, Fekete, Szürke",
+        "**N** (nulla): Kék",
+        "**PE** (védővezető): Sárga-zöld",
+        "**DC pozitív (+):** Piros",
+        "**DC negatív (-):** Fekete vagy Kék"
+      ]
+    },
+    {
+      title: "Rajzelemek",
+      items: [
+        "Feliratmező: jobb alsó sarok, mindig látható",
+        "Központjelek: a rajzlap oldalainak közepén",
+        "Keret: rajz határolása (margó)",
+        "Darabjegyzék: alkatrészek listája",
+        "Méretarány, mértékegység jelölése kötelező"
+      ]
+    },
+    {
+      title: "Vetületi ábrázolás",
+      items: [
+        "**Európai nézetrend:** objektum dobozba helyezve",
+        "Nézetek: elöl, felül, alul, jobb, bal, hátul",
+        "**Metszet:** belső részek láthatóvá tétele",
+        "**Sraffozás:** 45° vonalkázás metszeteken",
+        "Metszősík jelölése: pontvonal (H típus)"
+      ]
+    },
+    {
+      title: "Speciális jelölések",
+      items: [
+        "Átmérő: **Ø** (pl. Ø20)",
+        "Sugár: **R** (pl. R15)",
+        "Négyzet: **□** (pl. □25)",
+        "Kulcsméret: **s** (hatlapfejű anya)",
+        "Menet: egyszerűsített ábrázolás",
+        "Befordított metszet: helyben, vékony vonallal"
+      ]
+    }
   ]
 };
 </script>

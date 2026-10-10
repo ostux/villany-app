@@ -47,6 +47,12 @@ export const CATEGORIES: Category[] = [
     title: "Villamosenergia-rendszer és hálózatok",
     description: "Nagyobb léptékű energiarendszerek, infrastruktúra",
     icon: "🏭"
+  },
+  {
+    id: "technical-drawing",
+    title: "Műszaki rajz és dokumentáció",
+    description: "Villamos rajzok, kapcsolási rajzok, műszaki dokumentáció olvasása és készítése",
+    icon: "📐"
   }
 ];
 
@@ -238,6 +244,20 @@ export const TOPICS: Topic[] = [
     summary: "Vezetéktartó oszlopok típusai, anyagok, alapozás, földelés, szigetelők, szabadvezetékek.",
     contentPath: "/src/content/topics/poles-lines.md",
     category: "power-systems"
+  },
+  {
+    id: "technical-documentation-basics",
+    title: "Műszaki dokumentáció alapjai",
+    summary: "Rajzlapok, vonaltípusok, vetületek, méretezés, felületi érdesség és műszaki rajzolás szabványai.",
+    contentPath: "/src/content/topics/technical-documentation-basics.md",
+    category: "technical-drawing"
+  },
+  {
+    id: "electrical-system-drawings",
+    title: "Villamos rendszerek rajzai",
+    summary: "Tömbvázlat, kapcsolási rajz, elvi rajz, huzalozási rajz, NYÁK rajz és egyéb villamos dokumentáció típusok.",
+    contentPath: "/src/content/topics/electrical-system-drawings.md",
+    category: "technical-drawing"
   }
 ];
 
