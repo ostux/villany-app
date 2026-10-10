@@ -1,3 +1,5 @@
+> **Megjegyzés:** Ez az anyag előkövetelmény, de nem része a villanyszerelő elméleti vizsgának.
+
 # Műszaki dokumentáció alapjai
 
 ## Bevezetés
