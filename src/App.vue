@@ -11,6 +11,7 @@ const tabs = [
   { id: "practice", label: "Gyakorlás", icon: "✏️", path: "/villany-app/practice" },
   { id: "circuits", label: "Rajzos feladatok", icon: "🔌", path: "/villany-app/circuits" },
   { id: "quiz", label: "Teszt", icon: "📝", path: "/villany-app/quiz" },
+  { id: "cheat-sheet", label: "Gyorsútmutató", icon: "📋", path: "/villany-app/cheat-sheet" },
 ];
 
 const activeTab = computed(() => {
@@ -19,6 +20,7 @@ const activeTab = computed(() => {
   if (path.startsWith("/villany-app/practice")) return "practice";
   if (path.startsWith("/villany-app/circuits")) return "circuits";
   if (path.startsWith("/villany-app/quiz")) return "quiz";
+  if (path.startsWith("/villany-app/cheat-sheet")) return "cheat-sheet";
   return "";
 });
 
@@ -48,6 +50,8 @@ const subtitle = computed(() => {
       return "Rajzos feladatok · Áramkörök";
     case "quiz":
       return "Teszt · Kvíz";
+    case "cheat-sheet":
+      return "Gyorsútmutató · Képletek és összefoglalók";
     default:
       return "Villamos alapismeretek · Elektrotechnika";
   }

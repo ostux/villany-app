@@ -5289,7 +5289,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     id: "ps0006",
     topic: "power-system",
     question: "Mi a villamosenergia egyetlen hátránya?",
-    options: ["Drága", "Veszélyes", "Nem tárolható", "Lassan szállítható"],
+    options: [
+      "Drága",
+      "Veszélyes",
+      "Nem tárolható gazdaságosan",
+      "Lassan szállítható",
+    ],
     correct: 2,
     explanation:
       "A villamosenergia egyetlen hátránya, hogy nem tárolható gazdaságosan nagy mennyiségben. A termelésnek és fogyasztásnak minden pillanatban meg kell egyeznie.",

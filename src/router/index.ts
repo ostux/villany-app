@@ -37,6 +37,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import("../components/Quiz.vue"),
   },
   {
+    path: "/villany-app/cheat-sheet",
+    name: "cheat-sheet",
+    component: () => import("../components/CheatSheet.vue"),
+  },
+  {
     path: "/:pathMatch(.*)*",
     redirect: "/villany-app",
   },
