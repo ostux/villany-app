@@ -13,6 +13,30 @@ A **főföldelő sín** (MET) a villamos létesítmény központi földelési po
 
 ## Földelő elektródák típusai
 
+### Megengedett földelési ellenállás
+
+A **földelési ellenállás maximum 10 Ω** lehet. Szükség esetén több földelőt kell alkalmazni párhuzamosan kapcsolva.
+
+> **Fontos:** Ideális esetben a földelő szétterjedési ellenállása nulla lenne – ezt csak közelíteni tudjuk.
+
+### Földelők anyaga
+
+- **Megengedett anyagok:** acél, rozsdamentes acél (tűzihorganyzott), réz
+- **TILOS:** alumínium földelőként való használata – gyorsan oxidálódik és elveszíti vezetőképességét
+
+> **Megjegyzés:** A **fagyott talaj nem vezet** – ezért a földelőt a fagyhatár alá (minimum 0,8-1 m) kell süllyeszteni.
+
+### Földelők típusai elhelyezés szerint
+
+- **Vonalszerű földelők:**
+  - Függőleges (rúdföld elő)
+  - Vízszintes (szalag földelő)
+- **Hurokszerű földelők:**
+  - Keret földelő
+  - Háló földelő
+
+> **Ajánlás:** A hurokszerű földelőket előnyben kell részesíteni, mert jobb földelési értéket adnak.
+
 ### 1. Függőleges földelő rúd
 
 A leggyakoribb földelési módszer:
@@ -82,20 +106,25 @@ Nagyobb földelési felület biztosítására:
 
 A földelés hatékonyságát nagymértékben befolyásolja a **talaj fajlagos ellenállása** (ρ):
 
-| Talaj típusa | Fajlagos ellenállás (Ωm) |
-|--------------|--------------------------|
-| Mocsaras, lápos talaj | 10-40 |
-| Agyag, agyagos talaj | 40-100 |
-| Homokos agyag | 100-200 |
-| Homok | 200-2000 |
-| Kavics | 1000-5000 |
-| Szikla, kőzet | 2000-10000 |
+| Talajfajta | Fajlagos ellenállás ρ [Ωm] – tartomány | Átlag |
+|---|---|---:|
+| Mocsár | 2–50 | 30 |
+| Agyag | 2–200 | 40 |
+| Iszap és homokos agyag, termőtalaj | 20–260 | 100 |
+| Homok, homokos föld (nedves) | 50–3000 | 200 |
+| Tőzeg | >1200 | 200 |
+| Kavicsos homok (nedves) | 50–3000 | 1000 |
+| Köves, sziklás talaj | 100–8000 | 2000 |
+| Beton (1:3 cement-homok) | 50–300 | 150 |
+| Beton (1:5 cement-kavicsos homok) | 100–8000 | 400 |
 
 > **Fontos:** Minél kisebb a fajlagos ellenállás, annál jobb a földelés hatékonysága. Rossz talaj esetén több elektródát kell párhuzamosan alkalmazni.
 
 ## Földelő elektróda ellenállásának számítása
 
 ### Függőleges rúd földelő
+
+**Pontos képlet:**
 
 $$R_a = \frac{\rho}{2\pi L} \times \ln\left(\frac{4L}{d}\right)$$
 
@@ -114,6 +143,23 @@ $R_a = \frac{100}{2\pi \times 2} \times \ln\left(\frac{4 \times 2}{0{,}016}\righ
 $R_a = \frac{100}{12{,}57} \times \ln(500)$
 
 $R_a = 7{,}96 \times 6{,}21 \approx 49{,}4 \, \Omega$
+```
+
+**Közelítő képlet (gyors becsléshez):**
+
+$$R \approx 0{,}9 \times \frac{\rho}{l}$$
+
+ahol:
+- $R$ = földelési ellenállás (Ω)
+- $\rho$ = talaj fajlagos ellenállása (Ωm)
+- $l$ = földelő hossza (m)
+
+```example
+Példa: 3 m hosszú rúdföldelő agyagtalajba (ρ=40 Ωm):
+
+$R = 0{,}9 \times \frac{40}{3} = \frac{36}{3} = 12 \, \Omega$
+
+Ez **túl sok** (max. 10 Ω megengedett), ezért további földelők szükségesek.
 ```
 
 ### Párhuzamosan kapcsolt elektródák
@@ -190,3 +236,49 @@ A földelési ellenállást rendszeresen ellenőrizni kell:
 - Jelölések megléte
 
 > **Figyelem:** Rossz vagy hibás földelés az érintésvédelem teljes meghibásodását okozhatja, ezért a rendszeres ellenőrzés életbevágóan fontos!
+
+## Lépésfeszültség
+
+### Mi a lépésfeszültség?
+
+A **lépésfeszültség** a földben folyó kóboráram következtében a talaj felszínén egy emberi lépésnyi (kb. **0,7 m**) távolságra lévő két pont közötti feszültség.
+
+### Potenciáltölcsér
+
+Rúdföldelő környezetében villámbecsapódáskor vagy nagyfeszültségű földzárlatkor **potenciáltölcsér** alakul ki:
+
+```
+      Földelő elektróda
+           │
+    ═══════╪═══════  ← talaj felszíne
+         ╱   ╲
+        ╱     ╲      Potenciál-
+       ╱       ╲     tölcsér
+      ╱         ╲
+     ╱___________╲
+```
+
+- A földelő elektróda közvetlen környezetében a legnagyobb a potenciál
+- Távolodva a földelőtől a potenciál fokozatosan csökken
+- **Lépésfeszültség:** két láb közötti feszültségkülönbség
+- **Érintési feszültség:** kezünk és lábunk közötti feszültségkülönbség
+
+### Veszélyek
+
+Nagyfeszültségű vezetékek földzárlati pontja (pl. földön fekvő leszakadt vezeték) környezetében a lépésfeszültség veszélyes értéket érhet el és **halálos áramütést okozhat**.
+
+**Különösen veszélyes az elesés:**
+- A test két talajjal érintkező pontja között a távolság akár **1,5–2 m** is lehet
+- Ezáltal sokkal nagyobb feszültségkülönbség alakul ki, mint álló helyzetnél
+
+### Helyes menekülési technika
+
+Leszakadt nagyfeszültségű vezeték közelében:
+
+1. **NE** lépkedj normál lépésekkel!
+2. **Igen kis lépésekkel** (néhány centiméteres araszolással) távolodj el
+3. A lépésfeszültség a lépés nagyságával nő
+4. Minél kisebb a lábak közti távolság, annál kisebb a feszültségkülönbség
+5. **NE ESS EL!** – ez a legveszélyesebb
+
+> **Fontos:** Villámvédelemnél és nagyfeszültségű berendezéseknél különösen számolni kell a lépésfeszültség veszélyével.

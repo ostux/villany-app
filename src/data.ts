@@ -59,6 +59,12 @@ export const CATEGORIES: Category[] = [
     title: "Munkaerő-piaci ismeretek",
     description: "Munkavállalás pénzügyi vonatkozásai és álláskeresés",
     icon: "💼"
+  },
+  {
+    id: "building-electrical",
+    title: "Épületvillamosság",
+    description: "Gyakorlati épületvillanyszerelés, hálózatra csatlakozás, szerelési módok és berendezések",
+    icon: "🏠"
   }
 ];
 
@@ -271,6 +277,97 @@ export const TOPICS: Topic[] = [
     summary: "Bruttó és nettó bér, munkavállalói adó és járulékok, motivációs levél készítése.",
     contentPath: "/src/content/topics/employment-basics.md",
     category: "employment"
+  },
+  {
+    id: "grid-connection",
+    title: "Hálózatra csatlakozás",
+    summary: "Csatlakozás célja, követelményei, szabadvezetékes és földkábeles csatlakozás, első túláramvédelmi eszköz, TN rendszer.",
+    contentPath: "/src/content/topics/grid-connection.md",
+    category: "building-electrical"
+  },
+  {
+    id: "electrical-terminology",
+    title: "Villamos szakfogalmak",
+    summary: "Hálózati, csatlakozási, elosztási és vezetékhálózati fogalmak szakmai szótára.",
+    contentPath: "/src/content/topics/electrical-terminology.md",
+    category: "building-electrical"
+  },
+  {
+    id: "energy-meters",
+    title: "Fogyasztásmérők",
+    summary: "Analóg, elektronikus és smart mérők, fogyasztásmérőhely kialakítása, áramváltós mérés.",
+    contentPath: "/src/content/topics/energy-meters.md",
+    category: "building-electrical"
+  },
+  {
+    id: "fire-emergency-switch",
+    title: "Tűzeseti főkapcsoló",
+    summary: "Tűzeseti főkapcsoló célja, elhelyezése, működési követelmények családi házban és társasházban.",
+    contentPath: "/src/content/topics/fire-emergency-switch.md",
+    category: "building-electrical"
+  },
+  {
+    id: "consumption-types",
+    title: "Általános és vezérelt fogyasztás",
+    summary: "Vezérelt fogyasztók (bojler, hőtárolós kályha), tarifák, hálózati terhelés kiegyenlítése.",
+    contentPath: "/src/content/topics/consumption-types.md",
+    category: "building-electrical"
+  },
+  {
+    id: "apartment-distribution",
+    title: "Lakás elosztótábla",
+    summary: "Elosztótábla tartalma, típusai, moduláris felépítés, áramkörök kialakítása, feliratoz ás.",
+    contentPath: "/src/content/topics/apartment-distribution.md",
+    category: "building-electrical"
+  },
+  {
+    id: "building-wiring-design",
+    title: "Épület villanyszerelés tervezése",
+    summary: "Fogyasztók teljesítményigénye, lakás méretezése, egyidejűségi tényező, áramkörök kialakítása, szelektivitás.",
+    contentPath: "/src/content/topics/building-wiring-design.md",
+    category: "building-electrical"
+  },
+  {
+    id: "overcurrent-protection",
+    title: "Túláramvédelem",
+    summary: "Kismegszakító felépítése, kioldási jelleggörbék (B, C, D), olvadóbiztosító, védelmi koordináció.",
+    contentPath: "/src/content/topics/overcurrent-protection.md",
+    category: "building-electrical"
+  },
+  {
+    id: "building-installation-methods",
+    title: "Épületvillamossági szerelési módok",
+    summary: "Védőcsöves szerelés (Mü I, II, III), MM falvezeték, kábelszerű vezeték, vezetékcsatornás, kábeltálcás szerelés.",
+    contentPath: "/src/content/topics/building-installation-methods.md",
+    category: "building-electrical"
+  },
+  {
+    id: "switches-and-sockets",
+    title: "Kapcsolók és dugaszolóaljzatok",
+    summary: "Kapcsolófajták (101, 102, 105, 106, 107), dugaljak típusai, ipari csatlakozók, szerelési magasságok.",
+    contentPath: "/src/content/topics/switches-and-sockets.md",
+    category: "building-electrical"
+  },
+  {
+    id: "bathroom-electrical",
+    title: "Fürdőszoba zónák",
+    summary: "Fürdőszoba zónabeosztás (0, 1, 2, 3), IP védettségi követelmények, AVK használat, potenciálkiegyenlítés.",
+    contentPath: "/src/content/topics/bathroom-electrical.md",
+    category: "building-electrical"
+  },
+  {
+    id: "special-locations",
+    title: "Speciális helyek",
+    summary: "Építési területek, padló- és mennyezetfűtés, szabadtéri dugaljak, garázsok, mezőgazdasági létesítmények.",
+    contentPath: "/src/content/topics/special-locations.md",
+    category: "building-electrical"
+  },
+  {
+    id: "building-electrical-formulas",
+    title: "Épületvillamosság képletek",
+    summary: "Képletek összefoglaló: hálózati csatlakozás, földelés, teljesítmény, méretezés, túláramvédelem.",
+    contentPath: "/src/content/topics/building-electrical-formulas.md",
+    category: "building-electrical"
   }
 ];
 
